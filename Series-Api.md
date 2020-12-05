@@ -41,10 +41,10 @@ Makes the main series to be an overlay source.
 ### changePriceScale(priceScale)
 
 1. `priceScale` should be a string with one of the following values:
-    * `"new-left"` - attach the main series to the new left price scale
-    * `"new-right"` - attach the main series to the new right price scale
-    * `"no-scale"` - hide the main series price scale if there are another scales on the main pane
-    * `entityId` - pin the main series to the same price axis as a study with a corresponding `entityId`
+   - `"new-left"` - attach the main series to the new left price scale
+   - `"new-right"` - attach the main series to the new right price scale
+   - `"no-scale"` - hide the main series price scale if there are another scales on the main pane
+   - `entityId` - pin the main series to the same price axis as a study with a corresponding `entityId`
 
 Changes the price scale of the main series.
 
@@ -70,7 +70,7 @@ Places main series behind all other chart objects.
 
 1. `chartStyle` - number
 
-Returns properties for a specific [chart style](Chart-Methods#setChartTypetype). See [this article](Chart-Style-Properties) for a returned object.
+Returns properties for a specific [chart style](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#setChartTypetype). See [this article](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Style-Properties) for a returned object.
 
 ### setChartStyleProperties(chartStyle, newPrefs)
 
@@ -79,5 +79,5 @@ Sets properties for a specific chart style.
 1. `chartStyle` - number
 1. `newPrefs` - object
 
-`newPrefs` should be a subset of properties for a [chart style](Chart-Methods#setChartTypetype).
-See [this article](Chart-Style-Properties) for available values of properties for a specific chart style.
+`newPrefs` should be a subset of properties for a [chart style](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#setChartTypetype).
+See [this article](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Style-Properties) for available values of properties for a specific chart style.

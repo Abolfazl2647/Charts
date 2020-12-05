@@ -6,143 +6,143 @@ The instruction below explains how to display chart data as an indicator. Please
 1. Also, set up the server to return valid historical data for this ticker.
 1. Use the indicator template and complete the following fields: name, descriptions, and the ticker. Modify the default style of the indicator if required.
 
-    ```javascript
-    {
-        // Replace the <study name> with your study name
-        // The name will be used internally by the Charting Library
-        name: "<study name>",
-        metainfo: {
-            "_metainfoVersion": 40,
-            "id": "<study name>@tv-basicstudies-1",
-            "scriptIdPart": "",
-            "name": "<study name>",
+   ```javascript
+   {
+       // Replace the <study name> with your study name
+       // The name will be used internally by the Charting Library
+       name: "<study name>",
+       metainfo: {
+           "_metainfoVersion": 40,
+           "id": "<study name>@tv-basicstudies-1",
+           "scriptIdPart": "",
+           "name": "<study name>",
 
-            // This description will be displayed in the Indicators window
-            // It is also used as a "name" argument when calling the createStudy method
-            "description": "<study description>",
+           // This description will be displayed in the Indicators window
+           // It is also used as a "name" argument when calling the createStudy method
+           "description": "<study description>",
 
-            // This description will be displayed on the chart
-            "shortDescription": "<short study description>",
+           // This description will be displayed on the chart
+           "shortDescription": "<short study description>",
 
-            "is_hidden_study": true,
-            "is_price_study": true,
-            "isCustomIndicator": true,
+           "is_hidden_study": true,
+           "is_price_study": true,
+           "isCustomIndicator": true,
 
-            "plots": [{"id": "plot_0", "type": "line"}],
-            "defaults": {
-                "styles": {
-                    "plot_0": {
-                        "linestyle": 0,
-                        "visible": true,
+           "plots": [{"id": "plot_0", "type": "line"}],
+           "defaults": {
+               "styles": {
+                   "plot_0": {
+                       "linestyle": 0,
+                       "visible": true,
 
-                        // Plot line width.
-                        "linewidth": 2,
+                       // Plot line width.
+                       "linewidth": 2,
 
-                        // Plot type:
-                        //    1 - Histogram
-                        //    2 - Line
-                        //    3 - Cross
-                        //    4 - Area
-                        //    5 - Columns
-                        //    6 - Circles
-                        //    7 - Line With Breaks
-                        //    8 - Area With Breaks
-                        "plottype": 2,
+                       // Plot type:
+                       //    1 - Histogram
+                       //    2 - Line
+                       //    3 - Cross
+                       //    4 - Area
+                       //    5 - Columns
+                       //    6 - Circles
+                       //    7 - Line With Breaks
+                       //    8 - Area With Breaks
+                       "plottype": 2,
 
-                        // Show price line?
-                        "trackPrice": false,
+                       // Show price line?
+                       "trackPrice": false,
 
-                        // Plot transparency, in percent.
-                        "transparency": 40,
+                       // Plot transparency, in percent.
+                       "transparency": 40,
 
-                        // Plot color in #RRGGBB format
-                        "color": "#0000FF"
-                    }
-                },
+                       // Plot color in #RRGGBB format
+                       "color": "#0000FF"
+                   }
+               },
 
-                // Precision of the study's output values
-                // (quantity of digits after the decimal separator).
-                "precision": 2,
+               // Precision of the study's output values
+               // (quantity of digits after the decimal separator).
+               "precision": 2,
 
-                "inputs": {}
-            },
-            "styles": {
-                "plot_0": {
-                    // Output name will be displayed in the Style window
-                    "title": "-- output name --",
-                    "histogramBase": 0,
-                }
-            },
-            "inputs": [],
-        },
+               "inputs": {}
+           },
+           "styles": {
+               "plot_0": {
+                   // Output name will be displayed in the Style window
+                   "title": "-- output name --",
+                   "histogramBase": 0,
+               }
+           },
+           "inputs": [],
+       },
 
-        constructor: function() {
-            this.init = function(context, inputCallback) {
-                this._context = context;
-                this._input = inputCallback;
+       constructor: function() {
+           this.init = function(context, inputCallback) {
+               this._context = context;
+               this._input = inputCallback;
 
-                // Define the symbol to be plotted.
-                // Symbol should be a string.
-                // You can use PineJS.Std.ticker(this._context) to get the selected symbol's ticker.
-                // For example,
-                //    var symbol = "AAPL";
-                //    var symbol = "#EQUITY";
-                //    var symbol = PineJS.Std.ticker(this._context) + "#TEST";
-                var symbol = "<TICKER>";
-                this._context.new_sym(symbol, PineJS.Std.period(this._context), PineJS.Std.period(this._context));
-            };
+               // Define the symbol to be plotted.
+               // Symbol should be a string.
+               // You can use PineJS.Std.ticker(this._context) to get the selected symbol's ticker.
+               // For example,
+               //    var symbol = "AAPL";
+               //    var symbol = "#EQUITY";
+               //    var symbol = PineJS.Std.ticker(this._context) + "#TEST";
+               var symbol = "<TICKER>";
+               this._context.new_sym(symbol, PineJS.Std.period(this._context), PineJS.Std.period(this._context));
+           };
 
-            this.main = function(context, inputCallback) {
-                this._context = context;
-                this._input = inputCallback;
+           this.main = function(context, inputCallback) {
+               this._context = context;
+               this._input = inputCallback;
 
-                this._context.select_sym(1);
+               this._context.select_sym(1);
 
-                // You can use following built-in functions in PineJS.Std object:
-                //    open, high, low, close
-                //    hl2, hlc3, ohlc4
-                var v = PineJS.Std.close(this._context);
-                return [v];
-            }
-        }
-    }
-    ```
+               // You can use following built-in functions in PineJS.Std object:
+               //    open, high, low, close
+               //    hl2, hlc3, ohlc4
+               var v = PineJS.Std.close(this._context);
+               return [v];
+           }
+       }
+   }
+   ```
 
-1. Add [custom_indicators_getter](Widget-Constructor#custom_indicators_getter) key to the widget constructor. Its value is a function that returns a Promise object with a list of custom indicators.
+1. Add [custom_indicators_getter](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#custom_indicators_getter) key to the widget constructor. Its value is a function that returns a Promise object with a list of custom indicators.
 
-    ```javascript
-    {
-        custom_indicators_getter: function(PineJS) {
-            return Promise.resolve([
-                // *** your indicator object, created from the template ***
-            ]);
-        },
-    }
-    ```
+   ```javascript
+   {
+       custom_indicators_getter: function(PineJS) {
+           return Promise.resolve([
+               // *** your indicator object, created from the template ***
+           ]);
+       },
+   }
+   ```
 
-1. Update your widget's initialization code to [create](Chart-Methods#createstudyname-forceoverlay-lock-inputs-overrides-options) this indicator when the chart is ready.
+1. Update your widget's initialization code to [create](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#createstudyname-forceoverlay-lock-inputs-overrides-options) this indicator when the chart is ready.
 
 ## Examples
 
-1. Add the indicator to the Charting Library using [custom_indicators_getter](Widget-Constructor#custom_indicators_getter) option.
+1. Add the indicator to the Charting Library using [custom_indicators_getter](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#custom_indicators_getter) option.
 1. Change your widget's initialization code. Here is an example.
 
-    ```javascript
-    widget = new TradingView.widget(/* ... */);
+   ```javascript
+   widget = new TradingView.widget(/* ... */);
 
-    widget.onChartReady(function() {
-        widget.chart().createStudy('<indicator-name>', false, true);
-    });
-    ```
+   widget.onChartReady(function () {
+     widget.chart().createStudy("<indicator-name>", false, true);
+   });
+   ```
 
 ### Requesting data for another ticker
 
 Let's assume that you wish to display the equity curve on the chart. You will have to do the following.
 
-* Create a name for the new ticker, e.g. `#EQUITY`. You can use any name that you can think of.
-* Change your server's code to validate this symbol. The minimum amount of symbol information should be returned for this ticker.
-* Make the server return valid historical data for this ticker just as you return the historical data for the generic symbols such as AAPL.
-* Modify the indicator template mentioned above and create the indicators file (or add a new indicator to the existing indicators file). Here is an example:
+- Create a name for the new ticker, e.g. `#EQUITY`. You can use any name that you can think of.
+- Change your server's code to validate this symbol. The minimum amount of symbol information should be returned for this ticker.
+- Make the server return valid historical data for this ticker just as you return the historical data for the generic symbols such as AAPL.
+- Modify the indicator template mentioned above and create the indicators file (or add a new indicator to the existing indicators file). Here is an example:
 
 ```javascript
 {

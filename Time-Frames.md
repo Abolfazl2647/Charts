@@ -5,16 +5,16 @@ You can see the toolbar at the bottom of the chart. Each of those buttons on the
 
 I.e., clicking `1Y` will make the chart switch the resolution to `1D` and scale it accordingly to display daily bars for the entire year. Each time frame has its own chart resolution. Here it the list of default time frames:
 
-Time Frame|Chart Resolution
----|---
-5Y|W
-1Y|D
-6M|120
-3M|60
-1M|30
-5D|5
-1D|1
+| Time Frame | Chart Resolution |
+| ---------- | ---------------- |
+| 5Y         | W                |
+| 1Y         | D                |
+| 6M         | 120              |
+| 3M         | 60               |
+| 1M         | 30               |
+| 5D         | 5                |
+| 1D         | 1                |
 
-You can customize default time frames using the [time_frames](Widget-Constructor#time_frames) argument of the widget constructor.
+You can customize default time frames using the [time_frames](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#time_frames) argument of the widget constructor.
 
 **Remark**: Time frames that require resolutions which are not available for a particular symbol will be hidden.

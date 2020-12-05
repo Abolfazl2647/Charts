@@ -1,61 +1,61 @@
 #### Getting Started
 
-* [Overview](Home)
-* [Package Content](Package-Content)
-* [First Start](Running-Your-Charting-Library)
-* [Best Practices](Best-Practices)
-* [FAQ](Frequently-Asked-Questions)
-* [Shortcuts](Shortcuts)
-* [Breaking changes](Breaking-Changes)
+- [Overview](https://github.com/Abolfazl2647/Charts/blob/main/Home)
+- [Package Content](https://github.com/Abolfazl2647/Charts/blob/main/Package-Content)
+- [First Start](https://github.com/Abolfazl2647/Charts/blob/main/Running-Your-Charting-Library)
+- [Best Practices](https://github.com/Abolfazl2647/Charts/blob/main/Best-Practices)
+- [FAQ](https://github.com/Abolfazl2647/Charts/blob/main/Frequently-Asked-Questions)
+- [Shortcuts](https://github.com/Abolfazl2647/Charts/blob/main/Shortcuts)
+- [Breaking changes](https://github.com/Abolfazl2647/Charts/blob/main/Breaking-Changes)
 
-***
+---
 
 #### Connecting Data
 
-* [Overview](Connecting-Data)
-* [JS API](JS-Api)
-* [UDF](UDF)
-* [Symbology](Symbology)
-* [Trading Sessions](Trading-Sessions)
-* [Quotes](Quotes)
+- [Overview](https://github.com/Abolfazl2647/Charts/blob/main/Connecting-Data)
+- [JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api)
+- [UDF](https://github.com/Abolfazl2647/Charts/blob/main/UDF)
+- [Symbology](https://github.com/Abolfazl2647/Charts/blob/main/Symbology)
+- [Trading Sessions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Sessions)
+- [Quotes](https://github.com/Abolfazl2647/Charts/blob/main/Quotes)
 
-***
+---
 
 #### Customization
 
 API Reference
 
-* [Widget Constructor](Widget-Constructor)
-* [Widget Methods](Widget-Methods)
-* [Chart Methods](Chart-Methods)
-* [Featuresets](Featuresets)
+- [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor)
+- [Widget Methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods)
+- [Chart Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
+- [Featuresets](https://github.com/Abolfazl2647/Charts/blob/main/Featuresets)
 
 Customisation by areas
 
-* [Global](Global)
-* [Toolbars](Toolbars)
-* [Chart](Chart)
-* [Symbol Search](Symbol-Search)
-* [Legend](Legend)
-* [Price Scale](Price-Scale)
-* [Time Scale](Time-Scale)
-* [Marks](Marks)
-* [Indicators](Indicators)
-* [Snapshots](Snapshots)
-* [Drawings](Drawings)
-* [Watchlist](Watch-List)
-* [News](News)
+- [Global](https://github.com/Abolfazl2647/Charts/blob/main/Global)
+- [Toolbars](https://github.com/Abolfazl2647/Charts/blob/main/Toolbars)
+- [Chart](https://github.com/Abolfazl2647/Charts/blob/main/Chart)
+- [Symbol Search](https://github.com/Abolfazl2647/Charts/blob/main/Symbol-Search)
+- [Legend](https://github.com/Abolfazl2647/Charts/blob/main/Legend)
+- [Price Scale](https://github.com/Abolfazl2647/Charts/blob/main/Price-Scale)
+- [Time Scale](https://github.com/Abolfazl2647/Charts/blob/main/Time-Scale)
+- [Marks](https://github.com/Abolfazl2647/Charts/blob/main/Marks)
+- [Indicators](https://github.com/Abolfazl2647/Charts/blob/main/Indicators)
+- [Snapshots](https://github.com/Abolfazl2647/Charts/blob/main/Snapshots)
+- [Drawings](https://github.com/Abolfazl2647/Charts/blob/main/Drawings)
+- [Watchlist](https://github.com/Abolfazl2647/Charts/blob/main/Watch-List)
+- [News](https://github.com/Abolfazl2647/Charts/blob/main/News)
 
-[Saving/Loading Charts](Saving-and-Loading-Charts)
+[Saving/Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts)
 
-[Creating Custom Studies](Creating-Custom-Studies)
+[Creating Custom Studies](https://github.com/Abolfazl2647/Charts/blob/main/Creating-Custom-Studies)
 
-***
+---
 
 #### Trading Terminal
 
-* [Brief Intro](Trading-Terminal)
-* [Broker API](Broker-API)
-* [Trading Host](Trading-Host)
-* [Account Manager](Account-Manager)
-* [Trading Types](Trading-Objects-and-Constants)
+- [Brief Intro](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal)
+- [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API)
+- [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host)
+- [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager)
+- [Trading Types](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants)

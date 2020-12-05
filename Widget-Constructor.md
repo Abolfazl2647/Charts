@@ -2,77 +2,79 @@ You may specify Charting library widget parameters when calling its constructor.
 
 ```javascript
 new TradingView.widget({
-    symbol: 'A',
-    interval: '1D',
-    timezone: "America/New_York",
-    container_id: "tv_chart_container",
-    locale: "ru",
-    datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com")
+  symbol: "A",
+  interval: "1D",
+  timezone: "America/New_York",
+  container_id: "tv_chart_container",
+  locale: "ru",
+  datafeed: new Datafeeds.UDFCompatibleDatafeed(
+    "https://demo_feed.tradingview.com"
+  ),
 });
 ```
 
-Below is a complete list of supported parameters. Use [Widget methods](Widget-Methods) if you wish to modify the parameters after the creation of the Charting Library.
+Below is a complete list of supported parameters. Use [Widget methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods) if you wish to modify the parameters after the creation of the Charting Library.
 
 `* - Required`
 
 ## Parameters
 
-* Library and Trading Terminal
-  * [symbol, interval*](#symbol-interval)
-  * [container_id*](#container_id)
-  * [datafeed*](#datafeed)
-  * [timeframe](#timeframe)
-  * [timezone](#timezone)
-  * [debug](#debug)
-  * [library_path](#library_path)
-  * [width, height](#width-height)
-  * [fullscreen](#fullscreen)
-  * [autosize](#autosize)
-  * [symbol_search_request_delay](#symbol_search_request_delay)
-  * [auto_save_delay](#auto_save_delay)
-  * [toolbar_bg](#toolbar_bg)
-  * [study_count_limit](#study_count_limit)
-  * [studies_access](#studies_access)
-  * [drawings_access](#drawings_access)
-  * [saved_data](#saved_data)
-  * [locale](#locale)
-  * [numeric_formatting](#numeric_formatting)
-  * [custom_formatters](#custom_formatters)
-  * [overrides](#overrides)
-  * [disabled_features, enabled_features](#disabled_features-enabled_features)
-  * [snapshot_url](#snapshot_url)
-  * [custom_indicators_getter](#custom_indicators_getter)
-  * [preset](#preset)
-  * [studies_overrides](#studies_overrides)
-  * [time_frames](#time_frames)
-  * [charts_storage_url, client_id, user_id](#charts_storage_url-client_id-user_id)
-  * [charts_storage_api_version](#charts_storage_api_version)
-  * [load_last_chart](#load_last_chart)
-  * [theme](#theme)
-  * [custom_css_url](#custom_css_url)
-  * [loading_screen](#loading_screen)
-  * [favorites](#favorites)
-  * [save_load_adapter](#save_load_adapter)
-  * [settings_adapter](#settings_adapter)
-* Trading Terminal only
-  * [widgetbar](#widgetbar)
-  * [rss_news_feed](#rss_news_feed)
-  * [news_provider](#news_provider)
-  * [broker_factory](#broker_factory)
-  * [broker_config](#broker_config)
+- Library and Trading Terminal
+  - [symbol, interval\*](https://github.com/Abolfazl2647/Charts/blob/main/#symbol-interval)
+  - [container_id\*](https://github.com/Abolfazl2647/Charts/blob/main/#container_id)
+  - [datafeed\*](https://github.com/Abolfazl2647/Charts/blob/main/#datafeed)
+  - [timeframe](https://github.com/Abolfazl2647/Charts/blob/main/#timeframe)
+  - [timezone](https://github.com/Abolfazl2647/Charts/blob/main/#timezone)
+  - [debug](https://github.com/Abolfazl2647/Charts/blob/main/#debug)
+  - [library_path](https://github.com/Abolfazl2647/Charts/blob/main/#library_path)
+  - [width, height](https://github.com/Abolfazl2647/Charts/blob/main/#width-height)
+  - [fullscreen](https://github.com/Abolfazl2647/Charts/blob/main/#fullscreen)
+  - [autosize](https://github.com/Abolfazl2647/Charts/blob/main/#autosize)
+  - [symbol_search_request_delay](https://github.com/Abolfazl2647/Charts/blob/main/#symbol_search_request_delay)
+  - [auto_save_delay](https://github.com/Abolfazl2647/Charts/blob/main/#auto_save_delay)
+  - [toolbar_bg](https://github.com/Abolfazl2647/Charts/blob/main/#toolbar_bg)
+  - [study_count_limit](https://github.com/Abolfazl2647/Charts/blob/main/#study_count_limit)
+  - [studies_access](https://github.com/Abolfazl2647/Charts/blob/main/#studies_access)
+  - [drawings_access](https://github.com/Abolfazl2647/Charts/blob/main/#drawings_access)
+  - [saved_data](https://github.com/Abolfazl2647/Charts/blob/main/#saved_data)
+  - [locale](https://github.com/Abolfazl2647/Charts/blob/main/#locale)
+  - [numeric_formatting](https://github.com/Abolfazl2647/Charts/blob/main/#numeric_formatting)
+  - [custom_formatters](https://github.com/Abolfazl2647/Charts/blob/main/#custom_formatters)
+  - [overrides](https://github.com/Abolfazl2647/Charts/blob/main/#overrides)
+  - [disabled_features, enabled_features](https://github.com/Abolfazl2647/Charts/blob/main/#disabled_features-enabled_features)
+  - [snapshot_url](https://github.com/Abolfazl2647/Charts/blob/main/#snapshot_url)
+  - [custom_indicators_getter](https://github.com/Abolfazl2647/Charts/blob/main/#custom_indicators_getter)
+  - [preset](https://github.com/Abolfazl2647/Charts/blob/main/#preset)
+  - [studies_overrides](https://github.com/Abolfazl2647/Charts/blob/main/#studies_overrides)
+  - [time_frames](https://github.com/Abolfazl2647/Charts/blob/main/#time_frames)
+  - [charts_storage_url, client_id, user_id](https://github.com/Abolfazl2647/Charts/blob/main/#charts_storage_url-client_id-user_id)
+  - [charts_storage_api_version](https://github.com/Abolfazl2647/Charts/blob/main/#charts_storage_api_version)
+  - [load_last_chart](https://github.com/Abolfazl2647/Charts/blob/main/#load_last_chart)
+  - [theme](https://github.com/Abolfazl2647/Charts/blob/main/#theme)
+  - [custom_css_url](https://github.com/Abolfazl2647/Charts/blob/main/#custom_css_url)
+  - [loading_screen](https://github.com/Abolfazl2647/Charts/blob/main/#loading_screen)
+  - [favorites](https://github.com/Abolfazl2647/Charts/blob/main/#favorites)
+  - [save_load_adapter](https://github.com/Abolfazl2647/Charts/blob/main/#save_load_adapter)
+  - [settings_adapter](https://github.com/Abolfazl2647/Charts/blob/main/#settings_adapter)
+- Trading Terminal only
+  - [widgetbar](https://github.com/Abolfazl2647/Charts/blob/main/#widgetbar)
+  - [rss_news_feed](https://github.com/Abolfazl2647/Charts/blob/main/#rss_news_feed)
+  - [news_provider](https://github.com/Abolfazl2647/Charts/blob/main/#news_provider)
+  - [broker_factory](https://github.com/Abolfazl2647/Charts/blob/main/#broker_factory)
+  - [broker_config](https://github.com/Abolfazl2647/Charts/blob/main/#broker_config)
 
 ## Library and Trading Terminal
 
-### symbol, interval*
+### symbol, interval\*
 
-The default symbol & time interval of your chart. The `interval` value is described in the [Section](Resolution).
+The default symbol & time interval of your chart. The `interval` value is described in the [Section](https://github.com/Abolfazl2647/Charts/blob/main/Resolution).
 
 ```javascript
 symbol: 'A',
 interval: '1D',
 ```
 
-### container_id*
+### container_id\*
 
 `id` is an attribute of a DOM element inside which the iframe with the chart will be placed.
 
@@ -80,12 +82,14 @@ interval: '1D',
 container_id: "tv_chart_container",
 ```
 
-### datafeed*
+### datafeed\*
 
-JavaScript object that implements the ([JS API](JS-Api)) interface to supply the chart with data.
+JavaScript object that implements the ([JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api)) interface to supply the chart with data.
 
 ```javascript
-datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com")
+datafeed: new Datafeeds.UDFCompatibleDatafeed(
+  "https://demo_feed.tradingview.com"
+);
 ```
 
 ### timeframe
@@ -100,7 +104,7 @@ timeframe: '3M',
 ### timezone
 
 Default timezone of the chart. The time on the timescale is displayed according to this timezone.
-See the [list of supported timezones](Symbology#timezone) for available values. Set it to `exchange` to use the exchange timezone. Use the [overrides](#overrides) section if you wish to override the default value.
+See the [list of supported timezones](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#timezone) for available values. Set it to `exchange` to use the exchange timezone. Use the [overrides](https://github.com/Abolfazl2647/Charts/blob/main/#overrides) section if you wish to override the default value.
 
 ```javascript
 timezone: "America/New_York",
@@ -135,7 +139,7 @@ height: 600,
 
 ### fullscreen
 
-*Default:* `false`
+_Default:_ `false`
 
 Boolean value showing whether the chart should use all the available space in the window.
 
@@ -145,7 +149,7 @@ fullscreen: true,
 
 ### autosize
 
-*Default:* `false`
+_Default:_ `false`
 
 Boolean value showing whether the chart should use all the available space in the container and resize when the container itself is resized.
 
@@ -179,7 +183,7 @@ toolbar_bg: '#f4f7f9',
 
 ### study_count_limit
 
-*Starting from version 1.5.*
+_Starting from version 1.5._
 
 Maximum amount of studies on the chart of a multichart layout. Minimum value is 2.
 
@@ -189,7 +193,7 @@ study_count_limit: 5,
 
 ### studies_access
 
-*Starting from version 1.1.*
+_Starting from version 1.1._
 
 An object with the following structure:
 
@@ -206,14 +210,14 @@ studies_access: {
 }
 ```
 
-* `type` is the list type. Supported values are: `black` (all listed items should be disabled), `white` (only the listed items should be enabled).
-* `tools` is an array of objects. Each object could have the following properties:
-  * `name` (*Mandatory*) is the name of a study. Use the same names as in the pop-ups of indicators.
-  * `grayed` is a boolean showing whether this study should be visible but look as if it's disabled. If the study is grayed out and user clicks it, then the `onGrayedObjectClicked` function is called.
+- `type` is the list type. Supported values are: `black` (all listed items should be disabled), `white` (only the listed items should be enabled).
+- `tools` is an array of objects. Each object could have the following properties:
+  - `name` (_Mandatory_) is the name of a study. Use the same names as in the pop-ups of indicators.
+  - `grayed` is a boolean showing whether this study should be visible but look as if it's disabled. If the study is grayed out and user clicks it, then the `onGrayedObjectClicked` function is called.
 
 ### drawings_access
 
-*Starting from version 1.1.*
+_Starting from version 1.1._
 
 This property has the same structure as the `studies_access`argument that is described above. Use the same names as you see in the UI.
 
@@ -233,11 +237,11 @@ drawings_access: {
 
 ### saved_data
 
-JS object containing saved chart content. Use this parameter when creating the widget if you have a saved chart already. If you want to load the chart content when the chart is initialized then use [load() method](https://github.com/tradingview/charting_library/wiki/Widget-Methods#loadstate) of the widget.
+JS object containing saved chart content. Use this parameter when creating the widget if you have a saved chart already. If you want to load the chart content when the chart is initialized then use [load() method](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/charting_library/wiki/Widget-Methods#loadstate) of the widget.
 
 ### locale
 
-Locale to be used by Charting Library. See [Localization](Localization) section for details.
+Locale to be used by Charting Library. See [Localization](https://github.com/Abolfazl2647/Charts/blob/main/Localization) section for details.
 
 ```javascript
 locale: 'en',
@@ -292,11 +296,11 @@ overrides: {
 }
 ```
 
-This code will make the watermark 100% opaque (invisible). All customizable properties are listed in [separate article](Overrides). You can use [Drawings-Overrides](Drawings-Overrides) starting from v 1.5.
+This code will make the watermark 100% opaque (invisible). All customizable properties are listed in [separate article](https://github.com/Abolfazl2647/Charts/blob/main/Overrides). You can use [Drawings-Overrides](https://github.com/Abolfazl2647/Charts/blob/main/Drawings-Overrides) starting from v 1.5.
 
 ### disabled_features, enabled_features
 
-The array containing names of features that should be enabled/disabled by default. `Feature` means part of the functionality of the chart (part of the UI/UX). Supported features are listed [here](Featuresets).
+The array containing names of features that should be enabled/disabled by default. `Feature` means part of the functionality of the chart (part of the UI/UX). Supported features are listed [here](https://github.com/Abolfazl2647/Charts/blob/main/Featuresets).
 
 Example:
 
@@ -319,7 +323,7 @@ Function that returns a Promise object with an array of your custom indicators.
 
 `PineJS` variable will be passed as the first argument of this function and can be used inside your indicators to access internal helper functions.
 
-See more details [here](Creating-Custom-Studies).
+See more details [here](https://github.com/Abolfazl2647/Charts/blob/main/Creating-Custom-Studies).
 
 ```javascript
 custom_indicators_getter: function(PineJS) {
@@ -331,7 +335,7 @@ custom_indicators_getter: function(PineJS) {
 
 ### preset
 
-`preset` is a name of predefined widget settings. For now, the only value supported in the `preset` is  `mobile`. The example of this `preset` is [available here](https://charting-library.tradingview.com).
+`preset` is a name of predefined widget settings. For now, the only value supported in the `preset` is `mobile`. The example of this `preset` is [available here](https://github.com/Abolfazl2647/Charts/blob/main/https://charting-library.tradingview.com).
 
 ```javascript
 preset: "mobile",
@@ -339,7 +343,7 @@ preset: "mobile",
 
 ### studies_overrides
 
-Use this option to customize the style or inputs of the indicators. You can also customize the styles and inputs of the `Compare` series using this argument. See more details [here](Studies-Overrides)
+Use this option to customize the style or inputs of the indicators. You can also customize the styles and inputs of the `Compare` series using this argument. See more details [here](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides)
 
 ```javascript
 studies_overrides: {
@@ -355,15 +359,15 @@ Example:
 
 ```javascript
 time_frames: [
-    { text: "50y", resolution: "6M", description: "50 Years" },
-    { text: "3y", resolution: "W", description: "3 Years", title: "3yr" },
-    { text: "8m", resolution: "D", description: "8 Month" },
-    { text: "3d", resolution: "5", description: "3 Days" },
-    { text: "1000y", resolution: "W", description: "All", title: "All" },
-]
+  { text: "50y", resolution: "6M", description: "50 Years" },
+  { text: "3y", resolution: "W", description: "3 Years", title: "3yr" },
+  { text: "8m", resolution: "D", description: "8 Month" },
+  { text: "3d", resolution: "5", description: "3 Days" },
+  { text: "1000y", resolution: "W", description: "All", title: "All" },
+];
 ```
 
-Timeframe is an object containing the `text` and `resolution` properties. The `text` property should have the following format: `<integer><y|m|d>` ( \d+(y|m|d) as Regex ). Resolution is a string and its format is described here - [here](Resolution). See [this topic](Time-Frames) to learn more about timeframes.
+Timeframe is an object containing the `text` and `resolution` properties. The `text` property should have the following format: `<integer><y|m|d>` ( \d+(y|m|d) as Regex ). Resolution is a string and its format is described here - [here](https://github.com/Abolfazl2647/Charts/blob/main/Resolution). See [this topic](https://github.com/Abolfazl2647/Charts/blob/main/Time-Frames) to learn more about timeframes.
 
 The `description` property was added in v 1.7 and is displayed in the pop-up menu. This parameter is optional. If it isn't specified then the `title` or `text` property is used as a description.
 
@@ -371,7 +375,7 @@ The `title` property was added in v 1.9 and its value will override the default 
 
 ### charts_storage_url, client_id, user_id
 
-These arguments are related to the high-level API for saving/loading the charts. See more details [here](Saving-and-Loading-Charts).
+These arguments are related to the high-level API for saving/loading the charts. See more details [here](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts).
 
 ```javascript
 charts_storage_url: 'http://storage.yourserver.com',
@@ -389,7 +393,7 @@ charts_storage_api_version: "1.1",
 
 ### load_last_chart
 
-Set this parameter to `true` if you want the library to load the last saved chart for a user (you should implement [save/load](Saving-and-Loading-Charts) first to make it work).
+Set this parameter to `true` if you want the library to load the last saved chart for a user (you should implement [save/load](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts) first to make it work).
 
 ```javascript
 load_last_chart: true,
@@ -397,7 +401,7 @@ load_last_chart: true,
 
 ### theme
 
-*Starting from version 1.13.*
+_Starting from version 1.13._
 
 Adds custom theme color for the chart. Supported values are: `"Light"` | `"Dark"`.
 
@@ -407,7 +411,7 @@ theme: "Light",
 
 ### custom_css_url
 
-*Starting from version 1.4.*
+_Starting from version 1.4._
 
 Adds your custom CSS to the chart. `url` should be an absolute or relative path to the `static` folder.
 
@@ -417,25 +421,27 @@ custom_css_url: 'css/style.css',
 
 ### loading_screen
 
-*Starting from version 1.12.*
+_Starting from version 1.12._
 
 Customization of the loading spinner. Value is an object with the following possible keys:
 
-* `backgroundColor`
-* `foregroundColor`
+- `backgroundColor`
+- `foregroundColor`
 
 Example:
 
 ```javascript
-loading_screen: { backgroundColor: "#000000" }
+loading_screen: {
+  backgroundColor: "#000000";
+}
 ```
 
 ### favorites
 
-Items that should be marked as favorite by default. This option requires that the usage of localstorage is disabled (see [featuresets](Featuresets) to know more). The `favorites` property is supposed to be an object. The following properties are supported:
+Items that should be marked as favorite by default. This option requires that the usage of localstorage is disabled (see [featuresets](https://github.com/Abolfazl2647/Charts/blob/main/Featuresets) to know more). The `favorites` property is supposed to be an object. The following properties are supported:
 
-* **intervals**: an array of time intervals that are marked as favorite. Example: `["D", "2D"]`
-* **chartTypes**: an array of chart types that are marked as favorite. The names of chart types are identical to chart's UI in the English version. Example: `["Area", "Candles"]`.
+- **intervals**: an array of time intervals that are marked as favorite. Example: `["D", "2D"]`
+- **chartTypes**: an array of chart types that are marked as favorite. The names of chart types are identical to chart's UI in the English version. Example: `["Area", "Candles"]`.
 
 ```javascript
 favorites: {
@@ -446,25 +452,25 @@ favorites: {
 
 ### save_load_adapter
 
-An object containing the save/load functions. It is used to customize the `Save` button behaviour. Please see details and example on [Saving and Loading Charts page](Saving-and-Loading-Charts#save_load_adapter).
+An object containing the save/load functions. It is used to customize the `Save` button behaviour. Please see details and example on [Saving and Loading Charts page](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts#save_load_adapter).
 
 ### settings_adapter
 
-*Starting from version 1.11.*
+_Starting from version 1.11._
 
 An object that contains set/remove functions. Use it to save chart settings to your preferred storage (including server-side). If it is available then it should have the following methods:
 
 1. `initialSettings: Object`
 
-    An object with the initial settings
+   An object with the initial settings
 
 1. `setValue(key: string, value: string): void`
 
-    A function that is called to store key/value pair.
+   A function that is called to store key/value pair.
 
 1. `removeValue(key: string): void`
 
-    A function that is called to remove a key.
+   A function that is called to remove a key.
 
 ```javascript
 settings_adapter: {
@@ -478,7 +484,7 @@ settings_adapter: {
 
 ### widgetbar
 
-:chart: *applies to [Trading Terminal](Trading-Terminal) only*
+:chart: _applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only_
 
 The object that contains settings for the widget panel on the right side of the chart. Watchlist, news and details widgets on the right side of the chart can be enabled using the `widgetbar` field in Widget constructor:
 
@@ -493,14 +499,14 @@ widgetbar: {
 }
 ```
 
-* `details` (*default:* `false`): Enables details widget in the widget panel on the right.
-* `watchlist` (*default:* `false`): Enables watchlist widget in the widget panel on the right.
-* `watchlist_settings.default_symbols` (*default:* `[]`): Sets the list of default symbols for watchlist.
-* `watchlist_settings.readonly` (*default:* `false`): Enables read-only mode for the watchlist.
+- `details` (_default:_ `false`): Enables details widget in the widget panel on the right.
+- `watchlist` (_default:_ `false`): Enables watchlist widget in the widget panel on the right.
+- `watchlist_settings.default_symbols` (_default:_ `[]`): Sets the list of default symbols for watchlist.
+- `watchlist_settings.readonly` (_default:_ `false`): Enables read-only mode for the watchlist.
 
 ### rss_news_feed
 
-:chart: *applies to [Trading Terminal](Trading-Terminal) only*
+:chart: _applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only_
 
 Use this property to change the RSS feed for news. You can set a different RSS for each symbol type or use a single RSS for all symbols. The object should have the `default` property, other properties are optional. The names of the properties match the symbol types. Each property is an object (or an array of objects) with the following properties:
 
@@ -549,25 +555,25 @@ rss_news_feed: {
 
 ### news_provider
 
-:chart: *applies to [Trading Terminal](Trading-Terminal) only*
+:chart: _applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only_
 
 An object that specifies the news provider. It may contain the following properties:
 
 1. `is_news_generic` - if set to `true` then the title of the news widget will not include a symbol name (`Headlines` will be included only). Otherwise `for SYMBOL_NAME` will be added.
 1. `get_news` - use this property to set your own news getter function. Both the `symbol` and `callback` will be passed to the function.
 
-    The callback function should be called with an array of news objects that have the following structure:
+   The callback function should be called with an array of news objects that have the following structure:
 
-    * `title` (required) - the title of news item.
-    * `published` (required) - the time of news item in ms (UTC).
-    * `source` (optional) - source of the news item title.
-    * `shortDescription` (optional) - Short description of a news item that will be displayed under the title.
-    * `link` (optional) - URL to the news story.
-    * `fullDescription` (optional) - full description (body) of a news item.
+   - `title` (required) - the title of news item.
+   - `published` (required) - the time of news item in ms (UTC).
+   - `source` (optional) - source of the news item title.
+   - `shortDescription` (optional) - Short description of a news item that will be displayed under the title.
+   - `link` (optional) - URL to the news story.
+   - `fullDescription` (optional) - full description (body) of a news item.
 
-    **NOTE:** When a user clicks on a news item a new tab with the `link` URL will be opened. If `link` is not specified then a pop-up dialog with `fullDescription` will be shown.
+   **NOTE:** When a user clicks on a news item a new tab with the `link` URL will be opened. If `link` is not specified then a pop-up dialog with `fullDescription` will be shown.
 
-    **NOTE 2:** If both `news_provider` and `rss_news_feed` are available then the `rss_news_feed` will be ignored.
+   **NOTE 2:** If both `news_provider` and `rss_news_feed` are available then the `rss_news_feed` will be ignored.
 
 Example:
 
@@ -598,9 +604,9 @@ news_provider: {
 
 ### broker_factory
 
-:chart: *applies to [Trading Terminal](Trading-Terminal) only*
+:chart: _applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only_
 
-Use this field to pass the function that returns a new object which implements [Broker API](Broker-API). This is a function that accepts [Trading Host](Trading-Host) and returns [Broker API](Broker-API).
+Use this field to pass the function that returns a new object which implements [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API). This is a function that accepts [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host) and returns [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API).
 
 ```javascript
 broker_factory: function(host) { ... }
@@ -608,9 +614,9 @@ broker_factory: function(host) { ... }
 
 ### broker_config
 
-:chart: *applies to [Trading Terminal](Trading-Terminal) only*
+:chart: _applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only_
 
-Use this field to set the configuration flags for the Trading Terminal. [Read more](Trading-Objects-and-Constants#configflags-object).
+Use this field to set the configuration flags for the Trading Terminal. [Read more](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#configflags-object).
 
 ```javascript
 broker_config: {
@@ -622,8 +628,8 @@ broker_config: {
 
 ## See Also
 
-* [Widget Methods](Widget-Methods)
-* [Featuresets](Featuresets)
-* [Saving and Loading Charts](Saving-and-Loading-Charts)
-* [Overriding Default Properties of the Studies](Studies-Overrides)
-* [Overriding Default Properties of the Chart](Overrides)
+- [Widget Methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods)
+- [Featuresets](https://github.com/Abolfazl2647/Charts/blob/main/Featuresets)
+- [Saving and Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts)
+- [Overriding Default Properties of the Studies](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides)
+- [Overriding Default Properties of the Chart](https://github.com/Abolfazl2647/Charts/blob/main/Overrides)

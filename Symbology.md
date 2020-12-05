@@ -3,11 +3,11 @@ The Charting Library uses your own data where you define the symbology yourself.
 But there are some fine points that you should be aware of:
 
 1. Our own symbology assumes that symbol names use `EXCHANGE:SYMBOL` format.
-    The Library supports this by default. You may continue using if it meets your requirements.
+   The Library supports this by default. You may continue using if it meets your requirements.
 1. If you already have or considering a different symbology then you might want to use the `ticker` field.
 
-    `ticker` is the unique identifier of the symbol that is used **only** inside the Library. Your users will never be able to see it.
-    Simply enter the `ticker` values in all of your SymbolInfo objects and Symbol Search results and expect that the Charting Library will request the data based on those values.
+   `ticker` is the unique identifier of the symbol that is used **only** inside the Library. Your users will never be able to see it.
+   Simply enter the `ticker` values in all of your SymbolInfo objects and Symbol Search results and expect that the Charting Library will request the data based on those values.
 
 # SymbolInfo Structure
 
@@ -22,7 +22,7 @@ It's the name of the symbol. It is a string that your users will be able to see.
 ## ticker
 
 It's an unique identifier for this particular symbol in your symbology.
-If you specify this property then its value will be used for all data requests for this symbol. `ticker` will be treated the same as [name](#name) if not specified explicitly.
+If you specify this property then its value will be used for all data requests for this symbol. `ticker` will be treated the same as [name](https://github.com/Abolfazl2647/Charts/blob/main/#name) if not specified explicitly.
 
 ## description
 
@@ -32,7 +32,7 @@ Description of a symbol. Will be displayed in the chart legend for this symbol.
 
 Optional type of the instrument.
 
-*Possible types are:*
+_Possible types are:_
 
 - `stock`
 - `index`
@@ -46,7 +46,7 @@ Optional type of the instrument.
 
 ## session
 
-Trading hours for this symbol. See the [Trading Sessions](Trading-Sessions) article to learn more details.
+Trading hours for this symbol. See the [Trading Sessions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Sessions) article to learn more details.
 
 ## holidays
 
@@ -64,7 +64,7 @@ It's a string in the following format:
 
 `SESSION:YYYYMMDD[,YYYYMMDD][;SESSION:YYYYMMDD[,YYYYMMDD]]`.
 
-Where `SESSION` has the same format as [Trading Sessions](Trading-Sessions).
+Where `SESSION` has the same format as [Trading Sessions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Sessions).
 
 Example: `1900F4-2350F4,1000-1845:20181113;1000-1400:20181114`.
 
@@ -78,7 +78,7 @@ The name will be displayed in the chart legend for this symbol.
 
 Timezone of the exchange for this symbol. We expect to get the name of the time zone in `olsondb` format.
 
-*Supported timezones are:*
+_Supported timezones are:_
 
 - `Etc/UTC`
 - `Africa/Cairo`
@@ -203,7 +203,7 @@ More examples:
 
 ## has_intraday
 
-*Default:* `false`
+_Default:_ `false`
 
 Boolean value showing whether the symbol includes intraday (minutes) historical data.
 
@@ -215,17 +215,16 @@ If it is set to `true`, all resolutions that are supplied directly by the datafe
 
 An array of resolutions which should be enabled for this symbol.
 
-Each item of an array is expected to be a string. Format is described in another [article](Resolution).
+Each item of an array is expected to be a string. Format is described in another [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution).
 
 If one changes the symbol and new symbol does not support the selected resolution then resolution will be switched to the first available one in the list.
 
 Resolution availability logic (pseudocode):
 
 ```javascript
-resolutionAvailable  =
-    resolution.isIntraday
-        ? symbol.has_intraday && symbol.supports_resoluiton(resolution)
-        : symbol.supports_resoluiton(resolution);
+resolutionAvailable = resolution.isIntraday
+  ? symbol.has_intraday && symbol.supports_resoluiton(resolution)
+  : symbol.supports_resoluiton(resolution);
 ```
 
 In case of absence of `supported_resolutions` in a symbol info all DWM resolutions will be available. Intraday resolutions will be available if `has_intraday` is `true`.
@@ -234,21 +233,21 @@ Supported resolutions affect available timeframes too. The timeframe will not be
 
 ## intraday_multipliers
 
-*Default:* `[]`
+_Default:_ `[]`
 
 Array of resolutions (in minutes) supported directly by the data feed.
-Each such resolution may be passed to, and should be implemented by, [getBars](JS-Api#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest).
+Each such resolution may be passed to, and should be implemented by, [getBars](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest).
 The default of `[]` means that the data feed supports aggregating by any number of minutes.
 
-If the data feed only supports certain minute resolutions but not the requested resolution, [getBars](JS-Api#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest) will be called (repeatedly if needed) with a higher resolution as a parameter, in order to build the requested resolution.
+If the data feed only supports certain minute resolutions but not the requested resolution, [getBars](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest) will be called (repeatedly if needed) with a higher resolution as a parameter, in order to build the requested resolution.
 
 For example, if the data feed only supports minute resolution, set `intraday_multipliers` to `['1']`.
 
-When the user wants to see 5-minute data, [getBars](JS-Api#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest) will be called with the resolution set to 1 until the library builds all the 5-minute resolution by itself.
+When the user wants to see 5-minute data, [getBars](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest) will be called with the resolution set to 1 until the library builds all the 5-minute resolution by itself.
 
 ## has_seconds
 
-*Default:* `false`
+_Default:_ `false`
 
 Boolean value showing whether the symbol includes seconds in the historical data.
 
@@ -258,7 +257,7 @@ If it is set to `true`, all resolutions that are supplied directly by the data f
 
 ## seconds_multipliers
 
-*Default:* `[]`
+_Default:_ `[]`
 
 It is an array containing resolutions that include seconds (excluding postfix) that the data feed provides.
 
@@ -266,7 +265,7 @@ E.g., if the data feed supports resolutions such as `["1S", "5S", "15S"]`, but h
 
 ## has_daily
 
-*Default:* `false`
+_Default:_ `false`
 
 The boolean value showing whether data feed has its own daily resolution bars or not.
 
@@ -274,7 +273,7 @@ If `has_daily` = `false` then Charting Library will build the respective resolut
 
 ## has_weekly_and_monthly
 
-*Default:* `false`
+_Default:_ `false`
 
 The boolean value showing whether data feed has its own weekly and monthly resolution bars or not.
 
@@ -282,7 +281,7 @@ If `has_weekly_and_monthly` = `false` then Charting Library will build the respe
 
 ## has_empty_bars
 
-*Default:* `false`
+_Default:_ `false`
 
 The boolean value showing whether the library should generate empty bars in the session when there is no data from the data feed for this particular time.
 
@@ -290,7 +289,7 @@ I.e., if your session is `0900-1600` and your data has gaps between `11:00` and 
 
 ## force_session_rebuild
 
-*Default:* `true`
+_Default:_ `true`
 
 The boolean value showing whether the library should filter bars using the current trading session.
 
@@ -300,13 +299,13 @@ If `true`, then the Library will remove bars that don't belong to the trading se
 
 ## has_no_volume
 
-*Default:* `false`
+_Default:_ `false`
 
 Boolean showing whether the symbol includes volume data or not.
 
 ## volume_precision
 
-*Default:* `0`
+_Default:_ `0`
 
 Integer showing typical volume value decimal places for a particular symbol. 0 means volume is always an integer. 1 means that there might be 1 numeric character after the comma.
 
@@ -314,7 +313,7 @@ Integer showing typical volume value decimal places for a particular symbol. 0 m
 
 The status code of a series with this symbol. The status is shown in the upper right corner of a chart.
 
-*Supported statuses are:*
+_Supported statuses are:_
 
 - `streaming`
 - `endofday`
@@ -323,7 +322,7 @@ The status code of a series with this symbol. The status is shown in the upper r
 
 ## expired
 
-*Default:* `false`
+_Default:_ `false`
 
 Boolean value showing whether this symbol is an expired futures contract or not.
 

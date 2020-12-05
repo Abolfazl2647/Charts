@@ -26,7 +26,7 @@ Clears current selection and selects an object specified by. `set(id)` is the sa
 
 1. `ids` is an array of `entityId`
 
-Clears current selection and selects objects specified by `ids`. `ids` is an array of drawings or studies IDs. `set(ids)`  is the same as `clear();add(ids)`. If any of the objects does not exist, an error is thrown.
+Clears current selection and selects objects specified by `ids`. `ids` is an array of drawings or studies IDs. `set(ids)` is the same as `clear();add(ids)`. If any of the objects does not exist, an error is thrown.
 
 ### remove(id)
 
@@ -56,22 +56,25 @@ Checks if the selection is empty. It returns `true` if there is no selected obje
 
 ### onChanged()
 
-Returns a [Subscription](Subscription) object that can be used to subscribe to the selection changes.
+Returns a [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription) object that can be used to subscribe to the selection changes.
 
 **Multiple selection:**
 
 Multiple selection works for shapes only using the following rules:
 
-* If you add a study to the selection, then it clears the selection and selects the study.
-* If you add a shape to the selection when the currently selected object is a study, then it clears the selection and selects the shape.
-* If you add an array of objects to the selection, it works as if you add these objects one by one.
+- If you add a study to the selection, then it clears the selection and selects the study.
+- If you add a shape to the selection when the currently selected object is a study, then it clears the selection and selects the shape.
+- If you add an array of objects to the selection, it works as if you add these objects one by one.
 
 **Example:**
 
 ```javascript
 var chart = tvWidget.activeChart();
-chart.selection().onChanged().subscribe(null, s => console.log(chart.selection().allSources()));      // it will print all selection changes to the console
-var studyId = chart.createStudy("Moving Average", false, false, [10]);  // create a study and save its id
-chart.selection().add(studyId);                                         // add the study to the selection ([<id>] is printed to the console)
-chart.selection().clear();                                              // clear the selection ([] is printed to the console)
+chart
+  .selection()
+  .onChanged()
+  .subscribe(null, (s) => console.log(chart.selection().allSources())); // it will print all selection changes to the console
+var studyId = chart.createStudy("Moving Average", false, false, [10]); // create a study and save its id
+chart.selection().add(studyId); // add the study to the selection ([<id>] is printed to the console)
+chart.selection().clear(); // clear the selection ([] is printed to the console)
 ```

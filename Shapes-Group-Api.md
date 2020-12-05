@@ -13,29 +13,29 @@ All operations available through the Shapes Group API go through the undo stack.
 
 ## Methods
 
-* [Manipulating groups](#manipulating-groups)
-  * [createGroupFromSelection()](#creategroupfromselection)
-  * [removeGroup(groupId)](#removegroupgroupid)
-  * [groups()](#groups)
-  * [shapesInGroup(groupId)](#shapesingroupgroupid)
-  * [excludeShapeFromGroup(groupId, shapeId)](#excludeshapefromgroupgroupid-shapeid)
-* [Z-Order operations](#z-order-operations)
-  * [availableZOrderOperations(groupId)](#availablezorderoperationsgroupid)
-  * [bringToFront(groupId)](#bringtofrontgroupId)
-  * [sendToBack(groupId)](#sendtobackgroupId)
-  * [bringForward(groupId)](#bringforwardgroupid)
-  * [sendBackward(groupId)](#sendbackwardgroupid)
-  * [insertAfter(groupId, target)](#insertaftergroupid-target)
-  * [insertBefore(groupId, target)](#insertbeforegroupid-target)
-* [Batch shapes operations](#batch-shapes-operations)
-  * [groupVisibility(groupId)](#groupvisibilitygroupId)
-  * [setGroupVisibility(groupId, value)](#setgroupvisibilitygroupId-value)
-  * [groupLock(groupId)](#grouplockgroupId)
-  * [setGroupLock(groupId, value)](#setgrouplockgroupid-value)
-* [Groups information methods](#groups-information-methods)
-  * [getGroupName(groupId)](#getgroupnamegroupId)
-  * [setGroupName(groupId, name)](#setgroupnamegroupid-name)
-  * [canBeGroupped(entities)](#canBeGrouppedentities)
+- [Manipulating groups](https://github.com/Abolfazl2647/Charts/blob/main/#manipulating-groups)
+  - [createGroupFromSelection()](https://github.com/Abolfazl2647/Charts/blob/main/#creategroupfromselection)
+  - [removeGroup(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#removegroupgroupid)
+  - [groups()](https://github.com/Abolfazl2647/Charts/blob/main/#groups)
+  - [shapesInGroup(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#shapesingroupgroupid)
+  - [excludeShapeFromGroup(groupId, shapeId)](https://github.com/Abolfazl2647/Charts/blob/main/#excludeshapefromgroupgroupid-shapeid)
+- [Z-Order operations](https://github.com/Abolfazl2647/Charts/blob/main/#z-order-operations)
+  - [availableZOrderOperations(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#availablezorderoperationsgroupid)
+  - [bringToFront(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#bringtofrontgroupId)
+  - [sendToBack(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#sendtobackgroupId)
+  - [bringForward(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#bringforwardgroupid)
+  - [sendBackward(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#sendbackwardgroupid)
+  - [insertAfter(groupId, target)](https://github.com/Abolfazl2647/Charts/blob/main/#insertaftergroupid-target)
+  - [insertBefore(groupId, target)](https://github.com/Abolfazl2647/Charts/blob/main/#insertbeforegroupid-target)
+- [Batch shapes operations](https://github.com/Abolfazl2647/Charts/blob/main/#batch-shapes-operations)
+  - [groupVisibility(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#groupvisibilitygroupId)
+  - [setGroupVisibility(groupId, value)](https://github.com/Abolfazl2647/Charts/blob/main/#setgroupvisibilitygroupId-value)
+  - [groupLock(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#grouplockgroupId)
+  - [setGroupLock(groupId, value)](https://github.com/Abolfazl2647/Charts/blob/main/#setgrouplockgroupid-value)
+- [Groups information methods](https://github.com/Abolfazl2647/Charts/blob/main/#groups-information-methods)
+  - [getGroupName(groupId)](https://github.com/Abolfazl2647/Charts/blob/main/#getgroupnamegroupId)
+  - [setGroupName(groupId, name)](https://github.com/Abolfazl2647/Charts/blob/main/#setgroupnamegroupid-name)
+  - [canBeGroupped(entities)](https://github.com/Abolfazl2647/Charts/blob/main/#canBeGrouppedentities)
 
 ## Manipulating groups
 
@@ -43,9 +43,9 @@ All operations available through the Shapes Group API go through the undo stack.
 
 Creates a group from selected shapes. Throws an error if one of the following occurs:
 
-* a selection is empty
-* a selection contains non-shapes
-* a selection contains shapes from more that one pane
+- a selection is empty
+- a selection contains non-shapes
+- a selection contains shapes from more that one pane
 
 This function moves all the shapes to the top one, while keeping their order.
 The function returns an ID of a newly created group.
@@ -81,10 +81,10 @@ When the last shape is removed from a group, the group is automatically removed.
 
 Returns an object with Z-order operations available for the specified group. This structure has the following fields:
 
-* `bringForwardEnabled`: true if one can bring a specified group forward
-* `bringToFrontEnabled`: true if one can bring a specified group to front
-* `sendBackwardEnabled`: true if one can send a specified group backward
-* `sendToBackEnabled`: true if one can send a specified group to back
+- `bringForwardEnabled`: true if one can bring a specified group forward
+- `bringToFrontEnabled`: true if one can bring a specified group to front
+- `sendBackwardEnabled`: true if one can send a specified group backward
+- `sendToBackEnabled`: true if one can send a specified group to back
 
 ### bringToFront(groupId)
 

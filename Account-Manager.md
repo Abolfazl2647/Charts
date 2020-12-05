@@ -1,11 +1,11 @@
-:chart: All content on this page is relevant to [Trading Terminal](Trading-Terminal) only.
+:chart: All content on this page is relevant to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
 
 Account Manager is an interactive table that displays trading information.
 It includes 3 pages: orders/positions and account information.
 
 To create an account manager you will need to describe columns of each page and provide data.
 
-Remark 1. [Broker API](Broker-API) should implement [accountManagerInfo](Broker-API#accountmanagerinfo)
+Remark 1. [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API) should implement [accountManagerInfo](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#accountmanagerinfo)
 
 <!--
 Be sure that you have the following structure:
@@ -17,7 +17,7 @@ Be sure that you have the following structure:
 
 # Account Manager Meta Information
 
-The following information should be returned by [accountManagerInfo](Broker-API#accountManagerInfo).
+The following information should be returned by [accountManagerInfo](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#accountManagerInfo).
 
 ## Account Manager header
 
@@ -27,7 +27,7 @@ Account Manager's header includes the name of the broker and an account name or 
 
 ### accountsList: array of AccountInfo
 
-### account: [WatchedValue](WatchedValue) of AccountInfo
+### account: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) of AccountInfo
 
 `AccountInfo` is an object with the following keys:
 
@@ -39,36 +39,36 @@ If the `currency` key is not set, `USD` will be used as a default value.
 
 ## Orders Page
 
-### orderColumns: array of [Column](#column-description)
+### orderColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
 
 Columns description that you want to be displayed on the Orders page.
-You can display any field of an [order](Trading-Objects-and-Constants#order) or add your own fields to an order object and display them.
+You can display any field of an [order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order) or add your own fields to an order object and display them.
 
-### orderColumnsSorting: [SortingParameters](#sortingparameters)
+### orderColumnsSorting: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/#sortingparameters)
 
 Optional sorting of the table. If it is not set, the table is sorted by the first column.
 
-### possibleOrderStatuses: array of [OrderStatus](Trading-Objects-and-Constants#orderstatus)
+### possibleOrderStatuses: array of [OrderStatus](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#orderstatus)
 
 Optional list of statuses to be used in the orders filter. Default list is used if it hasn't been set.
 
-### historyColumns: array of [Column](#column-description)
+### historyColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
 
 History page will be displayed if it exists. All orders from previous sessions will be shown in the History.
 
-### historyColumnsSorting: [SortingParameters](#sortingparameters)
+### historyColumnsSorting: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/#sortingparameters)
 
 Optional sorting of the table. If it is not set, the table is sorted by the first column.
 
 ## Positions Page
 
-### positionColumns: array of [Column](#column-description)
+### positionColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
 
-You can display any field of a [position](Trading-Objects-and-Constants#position) or add your own fields to a position object and display them.
+You can display any field of a [position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position) or add your own fields to a position object and display them.
 
 ## Additional Pages (e.g. Account Summary)
 
-### pages: array of [Page](#page)
+### pages: array of [Page](https://github.com/Abolfazl2647/Charts/blob/main/#page)
 
 You can add new tabs in the Account Manager by using `pages`. Each tab is a set of tables.
 
@@ -78,46 +78,46 @@ You can add new tabs in the Account Manager by using `pages`. Each tab is a set 
 
 1. `id`: String
 
-    Unique identifier of a page
+   Unique identifier of a page
 
 1. `title`: String
 
-    Page title. It is the tab name.
+   Page title. It is the tab name.
 
-1. `tables`: Array of [Table](#table).
+1. `tables`: Array of [Table](https://github.com/Abolfazl2647/Charts/blob/main/#table).
 
-    It is possible to display one or more tables in this tab.
+   It is possible to display one or more tables in this tab.
 
 #### Table
 
-You can add one or more tables to a [Page](#page).
+You can add one or more tables to a [Page](https://github.com/Abolfazl2647/Charts/blob/main/#page).
 Account Summary table metainfo is an object with the following fields:
 
 1. `id`: String
 
-    Unique identifier of a table.
+   Unique identifier of a table.
 
 1. `title`: String
 
-    Optional title of a table.
+   Optional title of a table.
 
-1. `columns`: array of [Column](#column-description)
+1. `columns`: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
 
 1. `getData`: Promise
 
-    This function is used to request table data. It should return Promise (or Deferred) and resolve it with an array of data rows.
+   This function is used to request table data. It should return Promise (or Deferred) and resolve it with an array of data rows.
 
-    Each row is an object. Keys of this object are column names with the corresponding values.
+   Each row is an object. Keys of this object are column names with the corresponding values.
 
-    There is a predefined field `isTotalRow` which can be used to mark a row that should be at the bottom of a table.
+   There is a predefined field `isTotalRow` which can be used to mark a row that should be at the bottom of a table.
 
-1. `changeDelegate` : [Delegate](Delegate)
+1. `changeDelegate` : [Delegate](https://github.com/Abolfazl2647/Charts/blob/main/Delegate)
 
-    This delegate is used to watch the data changes and update the table. Pass new account manager data to `fire` method of the delegate.
+   This delegate is used to watch the data changes and update the table. Pass new account manager data to `fire` method of the delegate.
 
-1. `initialSorting`: [SortingParameters](#sortingparameters)
+1. `initialSorting`: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/#sortingparameters)
 
-    Optional sorting of the table. If it is not set, the table is sorted by the first column.
+   Optional sorting of the table. If it is not set, the table is sorted by the first column.
 
 **NOTE**: if you have more than 1 row in a table and want to update a row using `changeDelegate` make sure that you have `id` field in each row to identify it.
 It is not necessary if you have only 1 row in a table.
@@ -138,10 +138,10 @@ Optional array to define custom formatters. Each description is an object with t
 - `name`: unique identifier of a formatter.
 
 - `format(options)`: function that is used for formatting of a cell value. `options` is an object with the following keys:
-    1. `value` - value to be formatted
-    1. `priceFormatter` - standard formatter for price. You can use method `format(price)` to prepare price value.
-    1. `prevValue` - optional field. It is a previous value so you can compare and format accordingly. It exists if current column has the `highlightDiff: true` key.
-    1. `row` - object with all key/value pairs from the current row
+  1. `value` - value to be formatted
+  1. `priceFormatter` - standard formatter for price. You can use method `format(price)` to prepare price value.
+  1. `prevValue` - optional field. It is a previous value so you can compare and format accordingly. It exists if current column has the `highlightDiff: true` key.
+  1. `row` - object with all key/value pairs from the current row
 
 ## Column description
 
@@ -158,11 +158,11 @@ You can use it to customize table's style.
 
 Here is a list of predefined classes:
 
-| class name   |   description  |
-|--------------|----------------|
-| `tv-data-table__cell--symbol-cell` | Special formatter for a symbol field |
-| `tv-data-table__cell--right-align` | It aligns cell value to the right |
-| `tv-data-table__cell--buttons-cell` | Cell with a buttons |
+| class name                          | description                          |
+| ----------------------------------- | ------------------------------------ |
+| `tv-data-table__cell--symbol-cell`  | Special formatter for a symbol field |
+| `tv-data-table__cell--right-align`  | It aligns cell value to the right    |
+| `tv-data-table__cell--buttons-cell` | Cell with a buttons                  |
 
 ### formatter
 
@@ -171,23 +171,23 @@ Formatter can be a default or a custom one.
 
 Here is the list of default formatters:
 
-| name | description |
-| ---- | ----------- |
-| `symbol` | It is used for a symbol field. It displays `brokerSymbol`, but when you click on a symbol the chart changes according to the `symbol` field. `property` key is ignored.|
-| `side` | It is used to display the side: Sell or Buy. |
-| `type` | It is used to display the type of order: Limit/Stop/StopLimit/Market. |
-| `formatPrice` | Symbol price formatting. |
-| `formatQuantity` | Displays an integer or floating point quantity, separates thousands groups with a space. |
-| `formatPriceForexSup` | The same as `formatPrice`, but it makes the last character of the price superscripted. It works only if instrument type is set to `forex`.|
-| `status` | It is used to format the `status`. |
-| `date` | Displays the date or time. |
-| `localDate` | Displays the local date or time. |
-| `dateOrDateTime` | Displays the date or date and time. This formatter accepts an object `{value: number, hasTime: boolean}`. If `hasTime` is set to `true` then the date and time are displayed. Otherwise only the date is displayed.|
-| `localDateOrDateTime` | The same as `dateOrDateTime`, but it displays time in the local timezone. |
-| `fixed` | Displays a number with 2 decimal places. |
-| `variablePrecision` | Displays a number with variable precision. |
-| `pips` | Displays a number with 1 decimal place. |
-| `profit` | Displays profit. It also adds the `+` sign, separates thousands and changes the cell text color to red or green. |
+| name                  | description                                                                                                                                                                                                         |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `symbol`              | It is used for a symbol field. It displays `brokerSymbol`, but when you click on a symbol the chart changes according to the `symbol` field. `property` key is ignored.                                             |
+| `side`                | It is used to display the side: Sell or Buy.                                                                                                                                                                        |
+| `type`                | It is used to display the type of order: Limit/Stop/StopLimit/Market.                                                                                                                                               |
+| `formatPrice`         | Symbol price formatting.                                                                                                                                                                                            |
+| `formatQuantity`      | Displays an integer or floating point quantity, separates thousands groups with a space.                                                                                                                            |
+| `formatPriceForexSup` | The same as `formatPrice`, but it makes the last character of the price superscripted. It works only if instrument type is set to `forex`.                                                                          |
+| `status`              | It is used to format the `status`.                                                                                                                                                                                  |
+| `date`                | Displays the date or time.                                                                                                                                                                                          |
+| `localDate`           | Displays the local date or time.                                                                                                                                                                                    |
+| `dateOrDateTime`      | Displays the date or date and time. This formatter accepts an object `{value: number, hasTime: boolean}`. If `hasTime` is set to `true` then the date and time are displayed. Otherwise only the date is displayed. |
+| `localDateOrDateTime` | The same as `dateOrDateTime`, but it displays time in the local timezone.                                                                                                                                           |
+| `fixed`               | Displays a number with 2 decimal places.                                                                                                                                                                            |
+| `variablePrecision`   | Displays a number with variable precision.                                                                                                                                                                          |
+| `pips`                | Displays a number with 1 decimal place.                                                                                                                                                                             |
+| `profit`              | Displays profit. It also adds the `+` sign, separates thousands and changes the cell text color to red or green.                                                                                                    |
 
 There are some special formatters that are used to add buttons to the table:
 

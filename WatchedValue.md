@@ -1,4 +1,4 @@
-WatchedValue object is returned by some methods of the [Trading Terminal](Trading-Terminal). Using this object you can get/set some value and be notified when the value is changed.
+WatchedValue object is returned by some methods of the [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal). Using this object you can get/set some value and be notified when the value is changed.
 
 ### value()
 
@@ -12,8 +12,8 @@ Sets new value.
 
 1. `callback` is a function to be called when the value is changed
 1. `options` is an object with the following properties:
-    1. `once` - if it is set to true then the callback will be executed only once
-    1. `callWithLast` - if it is set to true then the callback will be executed with the previous value (if available)
+   1. `once` - if it is set to true then the callback will be executed only once
+   1. `callWithLast` - if it is set to true then the callback will be executed with the previous value (if available)
 
 ### unsubscribe(callback)
 

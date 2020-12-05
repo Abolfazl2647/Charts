@@ -5,73 +5,73 @@ Below is the list of methods that the widget supports. You can call them using t
 Example:
 
 ```javascript
-widget.onChartReady(function() {
-    // It's now safe to call any other methods of the widget
+widget.onChartReady(function () {
+  // It's now safe to call any other methods of the widget
 });
 ```
 
 ## Methods
 
-* [Subscribing To Chart Events](#subscribing-to-chart-events)
-  * [onChartReady(callback)](#onchartreadycallback)
-  * [headerReady()](#headerready)
-  * [onGrayedObjectClicked(callback)](#ongrayedobjectclickedcallback)
-  * [onShortcut(shortcut, callback)](#onshortcutshortcut-callback)
-  * [subscribe(event, callback)](#subscribeevent-callback)
-  * [unsubscribe(event, callback)](#unsubscribeevent-callback)
-* [Chart Actions](#chart-actions)
-  * [chart()](#chart)
-  * [setLanguage(locale)](#setlanguagelocale)
-  * [setSymbol(symbol, interval, callback)](#setsymbolsymbol-interval-callback)
-  * [remove()](#remove)
-  * [closePopupsAndDialogs()](#closepopupsanddialogs)
-  * [selectLineTool(drawingId)](#selectlinetooldrawingid)
-  * [selectedLineTool()](#selectedlinetool)
-  * [takeScreenshot()](#takescreenshot)
-  * [lockAllDrawingTools](#lockalldrawingtools)
-  * [hideAllDrawingTools](#hidealldrawingtools)
-  * [magnetEnabled](#magnetenabled)
-  * [magnetMode](#magnetmode)
-* [Saving/Loading Charts](#savingloading-charts)
-  * [save(callback)](#savecallback)
-  * [load(state)](#loadstate)
-  * [getSavedCharts(callback)](#getsavedchartscallback)
-  * [loadChartFromServer(chartRecord)](#loadchartfromserverchartrecord)
-  * [saveChartToServer(onCompleteCallback, onFailCallback, options)](#savecharttoserveroncompletecallback-onfailcallback-options)
-  * [removeChartFromServer(chartId, onCompleteCallback)](#removechartfromserverchartid-oncompletecallback)
-* [Custom UI Controls](#custom-ui-controls)
-  * [onContextMenu(callback)](#oncontextmenucallback)
-  * [createButton(options)](#createbuttonoptions)
-* [Dialogs](#dialogs)
-  * [showNoticeDialog(params)](#shownoticedialogparams)
-  * [showConfirmDialog(params)](#showconfirmdialogparams)
-  * [showLoadChartDialog()](#showloadchartdialog)
-  * [showSaveAsChartDialog()](#showsaveaschartdialog)
-* [Getters](#getters)
-  * [symbolInterval(callback)](#symbolinterval)
-  * [mainSeriesPriceFormatter()](#mainseriespriceformatter)
-  * [getIntervals()](#getintervals)
-  * [getStudiesList()](#getstudieslist)
-  * [undoRedoState()](#undoredostate)
-  * [getTheme()](#gettheme)
-* [Customization](#customization)
-  * [changeTheme(themeName, options)](#changethemethemename-options)
-  * [addCustomCSSFile(url)](#addcustomcssfileurl)
-  * [applyOverrides(overrides)](#applyoverridesoverrides)
-  * [applyStudiesOverrides(overrides)](#applystudiesoverridesoverrides)
-* :chart: [Trading Terminal only](#chart-trading-terminal-only)
-  * [watchList()](#chart-watchlist)
-* :chart: [Multiple Charts Layout](#chart-multiple-charts-layout)
-  * [chart(index)](#chart-chartindex)
-  * [activeChart()](#chart-activechart)
-  * [chartsCount()](#chart-chartscount)
-  * [layout()](#chart-layout)
-  * [setLayout(layout)](#chart-setlayoutlayout)
-  * [layoutName()](#chart-layoutName)
-  * [symbolSync()](#chart-symbolsync)
-  * [intervalSync()](#chart-intervalsync)
-  * [crosshairSync()](#chart-crosshairsync)
-  * [timeSync()](#chart-timesync)
+- [Subscribing To Chart Events](https://github.com/Abolfazl2647/Charts/blob/main/#subscribing-to-chart-events)
+  - [onChartReady(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#onchartreadycallback)
+  - [headerReady()](https://github.com/Abolfazl2647/Charts/blob/main/#headerready)
+  - [onGrayedObjectClicked(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#ongrayedobjectclickedcallback)
+  - [onShortcut(shortcut, callback)](https://github.com/Abolfazl2647/Charts/blob/main/#onshortcutshortcut-callback)
+  - [subscribe(event, callback)](https://github.com/Abolfazl2647/Charts/blob/main/#subscribeevent-callback)
+  - [unsubscribe(event, callback)](https://github.com/Abolfazl2647/Charts/blob/main/#unsubscribeevent-callback)
+- [Chart Actions](https://github.com/Abolfazl2647/Charts/blob/main/#chart-actions)
+  - [chart()](https://github.com/Abolfazl2647/Charts/blob/main/#chart)
+  - [setLanguage(locale)](https://github.com/Abolfazl2647/Charts/blob/main/#setlanguagelocale)
+  - [setSymbol(symbol, interval, callback)](https://github.com/Abolfazl2647/Charts/blob/main/#setsymbolsymbol-interval-callback)
+  - [remove()](https://github.com/Abolfazl2647/Charts/blob/main/#remove)
+  - [closePopupsAndDialogs()](https://github.com/Abolfazl2647/Charts/blob/main/#closepopupsanddialogs)
+  - [selectLineTool(drawingId)](https://github.com/Abolfazl2647/Charts/blob/main/#selectlinetooldrawingid)
+  - [selectedLineTool()](https://github.com/Abolfazl2647/Charts/blob/main/#selectedlinetool)
+  - [takeScreenshot()](https://github.com/Abolfazl2647/Charts/blob/main/#takescreenshot)
+  - [lockAllDrawingTools](https://github.com/Abolfazl2647/Charts/blob/main/#lockalldrawingtools)
+  - [hideAllDrawingTools](https://github.com/Abolfazl2647/Charts/blob/main/#hidealldrawingtools)
+  - [magnetEnabled](https://github.com/Abolfazl2647/Charts/blob/main/#magnetenabled)
+  - [magnetMode](https://github.com/Abolfazl2647/Charts/blob/main/#magnetmode)
+- [Saving/Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/#savingloading-charts)
+  - [save(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#savecallback)
+  - [load(state)](https://github.com/Abolfazl2647/Charts/blob/main/#loadstate)
+  - [getSavedCharts(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#getsavedchartscallback)
+  - [loadChartFromServer(chartRecord)](https://github.com/Abolfazl2647/Charts/blob/main/#loadchartfromserverchartrecord)
+  - [saveChartToServer(onCompleteCallback, onFailCallback, options)](https://github.com/Abolfazl2647/Charts/blob/main/#savecharttoserveroncompletecallback-onfailcallback-options)
+  - [removeChartFromServer(chartId, onCompleteCallback)](https://github.com/Abolfazl2647/Charts/blob/main/#removechartfromserverchartid-oncompletecallback)
+- [Custom UI Controls](https://github.com/Abolfazl2647/Charts/blob/main/#custom-ui-controls)
+  - [onContextMenu(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#oncontextmenucallback)
+  - [createButton(options)](https://github.com/Abolfazl2647/Charts/blob/main/#createbuttonoptions)
+- [Dialogs](https://github.com/Abolfazl2647/Charts/blob/main/#dialogs)
+  - [showNoticeDialog(params)](https://github.com/Abolfazl2647/Charts/blob/main/#shownoticedialogparams)
+  - [showConfirmDialog(params)](https://github.com/Abolfazl2647/Charts/blob/main/#showconfirmdialogparams)
+  - [showLoadChartDialog()](https://github.com/Abolfazl2647/Charts/blob/main/#showloadchartdialog)
+  - [showSaveAsChartDialog()](https://github.com/Abolfazl2647/Charts/blob/main/#showsaveaschartdialog)
+- [Getters](https://github.com/Abolfazl2647/Charts/blob/main/#getters)
+  - [symbolInterval(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#symbolinterval)
+  - [mainSeriesPriceFormatter()](https://github.com/Abolfazl2647/Charts/blob/main/#mainseriespriceformatter)
+  - [getIntervals()](https://github.com/Abolfazl2647/Charts/blob/main/#getintervals)
+  - [getStudiesList()](https://github.com/Abolfazl2647/Charts/blob/main/#getstudieslist)
+  - [undoRedoState()](https://github.com/Abolfazl2647/Charts/blob/main/#undoredostate)
+  - [getTheme()](https://github.com/Abolfazl2647/Charts/blob/main/#gettheme)
+- [Customization](https://github.com/Abolfazl2647/Charts/blob/main/#customization)
+  - [changeTheme(themeName, options)](https://github.com/Abolfazl2647/Charts/blob/main/#changethemethemename-options)
+  - [addCustomCSSFile(url)](https://github.com/Abolfazl2647/Charts/blob/main/#addcustomcssfileurl)
+  - [applyOverrides(overrides)](https://github.com/Abolfazl2647/Charts/blob/main/#applyoverridesoverrides)
+  - [applyStudiesOverrides(overrides)](https://github.com/Abolfazl2647/Charts/blob/main/#applystudiesoverridesoverrides)
+- :chart: [Trading Terminal only](https://github.com/Abolfazl2647/Charts/blob/main/#chart-trading-terminal-only)
+  - [watchList()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-watchlist)
+- :chart: [Multiple Charts Layout](https://github.com/Abolfazl2647/Charts/blob/main/#chart-multiple-charts-layout)
+  - [chart(index)](https://github.com/Abolfazl2647/Charts/blob/main/#chart-chartindex)
+  - [activeChart()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-activechart)
+  - [chartsCount()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-chartscount)
+  - [layout()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-layout)
+  - [setLayout(layout)](https://github.com/Abolfazl2647/Charts/blob/main/#chart-setlayoutlayout)
+  - [layoutName()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-layoutName)
+  - [symbolSync()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-symbolsync)
+  - [intervalSync()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-intervalsync)
+  - [crosshairSync()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-crosshairsync)
+  - [timeSync()](https://github.com/Abolfazl2647/Charts/blob/main/#chart-timesync)
 
 ## Subscribing To Chart Events
 
@@ -84,15 +84,15 @@ You can safely call all other methods starting from this moment.
 
 ### headerReady()
 
-Returns a `Promise` object that should be used to handle an event when the Charting Library header widget API is ready (e.g. [createButton](#createbuttonoptions)).
+Returns a `Promise` object that should be used to handle an event when the Charting Library header widget API is ready (e.g. [createButton](https://github.com/Abolfazl2647/Charts/blob/main/#createbuttonoptions)).
 The `Promise` object became available in 2015 which is why some older browsers, such as Internet Explorer do not support it. The Charting Library contains polyfills inside the iFrame only. Therefore, if you want to use this method in IE11, you should be adding the `Promise` polyfill.
 
 ### onGrayedObjectClicked(callback)
 
 1. `callback`: function(subject)
-    1. `subject`: object `{type, name}`
-        * `type`: `drawing` | `study`
-        * `name`: string, name of a clicked subject
+   1. `subject`: object `{type, name}`
+      - `type`: `drawing` | `study`
+      - `name`: string, name of a clicked subject
 
 The Library will call the `callback` function every time a user clicks on a grayed out object.
 
@@ -137,7 +137,7 @@ The Library will call the `callback` function every time the shortcut key is pre
 Example:
 
 ```javascript
-widget.onShortcut("alt+s", function() {
+widget.onShortcut("alt+s", function () {
   widget.chart().executeActionById("symbolSearch");
 });
 ```
@@ -146,41 +146,41 @@ widget.onShortcut("alt+s", function() {
 
 1. `event`: can be
 
-| Event name | Library Version | Description |
-|------------|-----------------|-------------|
-| `toggle_sidebar` | | Drawing toolbar is shown/hidden |
-| `indicators_dialog` | | Indicators dialog is shown |
-| `toggle_header` | | Chart header is shown/hidden |
-| `edit_object_dialog` | | Chart/Study Properties dialog is shown |
-| `chart_load_requested` | | New chart is about to be loaded |
-| `chart_loaded` | | |
-| `mouse_down` | | |
-| `mouse_up` | | |
-| `drawing` | 1.7 | A drawing is added to a chart. The arguments contain an object with the `value` field that corresponds with the name of the drawing. |
-| `study` | 1.7 | An indicator is added to a chart. The arguments contain an object with the `value` field that corresponds with the name of the indicator. |
-| `undo` | 1.7 | |
-| `redo` | 1.7 | |
-| `undo_redo_state_changed` | 1.14 | The Undo/Redo state has been changed. The arguments contain an object with the state of the Undo/Redo stack. This object has the same structure as the result of [UndoRedoState](Widget-Methods#undoredostate) method |
-| `reset_scales` | 1.7 | Reset scales button is clicked |
-| `compare_add` | 1.7 | A compare dialog is shown |
-| `add_compare` | 1.7 | A compare instrument is added |
-| `load_study` template | 1.7 | A study template is loaded |
-| `onTick` | | Last bar is updated |
-| `onAutoSaveNeeded` | | User changed the chart. `Chart change` means any user action that can be undone. The callback function will not be called more than once every 5 seconds. See also [auto_save_delay](Widget-Constructor#auto_save_delay) |
-| `onScreenshotReady` | | A screenshot URL is returned by the server |
-| `onMarkClick` | | User clicked a [mark on a bar](Marks#marks-on-bars). Mark ID will be passed as an argument |
-| `onTimescaleMarkClick` | | User clicked a [timescale mark](Marks#marks-on-the-timescale). Mark ID will be passed as an argument |
-| `onSelectedLineToolChanged` | | Selected line tool is changed |
-| `study_event` | 1.15 | An event related to the study. The callback function receives two arguments: a study ID and an event type (currently possible values for this argument are `remove` and at version 1.16 - `price_scale_changed`) |
-| `series_event` | 1.16 | An event related to the series. The callback function receives an argument - an event type (currently the only possible value for this argument is `price_scale_changed`) |
-| `drawing_event` | 1.15 | Drawing was hidden, shown, moved, removed, or clicked. The callback function will receive two arguments: a drawing ID and an event type. Possible values of the event type argument are `hide`, `show`, `move`, `remove`, `click` |
-| `study_properties_changed` | 1.14 | Study properties are changed. Entity ID will be passed as an argument |
-| `series_properties_changed` | 1.15 | Main series properties are changed. |
-| `panes_height_changed` | 1.15 | Panes' size is changed. |
-| `panes_order_changed` | 1.15 | Panes' order is changed. |
-| :chart: `layout_about_to_be_changed` | | Amount or placement of the charts is about to be changed |
-| :chart: `layout_changed` | | Amount or placement of the charts is changed |
-| :chart: `activeChartChanged` | | Active chart is changed |
+| Event name                           | Library Version | Description                                                                                                                                                                                                                                                               |
+| ------------------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `toggle_sidebar`                     |                 | Drawing toolbar is shown/hidden                                                                                                                                                                                                                                           |
+| `indicators_dialog`                  |                 | Indicators dialog is shown                                                                                                                                                                                                                                                |
+| `toggle_header`                      |                 | Chart header is shown/hidden                                                                                                                                                                                                                                              |
+| `edit_object_dialog`                 |                 | Chart/Study Properties dialog is shown                                                                                                                                                                                                                                    |
+| `chart_load_requested`               |                 | New chart is about to be loaded                                                                                                                                                                                                                                           |
+| `chart_loaded`                       |                 |                                                                                                                                                                                                                                                                           |
+| `mouse_down`                         |                 |                                                                                                                                                                                                                                                                           |
+| `mouse_up`                           |                 |                                                                                                                                                                                                                                                                           |
+| `drawing`                            | 1.7             | A drawing is added to a chart. The arguments contain an object with the `value` field that corresponds with the name of the drawing.                                                                                                                                      |
+| `study`                              | 1.7             | An indicator is added to a chart. The arguments contain an object with the `value` field that corresponds with the name of the indicator.                                                                                                                                 |
+| `undo`                               | 1.7             |                                                                                                                                                                                                                                                                           |
+| `redo`                               | 1.7             |                                                                                                                                                                                                                                                                           |
+| `undo_redo_state_changed`            | 1.14            | The Undo/Redo state has been changed. The arguments contain an object with the state of the Undo/Redo stack. This object has the same structure as the result of [UndoRedoState](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#undoredostate) method    |
+| `reset_scales`                       | 1.7             | Reset scales button is clicked                                                                                                                                                                                                                                            |
+| `compare_add`                        | 1.7             | A compare dialog is shown                                                                                                                                                                                                                                                 |
+| `add_compare`                        | 1.7             | A compare instrument is added                                                                                                                                                                                                                                             |
+| `load_study` template                | 1.7             | A study template is loaded                                                                                                                                                                                                                                                |
+| `onTick`                             |                 | Last bar is updated                                                                                                                                                                                                                                                       |
+| `onAutoSaveNeeded`                   |                 | User changed the chart. `Chart change` means any user action that can be undone. The callback function will not be called more than once every 5 seconds. See also [auto_save_delay](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#auto_save_delay) |
+| `onScreenshotReady`                  |                 | A screenshot URL is returned by the server                                                                                                                                                                                                                                |
+| `onMarkClick`                        |                 | User clicked a [mark on a bar](https://github.com/Abolfazl2647/Charts/blob/main/Marks#marks-on-bars). Mark ID will be passed as an argument                                                                                                                               |
+| `onTimescaleMarkClick`               |                 | User clicked a [timescale mark](https://github.com/Abolfazl2647/Charts/blob/main/Marks#marks-on-the-timescale). Mark ID will be passed as an argument                                                                                                                     |
+| `onSelectedLineToolChanged`          |                 | Selected line tool is changed                                                                                                                                                                                                                                             |
+| `study_event`                        | 1.15            | An event related to the study. The callback function receives two arguments: a study ID and an event type (currently possible values for this argument are `remove` and at version 1.16 - `price_scale_changed`)                                                          |
+| `series_event`                       | 1.16            | An event related to the series. The callback function receives an argument - an event type (currently the only possible value for this argument is `price_scale_changed`)                                                                                                 |
+| `drawing_event`                      | 1.15            | Drawing was hidden, shown, moved, removed, or clicked. The callback function will receive two arguments: a drawing ID and an event type. Possible values of the event type argument are `hide`, `show`, `move`, `remove`, `click`                                         |
+| `study_properties_changed`           | 1.14            | Study properties are changed. Entity ID will be passed as an argument                                                                                                                                                                                                     |
+| `series_properties_changed`          | 1.15            | Main series properties are changed.                                                                                                                                                                                                                                       |
+| `panes_height_changed`               | 1.15            | Panes' size is changed.                                                                                                                                                                                                                                                   |
+| `panes_order_changed`                | 1.15            | Panes' order is changed.                                                                                                                                                                                                                                                  |
+| :chart: `layout_about_to_be_changed` |                 | Amount or placement of the charts is about to be changed                                                                                                                                                                                                                  |
+| :chart: `layout_changed`             |                 | Amount or placement of the charts is changed                                                                                                                                                                                                                              |
+| :chart: `activeChartChanged`         |                 | Active chart is changed                                                                                                                                                                                                                                                   |
 
 1. `callback`: function(arguments)
 
@@ -195,11 +195,11 @@ Unsubscribes a previously subscribed `callback` function from a given `event` (t
 
 ### chart()
 
-Returns a chart object that you can use to call [Chart-Methods](Chart-Methods)
+Returns a chart object that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
 
 ### setLanguage(locale)
 
-1. `locale`: [language code](Localization)
+1. `locale`: [language code](https://github.com/Abolfazl2647/Charts/blob/main/Localization)
 
 Sets the language of the widget. For now, this call reloads the chart. **Please avoid using it**.
 
@@ -221,47 +221,47 @@ Calling this method closes all context menus, pop-ups or dialogs.
 
 ### selectLineTool(drawingId)
 
-1. `drawingId`: may be one of the [identifiers](Shapes-and-Overrides) or
-    1. `cursor`
-    1. `dot`
-    1. `arrow_cursor`
-    1. `eraser`
-    1. `measure`
-    1. `zoom`
-    1. `brush`
+1. `drawingId`: may be one of the [identifiers](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides) or
+   1. `cursor`
+   1. `dot`
+   1. `arrow_cursor`
+   1. `eraser`
+   1. `measure`
+   1. `zoom`
+   1. `brush`
 
 Selects a drawing or a cursor. It's the same as a single click on a drawing button.
 
 ### selectedLineTool()
 
-Returns an [identifier](Shapes-and-Overrides) of the selected drawing or cursor (see above).
+Returns an [identifier](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides) of the selected drawing or cursor (see above).
 
 ### takeScreenshot()
 
 This method creates a snapshot of the chart and uploads it to the server.
-When it is done the [onScreenshotReady](#subscribeevent-callback) callback function is called.
+When it is done the [onScreenshotReady](https://github.com/Abolfazl2647/Charts/blob/main/#subscribeevent-callback) callback function is called.
 The URL of the snapshot will be passed as an argument to the callback function.
 
 ### lockAllDrawingTools()
 
-This method returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of Lock All Drawing Tools button.
+This method returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of Lock All Drawing Tools button.
 
 ### hideAllDrawingTools()
 
-This method returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of Hide All Drawing Tools button.
+This method returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of Hide All Drawing Tools button.
 
 ### magnetEnabled()
 
-This method returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of the Magnet (enabled - `true` or disabled - `false`).
+This method returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of the Magnet (enabled - `true` or disabled - `false`).
 
 ### magnetMode()
 
-This method returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the mode of the Magnet.
+This method returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the mode of the Magnet.
 
 Available modes:
 
-* `0` - weak magnet mode
-* `1` - strong magnet mode
+- `0` - weak magnet mode
+- `1` - strong magnet mode
 
 ## Saving/Loading Charts
 
@@ -271,13 +271,13 @@ Available modes:
 
 Saves the chart state to JS object. Charting Library will call your callback function and pass the state object as an argument.
 
-This call is part of the low-level [save/load API](Saving-and-Loading-Charts).
+This call is part of the low-level [save/load API](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts).
 
 ### load(state)
 
 1. `state`: object
 
-Loads the chart from the `state` object. This call is part of the low-level [save/load API](Saving-and-Loading-Charts).
+Loads the chart from the `state` object. This call is part of the low-level [save/load API](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts).
 
 ### getSavedCharts(callback)
 
@@ -285,18 +285,18 @@ Loads the chart from the `state` object. This call is part of the low-level [sav
 
 `objects` is an array of:
 
-* `id`
-* `name`
-* `image_url`
-* `modified_iso`
-* `short_symbol`
-* `interval`
+- `id`
+- `name`
+- `image_url`
+- `modified_iso`
+- `short_symbol`
+- `interval`
 
 Returns a list of chart descriptions saved to the server for the current user.
 
 ### loadChartFromServer(chartRecord)
 
-1. `chartRecord` is an object that you get using [getSavedCharts(callback)](#getsavedchartscallback)
+1. `chartRecord` is an object that you get using [getSavedCharts(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#getsavedchartscallback)
 
 Loads and displays a chart from the server.
 
@@ -305,14 +305,14 @@ Loads and displays a chart from the server.
 1. `onCompleteCallback`: function()
 1. `onFailCallback`: function()
 1. `options`: object `{ chartName }`
-    * `chartName`: name of a chart. Should be specified for new charts and when renaming the chart.
-    * `defaultChartName`: default name of a chart. It will be used if the current chart has no name.
+   - `chartName`: name of a chart. Should be specified for new charts and when renaming the chart.
+   - `defaultChartName`: default name of a chart. It will be used if the current chart has no name.
 
 Saves the current chart to the server.
 
 ### removeChartFromServer(chartId, onCompleteCallback)
 
-1. `chartId`: the `id` should be received from the object that is returned by the [getSavedCharts(callback)](#getsavedchartscallback)
+1. `chartId`: the `id` should be received from the object that is returned by the [getSavedCharts(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#getsavedchartscallback)
 1. `onCompleteCallback`: function()
 
 Removes the chart from the server.
@@ -322,9 +322,9 @@ Removes the chart from the server.
 ### onContextMenu(callback)
 
 1. `callback`: function(unixtime, price).
-    This callback function is expected to return a value (see below).
+   This callback function is expected to return a value (see below).
 
-The Charting Library will call the callback function every time  user opens a context menu on the chart.
+The Charting Library will call the callback function every time user opens a context menu on the chart.
 The arguments that are passed to the callback function contain unix time and price of the clicked point on the chart.
 
 You have to return an array of objects that have the following format to add or remove items from the context menu.
@@ -337,9 +337,9 @@ You have to return an array of objects that have the following format to add or 
 }
 ```
 
-* `position`: position of the item in the context menu
-* `text`: menu item text
-* `click`: a callback function that will be called when a user selects your menu item
+- `position`: position of the item in the context menu
+- `text`: menu item text
+- `click`: a callback function that will be called when a user selects your menu item
 
 Use the minus sign to add a separator. Example: `{ text: "-", position: "top" }`.
 
@@ -372,44 +372,46 @@ widget.onChartReady(function() {
 ### createButton(options)
 
 1. `options`: object `{ align: "left" }`
-    * `align`: `right` | `left`. default: `left`
+   - `align`: `right` | `left`. default: `left`
 
-Creates a new DOM element in the top toolbar of the chart and returns [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) for this button.
+Creates a new DOM element in the top toolbar of the chart and returns [HTMLElement](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) for this button.
 You can use it to add custom controls right on the chart.
 
-**NOTE:** This method MUST be called after [headerReady](#headerready) promise is resolved.
+**NOTE:** This method MUST be called after [headerReady](https://github.com/Abolfazl2647/Charts/blob/main/#headerready) promise is resolved.
 
 Example:
 
 ```javascript
-widget.headerReady().then(function() {
-    var button = widget.createButton();
-    button.setAttribute('title', 'My custom button tooltip');
-    button.addEventListener('click', function() { alert("My custom button pressed!"); });
-    button.textContent = 'My custom button caption';
+widget.headerReady().then(function () {
+  var button = widget.createButton();
+  button.setAttribute("title", "My custom button tooltip");
+  button.addEventListener("click", function () {
+    alert("My custom button pressed!");
+  });
+  button.textContent = "My custom button caption";
 });
 ```
 
 ## Dialogs
 
-*Starting from version 1.6.*
+_Starting from version 1.6._
 
 ### showNoticeDialog(params)
 
 1. `params`: object:
-    * `title`: text to be shown in the title
-    * `body`: text to be shown in the body
-    * `callback`: function to be called when ok button is pressed
+   - `title`: text to be shown in the title
+   - `body`: text to be shown in the body
+   - `callback`: function to be called when ok button is pressed
 
 This method shows a dialog with custom title and text along with the "OK" button.
 
 ### showConfirmDialog(params)
 
 1. `params`: object:
-    * `title`: text to be shown in the title
-    * `body`: text to be shown in the body
-    * `callback(result)`: function to be called when ok button is pressed.
-        `result` is `true` if `OK` is pressed, otherwise it is `false`.
+   - `title`: text to be shown in the title
+   - `body`: text to be shown in the body
+   - `callback(result)`: function to be called when ok button is pressed.
+     `result` is `true` if `OK` is pressed, otherwise it is `false`.
 
 This method shows a dialog with the custom title and text along with the "OK" and "CANCEL" buttons.
 
@@ -443,14 +445,14 @@ Returns an array of IDs of all studies. They can be used to create a study.
 
 Returns an object with the state of the Undo/Redo stack. The object has the following keys:
 
-* `enableUndo`: boolean flag that shows the undo action availability
-* `undoText`: name of the next undo operation. If the undo stack is empty then it is undefined.
-* `enableRedo`: boolean flag that shows the redo action availability
-* `redoText`: name of the next redo operation. If the redo stack is empty then it is undefined.
+- `enableUndo`: boolean flag that shows the undo action availability
+- `undoText`: name of the next undo operation. If the undo stack is empty then it is undefined.
+- `enableRedo`: boolean flag that shows the redo action availability
+- `redoText`: name of the next redo operation. If the redo stack is empty then it is undefined.
 
 ### getTheme()
 
-*Starting from version 1.16.*
+_Starting from version 1.16._
 
 This method returns the chart theme name.
 
@@ -462,15 +464,15 @@ console.log(widget.getTheme());
 
 ### changeTheme(themeName, options)
 
-*Starting from version 1.13.*
+_Starting from version 1.13._
 
 1. `themeName` should be `"Light"` | `"Dark"`
-1. `options` is an *optional* object added in version 1.17 with one field:
-    * `disableUndo` - boolean flag that shows the undo action availability.
+1. `options` is an _optional_ object added in version 1.17 with one field:
+   - `disableUndo` - boolean flag that shows the undo action availability.
 
 This method changes the chart theme without reloading the chart.
 
-You can also use the [theme](Widget-Constructor#theme) in the Widget Constructor to create the chart with a custom theme.
+You can also use the [theme](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#theme) in the Widget Constructor to create the chart with a custom theme.
 
 ### addCustomCSSFile(url)
 
@@ -478,32 +480,32 @@ You can also use the [theme](Widget-Constructor#theme) in the Widget Constructor
 
 This method was introduced in version `1.3`.
 
-Starting from version `1.4` use [custom_css_url](Widget-Constructor#custom_css_url) instead.
+Starting from version `1.4` use [custom_css_url](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#custom_css_url) instead.
 
 ### applyOverrides(overrides)
 
-*Starting from version 1.5.*
+_Starting from version 1.5._
 
 1. `overrides` is an object.
-    It is the same as [overrides](Widget-Constructor#overrides) in the Widget Constructor.
+   It is the same as [overrides](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#overrides) in the Widget Constructor.
 
 This method applies "overrides" to the properties without reloading the chart.
 
 ### applyStudiesOverrides(overrides)
 
-*Starting from version 1.9.*
+_Starting from version 1.9._
 
-1. `overrides` is an object. It is the same as [studies_overrides](Widget-Constructor#studies_overrides) in the Widget Constructor.
+1. `overrides` is an object. It is the same as [studies_overrides](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#studies_overrides) in the Widget Constructor.
 
 This method applies "overrides" to the styles or inputs of the indicators without reloading the chart.
 
 ## :chart: Trading Terminal only
 
-The following methods are available in [Trading Terminal](Trading-Terminal) only.
+The following methods are available in [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
 
 ### :chart: watchList()
 
-*Starting from version 1.9.*
+_Starting from version 1.9._
 
 Returns an object to manage the watchlist. The object has the following methods:
 
@@ -525,13 +527,13 @@ Returns an object to manage the watchlist. The object has the following methods:
 
 1. `saveList(list: SymbolList)` - allows you to save a list of symbols where `list` is an object with the following keys:
 
-    ```js
-    id: string;
-    title: string;
-    symbols: string[];
-    ```
+   ```js
+   id: string;
+   title: string;
+   symbols: string[];
+   ```
 
-    If there is no WatchList or an equivalent list already exists then `false` will be returned, otherwise `true` will returned.
+   If there is no WatchList or an equivalent list already exists then `false` will be returned, otherwise `true` will returned.
 
 1. `deleteList(listId: string)` - allows you to delete a list of symbols.
 
@@ -551,11 +553,11 @@ Returns an object to manage the watchlist. The object has the following methods:
 
 1. `index`: index of a chart starting from `0`. `index` is `0` by default.
 
-Returns a chart object that you can use to call [Chart-Methods](Chart-Methods)
+Returns a chart object that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
 
 ### :chart: activeChart()
 
-Returns a chart object of the active chart that you can use to call [Chart-Methods](Chart-Methods)
+Returns a chart object of the active chart that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
 
 ### :chart: chartsCount()
 
@@ -577,17 +579,17 @@ Returns the current layout name. If the current layout has not yet been saved th
 
 ### :chart: symbolSync()
 
-Returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of symbol sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of symbol sync between charts.
 
 ```javascript
 if (widget.symbolSync().value()) {
-    // Do something
+  // Do something
 }
 ```
 
 ### :chart: intervalSync()
 
-Returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of interval sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of interval sync between charts.
 
 ```javascript
 widget.intervalSync().setValue(true);
@@ -595,7 +597,7 @@ widget.intervalSync().setValue(true);
 
 ### :chart: crosshairSync()
 
-Returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of crosshair sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of crosshair sync between charts.
 
 ```javascript
 widget.crosshairSync().setValue(true);
@@ -603,7 +605,7 @@ widget.crosshairSync().setValue(true);
 
 ### :chart: timeSync()
 
-Returns a [WatchedValue](WatchedValue) object that can be used to read/set/watch the state of time sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of time sync between charts.
 
 ```javascript
 widget.timeSync().setValue(true);
@@ -611,8 +613,8 @@ widget.timeSync().setValue(true);
 
 ## See Also
 
-* [Chart-Methods](Chart-Methods)
-* [Widget Constructor](Widget-Constructor)
-* [Saving and Loading Charts](Saving-and-Loading-Charts)
-* [Overriding Default Properties of the Studies](Studies-Overrides)
-* [Overriding Default Properties of the Chart](Overrides)
+- [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
+- [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor)
+- [Saving and Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts)
+- [Overriding Default Properties of the Studies](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides)
+- [Overriding Default Properties of the Chart](https://github.com/Abolfazl2647/Charts/blob/main/Overrides)

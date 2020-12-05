@@ -1,27 +1,27 @@
 The Charting Library supports saving/loading charts and study templates using UI and API:
 
-1. **API**: Content of charts and study templates can be directly accessed using widget's [save() / load() methods](Widget-Methods#savecallback) and [createStudyTemplate() / applyStudyTemplate() methods](Chart-Methods#createstudytemplateoptions).
-    You are able to save the JSONs where you wish. For example, you may embed them to your saved pages or user's working area etc.
+1. **API**: Content of charts and study templates can be directly accessed using widget's [save() / load() methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#savecallback) and [createStudyTemplate() / applyStudyTemplate() methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#createstudytemplateoptions).
+   You are able to save the JSONs where you wish. For example, you may embed them to your saved pages or user's working area etc.
 
-1. **Save button**: Charting Library has save/load UI for charts and study templates. You can use [predefined server requests](#predefined-server-requests) or implement [save_load_adapter](#save_load_adapter) and process save/load by yourself.
+1. **Save button**: Charting Library has save/load UI for charts and study templates. You can use [predefined server requests](https://github.com/Abolfazl2647/Charts/blob/main/#predefined-server-requests) or implement [save_load_adapter](https://github.com/Abolfazl2647/Charts/blob/main/#save_load_adapter) and process save/load by yourself.
 
 ## Predefined server requests
 
 ### Example
 
-We created a tiny storage sample with Python and PostgreSQL that can be found in [our GitHub](https://github.com/tradingview/saveload_backend).
+We created a tiny storage sample with Python and PostgreSQL that can be found in [our GitHub](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/saveload_backend).
 You can use it and run on your own server so that you'll be able to have control over all your users' saved data.
 
 Here are a few steps for those who want to have their own chart storage:
 
 1. Clone our repository to your host
 1. Run the data service or use our demo service. Here is a short to-do list for anyone who is not familiar with Django.
-    1. Install Python 3.x and Pip.
-    1. Install PostgreSQL or some other Django-friendly database engine.
-    1. Go to you chart storage folder and run `pip install -r requirements.txt`
-    1. Go to charting_library_charts folder and set up your database connection in settings.py (see `DATABASES` @ line #12). Please remember to create the appropriate database in your PostgreSQL.
-    1. Run `python manage.py migrate` . This will create the database schema without any data.
-    1. Run `python manage.py runserver` to run a TEST instance of your database. Don't use the command above in production environment. Use some other program (i.e., Gunicorn).
+   1. Install Python 3.x and Pip.
+   1. Install PostgreSQL or some other Django-friendly database engine.
+   1. Go to you chart storage folder and run `pip install -r requirements.txt`
+   1. Go to charting_library_charts folder and set up your database connection in settings.py (see `DATABASES` @ line #12). Please remember to create the appropriate database in your PostgreSQL.
+   1. Run `python manage.py migrate` . This will create the database schema without any data.
+   1. Run `python manage.py runserver` to run a TEST instance of your database. Don't use the command above in production environment. Use some other program (i.e., Gunicorn).
 1. Set up your Charting Library page: set `charts_storage_url = url-of-your-charts-storage`, also set `client_id` and `user_id` (see details below) in the widget constructor.
 1. Enjoy!
 
@@ -29,8 +29,8 @@ Here are a few steps for those who want to have their own chart storage:
 
 ### Developing your own backend
 
-* Charting Library sends HTTP/HTTPS commands to `charts_storage_url/charts_storage_api_version/charts?client=client_id&user=user_id`. `charts_storage_url`, `charts_storage_api_version`, `client_id` and `user_id` are the arguments of the [widget constructor](Widget-Constructor).
-* You should implement the processing of 4 requests: save chart / load chart / delete chart / list charts.
+- Charting Library sends HTTP/HTTPS commands to `charts_storage_url/charts_storage_api_version/charts?client=client_id&user=user_id`. `charts_storage_url`, `charts_storage_api_version`, `client_id` and `user_id` are the arguments of the [widget constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor).
+- You should implement the processing of 4 requests: save chart / load chart / delete chart / list charts.
 
 #### LIST CHARTS
 
@@ -40,11 +40,11 @@ RESPONSE: JSON Object
 
 1. `status`: `ok` or `error`
 1. `data`: Array of Objects
-    1. `timestamp`: UNIX time when the chart was saved (example, `144908432`1)
-    1. `symbol`: base symbol of the chart (example, `AA`)
-    1. `resolution`: resolution of the chart (example, `D`)
-    1. `id`: unique integer identifier of the chart (example, `9163`)
-    1. `name`: chart name (example, `Test`)
+   1. `timestamp`: UNIX time when the chart was saved (example, `144908432`1)
+   1. `symbol`: base symbol of the chart (example, `AA`)
+   1. `resolution`: resolution of the chart (example, `D`)
+   1. `id`: unique integer identifier of the chart (example, `9163`)
+   1. `name`: chart name (example, `Test`)
 
 #### SAVE CHART
 
@@ -81,10 +81,10 @@ RESPONSE: JSON Object
 
 1. `status`: `ok` or `error`
 1. `data`: Object
-    1. `content`: saved content of the chart
-    1. `timestamp`: UNIX time when the chart was saved (example, `1449084321`)
-    1. `id`: unique integer identifier of the chart (example, `9163`)
-    1. `name`: name of the chart
+   1. `content`: saved content of the chart
+   1. `timestamp`: UNIX time when the chart was saved (example, `1449084321`)
+   1. `id`: unique integer identifier of the chart (example, `9163`)
+   1. `name`: name of the chart
 
 #### DELETE CHART
 
@@ -114,84 +114,88 @@ You can either set it for each user individually (private storage for each user)
 
 Here are a few examples:
 
-`client_id`|`user_id`|Effect
----|---|---
-Your site URL or other link|Unique user ID|Each user has a private chart storage that other users can't see.
-Your site URL or other link|The same value for all users|Each user can see and load any saved chart.
-Your site URL or other link|Unique user ID for registered users along with a separate setting for anonymous users|Each registered user has a private chart storage that other users can't see. All anonymous users share a single storage.
+| `client_id`                 | `user_id`                                                                             | Effect                                                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Your site URL or other link | Unique user ID                                                                        | Each user has a private chart storage that other users can't see.                                                        |
+| Your site URL or other link | The same value for all users                                                          | Each user can see and load any saved chart.                                                                              |
+| Your site URL or other link | Unique user ID for registered users along with a separate setting for anonymous users | Each registered user has a private chart storage that other users can't see. All anonymous users share a single storage. |
 
 ## save_load_adapter
 
-*Starting from version 1.12.*
+_Starting from version 1.12._
 
-One of the parameters in [Widget Construcor](Widget-Constructor#save_load_adapter), this is basically an object containing the save/load functions. It is used to customize the `Save` button behaviour. If it is available, it should have the following methods:
+One of the parameters in [Widget Construcor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#save_load_adapter), this is basically an object containing the save/load functions. It is used to customize the `Save` button behaviour. If it is available, it should have the following methods:
 
 ### Chart layouts
 
- 1. `getAllCharts(): Promise<ChartMetaInfo[]>`
+1.  `getAllCharts(): Promise<ChartMetaInfo[]>`
 
     A function to get all saved charts.
 
     `ChartMetaInfo` is an object with the following fields:
-     * `id` - unique ID of the chart.
-     * `name` - name of the chart.
-     * `symbol` - symbol of the chart.
-     * `resolution` - resolution of the chart.
-     * `timestamp` - last modified date (number of milliseconds since midnight `01/01/1970` UTC) of the chart.
 
- 1. `removeChart(chartId): Promise<void>`
+    - `id` - unique ID of the chart.
+    - `name` - name of the chart.
+    - `symbol` - symbol of the chart.
+    - `resolution` - resolution of the chart.
+    - `timestamp` - last modified date (number of milliseconds since midnight `01/01/1970` UTC) of the chart.
 
-     A function to remove a chart. `chartId` is a unique ID of the chart (see `getAllCharts` above).
+1.  `removeChart(chartId): Promise<void>`
 
- 1. `saveChart(chartData: ChartData): Promise<ChartId>`
+    A function to remove a chart. `chartId` is a unique ID of the chart (see `getAllCharts` above).
 
-     A function to save a chart.
+1.  `saveChart(chartData: ChartData): Promise<ChartId>`
+
+    A function to save a chart.
 
     `ChartData` is an object with the following fields:
-     * `id` - unique ID of the chart (may be `undefined` if it wasn't saved before).
-     * `name` - name of the chart.
-     * `symbol` - symbol of the chart.
-     * `resolution` - resolution of the chart.
-     * `content` - content of the chart.
+
+    - `id` - unique ID of the chart (may be `undefined` if it wasn't saved before).
+    - `name` - name of the chart.
+    - `symbol` - symbol of the chart.
+    - `resolution` - resolution of the chart.
+    - `content` - content of the chart.
 
     `ChartId` - unique ID of the chart (string)
 
- 1. `getChartContent(chartId): Promise<ChartContent>`
+1.  `getChartContent(chartId): Promise<ChartContent>`
 
-     A function to load the chart from the server.
+    A function to load the chart from the server.
 
     `ChartContent` is a string with the chart content (see `ChartData::content` field in `saveChart` function).
 
 ### Study Templates
 
- 1. `getAllStudyTemplates(): Promise<StudyTemplateMetaInfo[]>`
+1.  `getAllStudyTemplates(): Promise<StudyTemplateMetaInfo[]>`
 
-     A function to get all saved study templates.
+    A function to get all saved study templates.
 
     `StudyTemplateMetaInfo` is an object with the following fields:
-     * `name` - name of the study template.
 
- 1. `removeStudyTemplate(studyTemplateInfo: StudyTemplateMetaInfo): Promise<void>`
+    - `name` - name of the study template.
 
-     A function to remove a study template.
+1.  `removeStudyTemplate(studyTemplateInfo: StudyTemplateMetaInfo): Promise<void>`
 
- 1. `saveStudyTemplate(studyTemplateData: StudyTemplateData): Promise<void>`
+    A function to remove a study template.
 
-     A function to save a study template.
+1.  `saveStudyTemplate(studyTemplateData: StudyTemplateData): Promise<void>`
+
+    A function to save a study template.
 
     `StudyTemplateData` is an object with the following fields:
-     * `name` - name of the study template.
-     * `content` - content of the study template.
 
- 1. `getStudyTemplateContent(studyTemplateInfo: StudyTemplateMetaInfo): Promise<StudyTemplateContent>`
+    - `name` - name of the study template.
+    - `content` - content of the study template.
 
-     A function to load a study template from the server.
+1.  `getStudyTemplateContent(studyTemplateInfo: StudyTemplateMetaInfo): Promise<StudyTemplateContent>`
+
+    A function to load a study template from the server.
 
     `StudyTemplateContent` - content of the study template (string)
 
- If both `charts_storage_url` and `save_load_adapter` are available  then `save_load_adapter` will be used.
+If both `charts_storage_url` and `save_load_adapter` are available then `save_load_adapter` will be used.
 
- **IMPORTANT:** All functions should return a `Promise` (or `Promise`-like objects).
+**IMPORTANT:** All functions should return a `Promise` (or `Promise`-like objects).
 
 In-memory example for testing purposes:
 

@@ -1,4 +1,4 @@
-The complete list of drawings overrides with default values is presented here. You can change the default values using the `overrides` argument of the [widget constructor](Widget-Constructor#overrides). At the bottom of this list you will find a list of constants and abbreviations used in the values.
+The complete list of drawings overrides with default values is presented here. You can change the default values using the `overrides` argument of the [widget constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#overrides). At the bottom of this list you will find a list of constants and abbreviations used in the values.
 
 ```javascript
 linetoolicon: {
@@ -966,7 +966,7 @@ LINESTYLE_DASHED = 2;
 LINESTYLE_LARGE_DASHED = 3;
 
 LINEEND_NORMAL = 0;
-LINEEND_ARROW  = 1;
+LINEEND_ARROW = 1;
 LINEEND_CIRCLE = 2;
 
 BARS_MODE = 0;
@@ -983,44 +983,44 @@ PITCHFORK_STYLE_SCHIFF2 = 2;
 PITCHFORK_STYLE_INSIDE = 3;
 
 LEVELS_TYPE_A = {
-    color: color,
-    visible: visible
+  color: color,
+  visible: visible,
 };
 
 LEVELS_TYPE_B = {
-    coeff: coeff,
-    color: color,
-    visible: visible
+  coeff: coeff,
+  color: color,
+  visible: visible,
 };
 
 LEVELS_TYPE_C = {
-    coeff: coeff,
-    color: color,
-    visible: visible,
-    linestyle: linestyle,
-    linewidth: linewidth
+  coeff: coeff,
+  color: color,
+  visible: visible,
+  linestyle: linestyle,
+  linewidth: linewidth,
 };
 
 LEVELS_TYPE_D = {
-    color: color,
-    width: width,
-    visible: visible
+  color: color,
+  width: width,
+  visible: visible,
 };
 
 LEVELS_TYPE_E = {
-    color: color,
-    visible: visible,
-    width: width,
-    x: x,
-    y: y
+  color: color,
+  visible: visible,
+  width: width,
+  x: x,
+  y: y,
 };
 
 LEVELS_TYPE_F = {
-    coeff1: coeff1,
-    coeff2: coeff2,
-    color: color,
-    visible: visible,
-    linestyle: linestyle,
-    linewidth: linewidth
+  coeff1: coeff1,
+  coeff2: coeff2,
+  color: color,
+  visible: visible,
+  linestyle: linestyle,
+  linewidth: linewidth,
 };
 ```

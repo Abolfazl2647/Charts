@@ -54,18 +54,18 @@ Gets all the properties of the shape.
 
 ### setProperties(properties)
 
-1. `properties` - an object with new properties. It should have the same structure as an object from [getProperties](#getproperties).
-    It can only include the properties that you want to override.
+1. `properties` - an object with new properties. It should have the same structure as an object from [getProperties](https://github.com/Abolfazl2647/Charts/blob/main/#getproperties).
+   It can only include the properties that you want to override.
 
 Sets the properties of the shape.
 
 ### getPoints()
 
-Returns the points of the shape - an array of the [PricedPoint](#pricedpoint) objects.
+Returns the points of the shape - an array of the [PricedPoint](https://github.com/Abolfazl2647/Charts/blob/main/#pricedpoint) objects.
 
 ### setPoints(points)
 
-1. `points` - an array with the new points for the shape. The format of each shape is the same as `points` argument from [createMultipointShape](Chart-Methods#createmultipointshapepoints-options) method.
+1. `points` - an array with the new points for the shape. The format of each shape is the same as `points` argument from [createMultipointShape](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#createmultipointshapepoints-options) method.
 
 Set the new points of the shape.
 
@@ -75,5 +75,5 @@ Set the new points of the shape.
 
 An object with the following keys:
 
-* `price` - price value of the point
-* `time` - time of the point
+- `price` - price value of the point
+- `time` - time of the point
