@@ -1,6 +1,6 @@
 #### Getting Started
 
-- [Overview](https://github.com/Abolfazl2647/Charts/blob/main/Home)
+- [Overview](https://github.com/Abolfazl2647/Charts/blob/main/Home.md)
 - [Package Content](https://github.com/Abolfazl2647/Charts/blob/main/Package-Content)
 - [First Start](https://github.com/Abolfazl2647/Charts/blob/main/Running-Your-Charting-Library)
 - [Best Practices](https://github.com/Abolfazl2647/Charts/blob/main/Best-Practices)
