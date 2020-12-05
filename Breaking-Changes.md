@@ -8,7 +8,7 @@ Here is the list of breaking changes:
 
 ## Version 1.16
 
-- Action `tmzProperties` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#getcheckableactionstateactionid) methods is removed.
+- Action `tmzProperties` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getcheckableactionstateactionid) methods is removed.
 - Chart method `createStudy` options for `priceScale` have been changed. `left` and `right` have been renamed to `new-left` and `new-right`.
 - Series API method `moveToOtherSourceScale` has been renamed to `changePriceScale`. New argument options are added: `new-left`, `new-right`, `no-scale`.
 - Study API method `changePriceScale` argument options have been changed. `left` and `right` have been renamed to `new-left` and `new-right`. New argument option `entityId` has been added, it pins the study to the same price axis as a study with a corresponding `entityId`.
@@ -21,15 +21,15 @@ Here is the list of breaking changes:
 
 - Featureset `show_logo_on_all_charts` has been removed.
 - Featureset `cl_feed_return_all_data` has been removed.
-- Action `magnetAction` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#getcheckableactionstateactionid) methods is removed. Use [magnetEnabled](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#magnetenabled) instead.
-- `callback` argument of [createStudy](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#createstudyname-forceoverlay-lock-inputs-overrides-options) has been removed.
-- [createStudy](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#createstudyname-forceoverlay-lock-inputs-overrides-options) returns [Promise](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) instead of `entityId`.
-- [Pane-Api](https://github.com/Abolfazl2647/Charts/blob/main/Pane-Api) method `getLeftPriceScale` is removed and replaced with `getLeftPriceScales` that returns an array of scales instead a single element.
-- [Pane-Api](https://github.com/Abolfazl2647/Charts/blob/main/Pane-Api) method `getRightPriceScale` is removed and replaced with `getRightPriceScales` that returns an array of scales instead a single element.
-- [setVisibleRange](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#setvisiblerangerange-options) method now returns a Promise object and don't accept a callback as the last argument.
-- Priority of the [symbol](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#symbol-interval) option has been made higher than the priority of the symbol from the [saved_data](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#saved_data) option. Do not assign a value to the [symbol](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#symbol-interval) option, if you don't want to override the symbol from [saved_data](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#saved_data).
-- Override `symbolWatermarkProperties` is not supported anymore. You can use [settings_adapter](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#settings_adapter) with `symbolWatermark` key.
-- `indicators_file_name` constructor option was removed. Use [custom_indicators_getter](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#custom_indicators_getter) instead.
+- Action `magnetAction` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getcheckableactionstateactionid) methods is removed. Use [magnetEnabled](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#magnetenabled) instead.
+- `callback` argument of [createStudy](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createstudyname-forceoverlay-lock-inputs-overrides-options) has been removed.
+- [createStudy](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createstudyname-forceoverlay-lock-inputs-overrides-options) returns [Promise](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) instead of `entityId`.
+- [Pane-Api](https://github.com/Abolfazl2647/Charts/blob/main/Pane-Api.md) method `getLeftPriceScale` is removed and replaced with `getLeftPriceScales` that returns an array of scales instead a single element.
+- [Pane-Api](https://github.com/Abolfazl2647/Charts/blob/main/Pane-Api.md) method `getRightPriceScale` is removed and replaced with `getRightPriceScales` that returns an array of scales instead a single element.
+- [setVisibleRange](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setvisiblerangerange-options) method now returns a Promise object and don't accept a callback as the last argument.
+- Priority of the [symbol](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#symbol-interval) option has been made higher than the priority of the symbol from the [saved_data](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#saved_data) option. Do not assign a value to the [symbol](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#symbol-interval) option, if you don't want to override the symbol from [saved_data](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#saved_data).
+- Override `symbolWatermarkProperties` is not supported anymore. You can use [settings_adapter](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#settings_adapter) with `symbolWatermark` key.
+- `indicators_file_name` constructor option was removed. Use [custom_indicators_getter](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#custom_indicators_getter) instead.
   We made this change to speed up the loading of the library and get rid of possible vulnerabilities that may occur when loading a file.
   You just need to move the code of your custom indicators from the JS file to the widget constructor, wrapping them in a function and a Promise
 
@@ -42,11 +42,11 @@ Till now the Trading Terminal called broker adapter's methods (e.g. `placeOrder`
 Starting from 1.15 the Trading Terminal shows all dialogs by itself and invokes broker adapter's methods to send an order or a position to the broker's server. The reason for this change is that we've added an order panel that can be used to place an order at any time.
 If you use your own order dialog then you still need to make changes in your broker adapter's methods, but additionally you need to use `metainfo` to pass the dialog constructor to the Trading Terminal.
 
-- Argument `silently` was removed from `placeOrder`, `modifyOrder`, `reversePosition`, `closePosition`, `closeTrade`, `cancelOrder`, `cancelOrders` methods of the [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API).
+- Argument `silently` was removed from `placeOrder`, `modifyOrder`, `reversePosition`, `closePosition`, `closeTrade`, `cancelOrder`, `cancelOrders` methods of the [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md).
 
-- Arguments `handler` and `options` were removed from `showOrderDailog` method of the [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host).
+- Arguments `handler` and `options` were removed from `showOrderDailog` method of the [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md).
 
-- Argument `handler` was removed from `showPositionBracketsDailog` method of the [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host).
+- Argument `handler` was removed from `showPositionBracketsDailog` method of the [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md).
 
 - `supportCustomPlaceOrderTradableCheck` flag is no longer supported.
 
@@ -54,11 +54,11 @@ If you use your own order dialog then you still need to make changes in your bro
 
 ## Version 1.14
 
-- [createButton](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#createButtonoptions) returns `HTMLElement` instead of `JQuery`.
-- [createButton](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#createButtonoptions) must be used after [headerReady()](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#headerready) `Promise` is resolved.
-- [getVisibleRange](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#getVisibleRange) returns `{from, to}` in the UTC timezone (it was a timezone selected on a chart before).
+- [createButton](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#createButtonoptions) returns `HTMLElement` instead of `JQuery`.
+- [createButton](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#createButtonoptions) must be used after [headerReady()](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#headerready) `Promise` is resolved.
+- [getVisibleRange](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getVisibleRange) returns `{from, to}` in the UTC timezone (it was a timezone selected on a chart before).
 - Method `onready` was removed. You can use `window.addEventListener('DOMContentLoaded', callback, false)` instead.
-- `saveAsSnapshot` parameter was removed from [saveChartToServer](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#savecharttoserveroncompletecallback-onfailcallback-options)
+- `saveAsSnapshot` parameter was removed from [saveChartToServer](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#savecharttoserveroncompletecallback-onfailcallback-options)
 
 **TypeScript type definitions**
 
@@ -70,9 +70,9 @@ If you use your own order dialog then you still need to make changes in your bro
 
 ## Version 1.13
 
-- Action `takeScreenshot` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#executeactionbyidactionid) method is removed. Use [takeScreenshot](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#takescreenshot) method instead.
-- Action `lockDrawingsAction` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#getcheckableactionstateactionid) methods is removed. Use [lockAllDrawingTools](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#lockalldrawingtools) instead.
-- Action `hideAllDrawingsAction` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#getcheckableactionstateactionid) methods is removed. Use [hideAllDrawingTools](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#hidealldrawingtools) instead.
+- Action `takeScreenshot` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#executeactionbyidactionid) method is removed. Use [takeScreenshot](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#takescreenshot) method instead.
+- Action `lockDrawingsAction` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getcheckableactionstateactionid) methods is removed. Use [lockAllDrawingTools](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#lockalldrawingtools) instead.
+- Action `hideAllDrawingsAction` from [executeActionById](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#executeactionbyidactionid) and [getCheckableActionState](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getcheckableactionstateactionid) methods is removed. Use [hideAllDrawingTools](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#hidealldrawingtools) instead.
 - Featureset `caption_buttons_text_if_possible` is enabled by default.
 - Fixed an [issue](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/charting_library/issues/2652) that was causing bars to shift. Time-shifted bars used to appear when daily bars had a negative exchange timezone offset along with a 24x7 session. If you have a workaround for this issue, please remove it before updating to this version.
 
@@ -89,7 +89,7 @@ If you use your own order dialog then you still need to make changes in your bro
 
 Study overrides:
 
-- Overrides for `Overlay` should be applied only via `studies_overrides` (and `applyStudiesOverrides` in runtime). In the previous versions you had to use `overrides` and `applyOverrides`). See [Studies-Overrides](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides) page.
+- Overrides for `Overlay` should be applied only via `studies_overrides` (and `applyStudiesOverrides` in runtime). In the previous versions you had to use `overrides` and `applyOverrides`). See [Studies-Overrides](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides.md) page.
 - Starting from this version you are no longer able to override `showStudyArguments` and `showLastValue` using `options` keyword.
 
 **Trading Terminal**
@@ -101,19 +101,19 @@ The following items are still supported in the Trading Terminal, but will be dep
 - `subscribePL` and `unsubscribePL`. The broker should call `plUpdate` method of the Host every time the profit is changed.
 - `supportDOM` is removed. DOM widget visibility can be set using `dome_widget` featureset.
 
-**The Trading Controller is replaced with [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API)**.
+**The Trading Controller is replaced with [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md)**.
 
 The following changes should be applied to your Trading Controller implementation to move to new Broker API:
 
 - Method `setHost` is removed. Host should be passed to the constructor of Broker API.
-- Method `buttonDropdownItems` is removed. Broker API should update [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host) using `setButtonDropdownActions`.
-- Methods `configFlags` and `durations` are removed. Use [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor) fields instead.
+- Method `buttonDropdownItems` is removed. Broker API should update [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md) using `setButtonDropdownActions`.
+- Methods `configFlags` and `durations` are removed. Use [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md) fields instead.
 - All methods that returned `$.Deferred` should be modified to return Promise.
 - Method `chartContextMenuItems` is renamed to `chartContextMenuActions`.
 - Method `isTradable` changed to return a Promise instead of a Boolean value.
 - All string constants ("working", "buy" etc.) should be replaced with the appropriate number of constants.
 - Position `avg_price` renamed to `avgPrice`.
-- `tradingController` field in the [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor) is removed. Use `brokerFactory` instead.
+- `tradingController` field in the [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md) is removed. Use `brokerFactory` instead.
 
 ## Version 1.11
 
@@ -141,8 +141,8 @@ The following items are still supported in Trading Terminal, but will be depreca
 
 - The chart can no longer show active orders only. Appropriate methods have been removed.
 - `showOrderDialog` receives an object instead of arguments list
-- `showSampleOrderDialog` removed, use [showOrderDialog](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host#showorderdialogorder-focus-promise) instead
-- `showOrderDialog` removed from [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API), use `placeOrder` and `modifyOrder` receive `silently` argument instead
+- `showSampleOrderDialog` removed, use [showOrderDialog](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#showorderdialogorder-focus-promise) instead
+- `showOrderDialog` removed from [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md), use `placeOrder` and `modifyOrder` receive `silently` argument instead
 - `reversePosition`, `closePosition`, `cancelOrder` have an additional argument `silently`.
 
 ## Version 1.7

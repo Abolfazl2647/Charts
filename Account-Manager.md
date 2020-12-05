@@ -1,11 +1,11 @@
-:chart: All content on this page is relevant to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
+:chart: All content on this page is relevant to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) only.
 
 Account Manager is an interactive table that displays trading information.
 It includes 3 pages: orders/positions and account information.
 
 To create an account manager you will need to describe columns of each page and provide data.
 
-Remark 1. [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API) should implement [accountManagerInfo](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#accountmanagerinfo)
+Remark 1. [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md) should implement [accountManagerInfo](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#accountmanagerinfo.md)
 
 <!--
 Be sure that you have the following structure:
@@ -17,7 +17,7 @@ Be sure that you have the following structure:
 
 # Account Manager Meta Information
 
-The following information should be returned by [accountManagerInfo](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#accountManagerInfo).
+The following information should be returned by [accountManagerInfo](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md#accountManagerInfo).
 
 ## Account Manager header
 
@@ -27,7 +27,7 @@ Account Manager's header includes the name of the broker and an account name or 
 
 ### accountsList: array of AccountInfo
 
-### account: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) of AccountInfo
+### account: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md) of AccountInfo
 
 `AccountInfo` is an object with the following keys:
 
@@ -39,36 +39,36 @@ If the `currency` key is not set, `USD` will be used as a default value.
 
 ## Orders Page
 
-### orderColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
+### orderColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#column-description)
 
 Columns description that you want to be displayed on the Orders page.
-You can display any field of an [order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order) or add your own fields to an order object and display them.
+You can display any field of an [order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order) or add your own fields to an order object and display them.
 
-### orderColumnsSorting: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/#sortingparameters)
+### orderColumnsSorting: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#sortingparameters)
 
 Optional sorting of the table. If it is not set, the table is sorted by the first column.
 
-### possibleOrderStatuses: array of [OrderStatus](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#orderstatus)
+### possibleOrderStatuses: array of [OrderStatus](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#orderstatus)
 
 Optional list of statuses to be used in the orders filter. Default list is used if it hasn't been set.
 
-### historyColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
+### historyColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#column-description)
 
 History page will be displayed if it exists. All orders from previous sessions will be shown in the History.
 
-### historyColumnsSorting: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/#sortingparameters)
+### historyColumnsSorting: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#sortingparameters)
 
 Optional sorting of the table. If it is not set, the table is sorted by the first column.
 
 ## Positions Page
 
-### positionColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
+### positionColumns: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#column-description)
 
 You can display any field of a [position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position) or add your own fields to a position object and display them.
 
 ## Additional Pages (e.g. Account Summary)
 
-### pages: array of [Page](https://github.com/Abolfazl2647/Charts/blob/main/#page)
+### pages: array of [Page](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#page)
 
 You can add new tabs in the Account Manager by using `pages`. Each tab is a set of tables.
 
@@ -84,13 +84,13 @@ You can add new tabs in the Account Manager by using `pages`. Each tab is a set 
 
    Page title. It is the tab name.
 
-1. `tables`: Array of [Table](https://github.com/Abolfazl2647/Charts/blob/main/#table).
+1. `tables`: Array of [Table](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#table).
 
    It is possible to display one or more tables in this tab.
 
 #### Table
 
-You can add one or more tables to a [Page](https://github.com/Abolfazl2647/Charts/blob/main/#page).
+You can add one or more tables to a [Page](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#page).
 Account Summary table metainfo is an object with the following fields:
 
 1. `id`: String
@@ -101,7 +101,7 @@ Account Summary table metainfo is an object with the following fields:
 
    Optional title of a table.
 
-1. `columns`: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/#column-description)
+1. `columns`: array of [Column](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#column-description)
 
 1. `getData`: Promise
 
@@ -111,11 +111,11 @@ Account Summary table metainfo is an object with the following fields:
 
    There is a predefined field `isTotalRow` which can be used to mark a row that should be at the bottom of a table.
 
-1. `changeDelegate` : [Delegate](https://github.com/Abolfazl2647/Charts/blob/main/Delegate)
+1. `changeDelegate` : [Delegate](https://github.com/Abolfazl2647/Charts/blob/main/Delegate.md)
 
    This delegate is used to watch the data changes and update the table. Pass new account manager data to `fire` method of the delegate.
 
-1. `initialSorting`: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/#sortingparameters)
+1. `initialSorting`: [SortingParameters](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md#sortingparameters)
 
    Optional sorting of the table. If it is not set, the table is sorted by the first column.
 
