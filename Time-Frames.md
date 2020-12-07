@@ -15,6 +15,6 @@ I.e., clicking `1Y` will make the chart switch the resolution to `1D` and scale 
 | 5D         | 5                |
 | 1D         | 1                |
 
-You can customize default time frames using the [time_frames](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#time_frames) argument of the widget constructor.
+You can customize default time frames using the [time_frames](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#time_frames) argument of the widget constructor.
 
 **Remark**: Time frames that require resolutions which are not available for a particular symbol will be hidden.

@@ -1,4 +1,4 @@
-:chart: All content on this page applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
+:chart: All content on this page applies to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) only.
 
 **NOTE:** If you use TypeScript - you can import these constants/interfaces/types from the `broker-api.d.ts` file.
 
@@ -6,7 +6,7 @@
 
 ### configFlags: object
 
-This is an object that should be passed in the constructor of the Trading Terminal to [broker_config](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#broker_config). Each field should have a boolean value (`true`/`false`):
+This is an object that should be passed in the constructor of the Trading Terminal to [broker_config](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#broker_config). Each field should have a boolean value (`true`/`false`):
 
 - `supportReversePosition`
 
@@ -39,14 +39,14 @@ This is an object that should be passed in the constructor of the Trading Termin
 
   _Default:_ `false`
 
-  Broker provides PL for a position. If the broker calculates profit/loss by itself it should call [plUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host#plupdatepositionid-pl) as soon as PL is changed.
+  Broker provides PL for a position. If the broker calculates profit/loss by itself it should call [plUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#plupdatepositionid-pl) as soon as PL is changed.
   Otherwise Chart will calculate PL as a difference between the current trade and an average price of the position.
 
 - `supportMargin`
 
   _Default:_ `false`
 
-  Broker supports margin. If the broker supports margin it should call [marginAvailableUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host#marginavailableupdatemarginavailable) when the Trading Terminal subscribes using [subscribeMarginAvailable](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#subscribemarginavailable).
+  Broker supports margin. If the broker supports margin it should call [marginAvailableUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#marginavailableupdatemarginavailable) when the Trading Terminal subscribes using [subscribeMarginAvailable](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md#subscribemarginavailable).
 
 - `supportOrderBrackets`
 
@@ -287,19 +287,19 @@ Describes a single order.
 - `id` : String
 - `symbol` : String
 - `brokerSymbol` : String. Can be empty if broker symbol is the same as TV symbol.
-- `type` : [OrderType](https://github.com/Abolfazl2647/Charts/blob/main/#ordertype)
-- `side` : [Side](https://github.com/Abolfazl2647/Charts/blob/main/#side)
+- `type` : [OrderType](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#ordertype)
+- `side` : [Side](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#side)
 - `qty` : Double
-- `status` : [OrderStatus](https://github.com/Abolfazl2647/Charts/blob/main/#orderstatus)
+- `status` : [OrderStatus](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#orderstatus)
 - `limitPrice` : double
 - `stopPrice` : double
 - `avgPrice` : double
 - `filledQty` : double
 - `parentId` : String. If order is a bracket parentOrderId should contain base order/position id.
-- `parentType`: [ParentType](https://github.com/Abolfazl2647/Charts/blob/main/#parenttype)
-- `stopType`: [StopType](https://github.com/Abolfazl2647/Charts/blob/main/#stoptype) It should be set to 1 (StopType.TrailingStop) for trailing stop orders.
-- `duration`: [OrderDuration](https://github.com/Abolfazl2647/Charts/blob/main/#orderduration)
-- `customFields`: [CustomInputFieldsValues](https://github.com/Abolfazl2647/Charts/blob/main/#custominputfieldsvalues)
+- `parentType`: [ParentType](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#parenttype)
+- `stopType`: [StopType](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#stoptype) It should be set to 1 (StopType.TrailingStop) for trailing stop orders.
+- `duration`: [OrderDuration](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#orderduration)
+- `customFields`: [CustomInputFieldsValues](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#custominputfieldsvalues)
 
 ## Position
 
@@ -309,7 +309,7 @@ Describes a single position.
 - `symbol` : String
 - `brokerSymbol` : String. Can be empty if broker symbol is the same as TV symbol.
 - `qty` : positive number
-- `side`: [Side](https://github.com/Abolfazl2647/Charts/blob/main/#side)
+- `side`: [Side](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#side)
 - `avgPrice` : number
 
 ## Trade
@@ -321,7 +321,7 @@ Describes a single trade (individual position).
 - `date`: number (UNIX timestamp in milliseconds)
 - `brokerSymbol` : String. Can be empty if broker symbol is the same as TV symbol.
 - `qty` : Double positive
-- `side`: [Side](https://github.com/Abolfazl2647/Charts/blob/main/#side)
+- `side`: [Side](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#side)
 - `price` : number
 
 ## Execution
@@ -332,7 +332,7 @@ Describes a single execution. Execution is a mark on a chart that displays trade
 - `brokerSymbol` : String. Can be empty if broker symbol is the same as TV symbol.
 - `price` : number
 - `time`: Date
-- `side` : [Side](https://github.com/Abolfazl2647/Charts/blob/main/#side)
+- `side` : [Side](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#side)
 - `qty` : number
 
 ## ActionMetainfo
@@ -407,7 +407,7 @@ OrderStatus.Working = 6; // order is created but not executed yet
 
 Duration or expiration of an order.
 
-- `type`: string identifier from the list that you pass to [durations](https://github.com/Abolfazl2647/Charts/blob/main/#orderduration)
+- `type`: string identifier from the list that you pass to [durations](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives.md#orderduration)
 - `datetime`: number
 
 ## DOMEObject

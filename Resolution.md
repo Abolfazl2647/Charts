@@ -49,8 +49,8 @@ Example: `12M` - one year, `24M` - two year, `48M` - four years.
 
 ## See also
 
-- [How to set a list of available resolutions on a chart](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api#supported_resolutions)
-- [How to set a list of resolutions supported by the financial instrument](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#supported_resolutions)
-- [Set initial resolution on a chart](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#symbol-interval)
-- [Get current chart resolution](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#resolution)
-- [Change resolution on a chart](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#setresolutionresolution-callback)
+- [How to set a list of available resolutions on a chart](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#supported_resolutions)
+- [How to set a list of resolutions supported by the financial instrument](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#supported_resolutions)
+- [Set initial resolution on a chart](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#symbol-interval)
+- [Get current chart resolution](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#resolution)
+- [Change resolution on a chart](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setresolutionresolution-callback)

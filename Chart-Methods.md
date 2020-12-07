@@ -2,78 +2,78 @@ Here is a list of methods supported by the chart.
 
 **Before version 1.4.** You can call these methods using widget object returned to you by widget's constructor.
 
-**Starting from version 1.5.** You can call these methods using chart object returned to you by widget's methods [chart(index)](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#chart-chartindex) or [activeChart()](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#chart-activechart).
+**Starting from version 1.5.** You can call these methods using chart object returned to you by widget's methods [chart(index)](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#chart-chartindex) or [activeChart()](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#chart-activechart).
 
 ## Methods
 
-- [Subscribing To Chart Events](https://github.com/Abolfazl2647/Charts/blob/main/#subscribing-to-chart-events)
-  - [onDataLoaded()](https://github.com/Abolfazl2647/Charts/blob/main/#ondataloaded)
-  - [onSymbolChanged()](https://github.com/Abolfazl2647/Charts/blob/main/#onsymbolchanged)
-  - [onIntervalChanged()](https://github.com/Abolfazl2647/Charts/blob/main/#onintervalchanged)
-  - [dataReady(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#datareadycallback)
-  - [crossHairMoved(callback)](https://github.com/Abolfazl2647/Charts/blob/main/#crosshairmovedcallback)
-  - [onVisibleRangeChanged()](https://github.com/Abolfazl2647/Charts/blob/main/#onvisiblerangechanged)
-- [Chart Actions](https://github.com/Abolfazl2647/Charts/blob/main/#chart-actions)
-  - [setVisibleRange(range, options)](https://github.com/Abolfazl2647/Charts/blob/main/#setvisiblerangerange-options)
-  - [setSymbol(symbol, callback)](https://github.com/Abolfazl2647/Charts/blob/main/#setsymbolsymbol-callback)
-  - [setResolution(resolution, callback)](https://github.com/Abolfazl2647/Charts/blob/main/#setresolutionresolution-callback)
-  - [resetData()](https://github.com/Abolfazl2647/Charts/blob/main/#resetdata)
-  - [executeActionById(action)](https://github.com/Abolfazl2647/Charts/blob/main/#executeactionbyidactionid)
-  - [getCheckableActionState(action)](https://github.com/Abolfazl2647/Charts/blob/main/#getcheckableactionstateactionid)
-  - [refreshMarks()](https://github.com/Abolfazl2647/Charts/blob/main/#refreshmarks)
-  - [clearMarks()](https://github.com/Abolfazl2647/Charts/blob/main/#clearmarks)
-  - [setChartType(type)](https://github.com/Abolfazl2647/Charts/blob/main/#setcharttypetype)
-  - [setTimezone(timezone)](https://github.com/Abolfazl2647/Charts/blob/main/#settimezonetimezone)
-  - [getTimezone()](https://github.com/Abolfazl2647/Charts/blob/main/#gettimezone)
-- [Studies And Shapes](https://github.com/Abolfazl2647/Charts/blob/main/#studies-and-shapes)
-  - [getAllShapes()](https://github.com/Abolfazl2647/Charts/blob/main/#getallshapes)
-  - [getAllStudies()](https://github.com/Abolfazl2647/Charts/blob/main/#getallstudies)
-  - [setEntityVisibility(id, isVisible)](https://github.com/Abolfazl2647/Charts/blob/main/#setentityvisibilityid-isvisible) [obsolete]
-  - [createStudy(name, forceOverlay, lock, inputs, overrides, options)](https://github.com/Abolfazl2647/Charts/blob/main/#createstudyname-forceoverlay-lock-inputs-overrides-options)
-  - [getStudyById(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/#getstudybyidentityid)
-  - [getSeries()](https://github.com/Abolfazl2647/Charts/blob/main/#getseries)
-  - [showPropertiesDialog(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/#showpropertiesdialogentityId)
-  - [createShape(point, options)](https://github.com/Abolfazl2647/Charts/blob/main/#createshapepoint-options)
-  - [createMultipointShape(points, options)](https://github.com/Abolfazl2647/Charts/blob/main/#createmultipointshapepoints-options)
-  - [getShapeById(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/#getshapebyidentityid)
-  - [removeEntity(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/#removeentityentityid)
-  - [removeAllShapes()](https://github.com/Abolfazl2647/Charts/blob/main/#removeallshapes)
-  - [removeAllStudies()](https://github.com/Abolfazl2647/Charts/blob/main/#removeallstudies)
-  - [getPanes()](https://github.com/Abolfazl2647/Charts/blob/main/#getpanes)
-- [Z-order operations](https://github.com/Abolfazl2647/Charts/blob/main/#z-order-operations)
-  - [availableZOrderOperations(entities)](https://github.com/Abolfazl2647/Charts/blob/main/#availablezorderoperationsentities)
-  - [sendToBack(entities)](https://github.com/Abolfazl2647/Charts/blob/main/#sendtobackentities)
-  - [bringToFront(entities)](https://github.com/Abolfazl2647/Charts/blob/main/#bringtofrontentities)
-  - [bringForward(entities)](https://github.com/Abolfazl2647/Charts/blob/main/#bringforwardentities)
-  - [sendBackward(entities)](https://github.com/Abolfazl2647/Charts/blob/main/#sendbackwardentities)
-- [Study Templates](https://github.com/Abolfazl2647/Charts/blob/main/#study-templates)
-  - [createStudyTemplate(options)](https://github.com/Abolfazl2647/Charts/blob/main/#createstudytemplateoptions)
-  - [applyStudyTemplate(template)](https://github.com/Abolfazl2647/Charts/blob/main/#applystudytemplatetemplate)
-- [Trading Primitives](https://github.com/Abolfazl2647/Charts/blob/main/#trading-primitives)
-  - [createOrderLine()](https://github.com/Abolfazl2647/Charts/blob/main/#createorderlineoptions)
-  - [createPositionLine()](https://github.com/Abolfazl2647/Charts/blob/main/#createpositionlineoptions)
-  - [createExecutionShape()](https://github.com/Abolfazl2647/Charts/blob/main/#createexecutionshapeoptions)
-- [Getters](https://github.com/Abolfazl2647/Charts/blob/main/#getters)
-  - [symbol()](https://github.com/Abolfazl2647/Charts/blob/main/#symbol)
-  - [symbolExt()](https://github.com/Abolfazl2647/Charts/blob/main/#symbolExt)
-  - [resolution()](https://github.com/Abolfazl2647/Charts/blob/main/#resolution)
-  - [getVisibleRange()](https://github.com/Abolfazl2647/Charts/blob/main/#getvisiblerange)
-  - [getVisiblePriceRange()](https://github.com/Abolfazl2647/Charts/blob/main/#getvisiblepricerange)
-  - [scrollPosition()](https://github.com/Abolfazl2647/Charts/blob/main/#scrollposition)
-  - [defaultScrollPosition()](https://github.com/Abolfazl2647/Charts/blob/main/#defaultscrollposition)
-  - [priceFormatter()](https://github.com/Abolfazl2647/Charts/blob/main/#priceformatter)
-  - [chartType()](https://github.com/Abolfazl2647/Charts/blob/main/#charttype)
-- [Other](https://github.com/Abolfazl2647/Charts/blob/main/#other)
-  - [exportData(options)](https://github.com/Abolfazl2647/Charts/blob/main/#exportdataoptions)
-  - [selection()](https://github.com/Abolfazl2647/Charts/blob/main/#selection)
-  - [setZoomEnabled(enabled)](https://github.com/Abolfazl2647/Charts/blob/main/#setzoomenabledenabled)
-  - [setScrollEnabled(enabled)](https://github.com/Abolfazl2647/Charts/blob/main/#setscrollenabledenabled)
+- [Subscribing To Chart Events](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#subscribing-to-chart-events)
+  - [onDataLoaded()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#ondataloaded)
+  - [onSymbolChanged()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#onsymbolchanged)
+  - [onIntervalChanged()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#onintervalchanged)
+  - [dataReady(callback)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#datareadycallback)
+  - [crossHairMoved(callback)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#crosshairmovedcallback)
+  - [onVisibleRangeChanged()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#onvisiblerangechanged)
+- [Chart Actions](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#chart-actions)
+  - [setVisibleRange(range, options)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setvisiblerangerange-options)
+  - [setSymbol(symbol, callback)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setsymbolsymbol-callback)
+  - [setResolution(resolution, callback)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setresolutionresolution-callback)
+  - [resetData()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#resetdata)
+  - [executeActionById(action)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#executeactionbyidactionid)
+  - [getCheckableActionState(action)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getcheckableactionstateactionid)
+  - [refreshMarks()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#refreshmarks)
+  - [clearMarks()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#clearmarks)
+  - [setChartType(type)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setcharttypetype)
+  - [setTimezone(timezone)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#settimezonetimezone)
+  - [getTimezone()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#gettimezone)
+- [Studies And Shapes](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#studies-and-shapes)
+  - [getAllShapes()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getallshapes)
+  - [getAllStudies()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getallstudies)
+  - [setEntityVisibility(id, isVisible)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setentityvisibilityid-isvisible) [obsolete]
+  - [createStudy(name, forceOverlay, lock, inputs, overrides, options)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createstudyname-forceoverlay-lock-inputs-overrides-options)
+  - [getStudyById(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getstudybyidentityid)
+  - [getSeries()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getseries)
+  - [showPropertiesDialog(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#showpropertiesdialogentityId)
+  - [createShape(point, options)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createshapepoint-options)
+  - [createMultipointShape(points, options)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createmultipointshapepoints-options)
+  - [getShapeById(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getshapebyidentityid)
+  - [removeEntity(entityId)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#removeentityentityid)
+  - [removeAllShapes()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#removeallshapes)
+  - [removeAllStudies()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#removeallstudies)
+  - [getPanes()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getpanes)
+- [Z-order operations](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#z-order-operations)
+  - [availableZOrderOperations(entities)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#availablezorderoperationsentities)
+  - [sendToBack(entities)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#sendtobackentities)
+  - [bringToFront(entities)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#bringtofrontentities)
+  - [bringForward(entities)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#bringforwardentities)
+  - [sendBackward(entities)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#sendbackwardentities)
+- [Study Templates](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#study-templates)
+  - [createStudyTemplate(options)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createstudytemplateoptions)
+  - [applyStudyTemplate(template)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#applystudytemplatetemplate)
+- [Trading Primitives](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#trading-primitives)
+  - [createOrderLine()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createorderlineoptions)
+  - [createPositionLine()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createpositionlineoptions)
+  - [createExecutionShape()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createexecutionshapeoptions)
+- [Getters](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getters)
+  - [symbol()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#symbol)
+  - [symbolExt()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#symbolExt)
+  - [resolution()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#resolution)
+  - [getVisibleRange()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getvisiblerange)
+  - [getVisiblePriceRange()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getvisiblepricerange)
+  - [scrollPosition()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#scrollposition)
+  - [defaultScrollPosition()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#defaultscrollposition)
+  - [priceFormatter()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#priceformatter)
+  - [chartType()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#charttype)
+- [Other](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#other)
+  - [exportData(options)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#exportdataoptions)
+  - [selection()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#selection)
+  - [setZoomEnabled(enabled)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setzoomenabledenabled)
+  - [setScrollEnabled(enabled)](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setscrollenabledenabled)
 
 ## Subscribing To Chart Events
 
 ### onDataLoaded()
 
-You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription) object returned by this function to be notified when new history bars are loaded. You can also use the same object to unsubscribe from the event.
+You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription.md) object returned by this function to be notified when new history bars are loaded. You can also use the same object to unsubscribe from the event.
 
 Example:
 
@@ -86,7 +86,7 @@ widget
 
 ### onSymbolChanged()
 
-You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription) object returned by this function to be notified when the symbol is changed. You can also use the same object to unsubscribe from the event.
+You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription.md) object returned by this function to be notified when the symbol is changed. You can also use the same object to unsubscribe from the event.
 
 Example:
 
@@ -96,7 +96,7 @@ widget.activeChart().onSymbolChanged().subscribe(null, () => console.log('The sy
 
 ### onIntervalChanged()
 
-You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription) object returned by this function to be notified when the interval is changed. You can also use the same object to unsubscribe from the event.
+You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription.md) object returned by this function to be notified when the interval is changed. You can also use the same object to unsubscribe from the event.
 When the event is fired it will provide the following arguments:
 
 1. `interval`: new interval
@@ -164,7 +164,7 @@ widget
 
 _Since version 1.13._
 
-You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription) object returned by this function to be notified when visible time range is changed. You can also use the same object to unsubscribe from the event.
+You can subscribe using [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription.md) object returned by this function to be notified when visible time range is changed. You can also use the same object to unsubscribe from the event.
 
 When the event is fired it will provide the following arguments:
 
@@ -219,7 +219,7 @@ widget.activeChart().setSymbol("IBM");
 
 ### setResolution(resolution, callback)
 
-1. `resolution`: string. Format is described in another [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution).
+1. `resolution`: string. Format is described in another [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution.md).
 1. `callback`: function(), optional
 
 Makes the chart change its resolution. Callback function is called once new data is loaded.
@@ -347,7 +347,7 @@ widget.activeChart().setChartType(12);
 
 1. `timezone`: string
 
-See [timezone](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#timezone) for more information.
+See [timezone](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#timezone) for more information.
 
 Example:
 
@@ -361,7 +361,7 @@ Makes the chart change its timezone.
 
 _Since version 1.15._
 
-Returns the current [timezone](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#timezone) of the chart.
+Returns the current [timezone](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#timezone) of the chart.
 
 ```javascript
 console.log(widget.activeChart().getTimezone());
@@ -435,7 +435,7 @@ widget.activeChart().setEntityVisibility(id, false); // Hide the entity with id
 1. `forceOverlay`: forces the Charting Library to place the created study on the main pane
 1. `lock`: boolean, shows whether a user will be able to remove/change/hide the study or not
 1. `inputs`: (starting from version `1.2`) an array of study inputs. This array is expected to contain input values in the same order as in the study properties dialog.
-1. `overrides`: (starting from version `1.2`) an object [containing properties](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides) you'd like to set for your new study. Note that you should not specify the study name. Start a property path with a plot name.
+1. `overrides`: (starting from version `1.2`) an object [containing properties](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides.md) you'd like to set for your new study. Note that you should not specify the study name. Start a property path with a plot name.
 1. `options`: object with the the following keys:
    - `checkLimit` - if it is `true` then the study limit dialog will be shown if the limit is exceeded.
    - `priceScale` - preferred price scale for the study. Possible values are:
@@ -445,9 +445,9 @@ widget.activeChart().setEntityVisibility(id, false); // Hide the entity with id
      - `as-series` - attach the study to the price scale where the main series is attached (it is only applicable the study is added to the pane with the main series)
    - `disableUndo` - prevents adding of the action to the undo stack
 
-See [here](https://github.com/Abolfazl2647/Charts/blob/main/Panes-And-Scales-Behavior) more information about panes and scales behavior in relation to studies.
+See [here](https://github.com/Abolfazl2647/Charts/blob/main/Panes-And-Scales-Behavior.md) more information about panes and scales behavior in relation to studies.
 
-Returns a [Promise](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to `entityId` of the created study.
+Returns a [Promise](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise.md) to `entityId` of the created study.
 
 **Starting from v 1.12 the function returns the result immediately. Callback is kept to maintain compatibility.**
 
@@ -476,7 +476,7 @@ widget.activeChart().createStudy("Compare", false, false, ["open", "AAPL"]);
 
 1. `entityId`: object. Value that is returned when a study is created via API.
 
-Returns an instance of the [StudyApi](https://github.com/Abolfazl2647/Charts/blob/main/Study-Api) that allows you to interact with the study.
+Returns an instance of the [StudyApi](https://github.com/Abolfazl2647/Charts/blob/main/Study-Api.md) that allows you to interact with the study.
 
 ```javascript
 widget.activeChart().getStudyById(id).setVisible(false);
@@ -484,7 +484,7 @@ widget.activeChart().getStudyById(id).setVisible(false);
 
 ### getSeries()
 
-Returns an instance of the [SeriesApi](https://github.com/Abolfazl2647/Charts/blob/main/Series-Api) that allows you to interact with the main series.
+Returns an instance of the [SeriesApi](https://github.com/Abolfazl2647/Charts/blob/main/Series-Api.md) that allows you to interact with the main series.
 
 ```javascript
 widget.activeChart().getSeries().setVisible(false);
@@ -503,7 +503,7 @@ chart.showPropertiesDialog(chart.getAllShapes()[0].id);`
 
 ### createShape(point, options)
 
-This is a shorthand for [createMultipointShape](https://github.com/Abolfazl2647/Charts/blob/main/#createmultipointshapepoints-options) method, which can be used for [shapes](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides) based on one point.
+This is a shorthand for [createMultipointShape](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createmultipointshapepoints-options) method, which can be used for [shapes](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides.md) based on one point.
 
 1. `point`: object `{time, [price], [channel]}`
    - `time`: unix time. It's the only mandatory key in this function argument.
@@ -511,8 +511,8 @@ This is a shorthand for [createMultipointShape](https://github.com/Abolfazl2647/
      If not, then the shape will be placed close to the bar according the `channel` value.
    - `channel`: If the price is not set then `channel` value defines where the shape is placed relative to the bar. Possible values are `open`, `high`, `low`, `close`.
      If no channel is specified then 'open' is a default value.
-1. `options`: object `{shape, [text], [lock], [overrides]}`, it is the same as in [createMultipointShape](https://github.com/Abolfazl2647/Charts/blob/main/#createmultipointshapepoints-options) method.
-   - `shape` may be one of the [identifiers](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides) that require only one point.
+1. `options`: object `{shape, [text], [lock], [overrides]}`, it is the same as in [createMultipointShape](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createmultipointshapepoints-options) method.
+   - `shape` may be one of the [identifiers](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides.md) that require only one point.
      `flag` is the default value.
    - `text` is an optional argument. It's the text that will be included in the shape if it's supported. Additional field `showLabel` in overrides may be necessary.
    - `lock` shows whether a user will be able to remove/change/hide the shape or not.
@@ -545,7 +545,7 @@ widget
    - `channel`: If the price is not set then `channel` value defines where the shape is placed relative to the bar. Possible values are `open`, `high`, `low`, `close`.
      If no channel is specified, 'open' is a default value.
 1. `options`: object `{shape, [text], [lock], [overrides]}`
-   - `shape` may be one of the [identifiers](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides)
+   - `shape` may be one of the [identifiers](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides.md)
    - `text` is an optional argument. It's the text that will be included in the shape if it's supported. Additional field `showLabel` in overrides may be necessary.
    - `lock` shows whether a user will be able to remove/change/hide the shape or not.
    - `disableSelection` prevents selecting of the shape
@@ -560,7 +560,7 @@ widget
 
 The function returns `entityId` - unique ID of the shape if the creation was successful and `null` if it wasn't.
 
-Check out [Shapes and Overrides](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides) for more information.
+Check out [Shapes and Overrides](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-and-Overrides.md) for more information.
 
 This call creates a shape at a specific point on the chart provided that it's within the main series area.
 
@@ -587,7 +587,7 @@ widget.activeChart().createMultipointShape(
 
 1. `entityId`: object. The value that is returned when a shape is created via API
 
-Returns an instance of the [ShapeApi](https://github.com/Abolfazl2647/Charts/blob/main/Shape-Api) that allows you to interact with the shape.
+Returns an instance of the [ShapeApi](https://github.com/Abolfazl2647/Charts/blob/main/Shape-Api.md) that allows you to interact with the shape.
 
 ```javascript
 widget.activeChart().getShapeById(id).bringToFront();
@@ -621,7 +621,7 @@ widget.activeChart().removeAllStudies();
 
 ### getPanes()
 
-Returns an array of instances of the [PaneApi](https://github.com/Abolfazl2647/Charts/blob/main/Pane-Api) that allows you to interact with the panes.
+Returns an array of instances of the [PaneApi](https://github.com/Abolfazl2647/Charts/blob/main/Pane-Api.md) that allows you to interact with the panes.
 
 ```javascript
 widget.activeChart().getPanes()[1].moveTo(0);
@@ -629,7 +629,7 @@ widget.activeChart().getPanes()[1].moveTo(0);
 
 ### shapesGroupController()
 
-Returns an [API](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-Group-Api) that can be used to work with groups of shapes.
+Returns an [API](https://github.com/Abolfazl2647/Charts/blob/main/Shapes-Group-Api.md) that can be used to work with groups of shapes.
 
 ```javascript
 widget.activeChart().shapesGroupController().createGroupFromSelection();
@@ -703,7 +703,7 @@ widget.activeChart().sendBackward([id]);
 
 Saves the study template to JS object. Charting Library will call your callback function and pass the state object as an argument.
 
-This call is a part of low-level [save/load API](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts).
+This call is a part of low-level [save/load API](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts.md).
 
 ```javascript
 const template = widget
@@ -717,7 +717,7 @@ const template = widget
 
 Loads the study template from the `template` object.
 
-This call is a part of low-level [save/load API](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts).
+This call is a part of low-level [save/load API](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts.md).
 
 ```javascript
 widget.activeChart().applyStudyTemplate(template);
@@ -732,7 +732,7 @@ widget.activeChart().applyStudyTemplate(template);
 
 Creates a new trading order on the chart and returns an API-object that you can use to adjust its properties and behavior.
 
-It is strongly recommended to read [this article](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives) before using this call.
+It is strongly recommended to read [this article](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives.md) before using this call.
 
 API object methods:
 
@@ -816,7 +816,7 @@ widget
 
 Creates a new trading position on the chart and returns an API-object that you can use to adjust its properties and behavior.
 
-It is strongly recommended to read [this article](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives) before using this call.
+It is strongly recommended to read [this article](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives.md) before using this call.
 
 API object methods:
 
@@ -908,7 +908,7 @@ widget
 
 Creates a new trade execution on the chart and returns an API-object that you can use to control the execution properties.
 
-It is strongly recommended to read [this article](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives) before using this call.
+It is strongly recommended to read [this article](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Primitives.md) before using this call.
 
 API object has a set of properties listed below. Each property should be used through respective accessors.
 For example, if you wish to work with `Extend Left` property, then use `getExtendLeft()` of `setExtendLeft()` methods.
@@ -971,7 +971,7 @@ console.log(widget.activeChart().symbol());
 
 Returns the current symbol information of the chart. The object has the following fields:
 
-- `symbol`: is the same as the result of [symbol()](https://github.com/Abolfazl2647/Charts/blob/main/#symbol) method
+- `symbol`: is the same as the result of [symbol()](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#symbol) method
 - `full_name`: the full name of the symbol
 - `exchange`: the exchange of the symbol
 - `description`: the description of the symbol
@@ -983,7 +983,7 @@ console.log(widget.activeChart().symbolExt().full_name);
 
 ### resolution()
 
-Returns the chart's time interval. The format is described in this [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution).
+Returns the chart's time interval. The format is described in this [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution.md).
 
 ```javascript
 console.log(widget.activeChart().resolution());
@@ -1001,7 +1001,7 @@ console.log(widget.activeChart().getVisibleRange());
 
 _Starting from version 1.7._
 
-Deprecated, use [Price Scale API](https://github.com/Abolfazl2647/Charts/blob/main/Price-Scale-Api#getVisiblePriceRange) instead.
+Deprecated, use [Price Scale API](https://github.com/Abolfazl2647/Charts/blob/main/Price-Scale-Api.md#getVisiblePriceRange) instead.
 
 Returns the object `{from, to}`. `from` and `to` are boundaries of the price scale visible range in main series area.
 
@@ -1060,7 +1060,7 @@ _Starting from version 1.14._
    - `includeTime` (`boolean`, default `true`) - defines whether each item of the exported data should contain time.
    - `includeSeries` (`boolean`, default `true`) - defines whether the exported data should contain the main series (open, high, low, close).
    - `includedStudies` - which studies should be included in the exported data
-     (by default, the value is `'all'` which means that all studies are included, but if you want to export only some of them then you can assign an array of [studies' ids](https://github.com/Abolfazl2647/Charts/blob/main/#getallstudies)).
+     (by default, the value is `'all'` which means that all studies are included, but if you want to export only some of them then you can assign an array of [studies' ids](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#getallstudies)).
 
 Exports data from the chart, returns a Promise object. This method doesn't load data. The result has the following structure:
 
@@ -1078,7 +1078,7 @@ Exports data from the chart, returns a Promise object. This method doesn't load 
     - `sourceTitle` (`string`) - title of the study
     - `plotTitle` (`string`) - title of the plot
 
-- `data` is an array of [Float64Array](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)s.
+- `data` is an array of [Float64Array](https://github.com/Abolfazl2647/Charts/blob/main/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array.md)s.
   Each `Float64Array` array has the same length as `schema` array and represents the associated field's item.
 
 **Examples:**
@@ -1095,7 +1095,7 @@ Exports data from the chart, returns a Promise object. This method doesn't load 
 
 _Starting from version 1.15._
 
-Returns [SelectionApi](https://github.com/Abolfazl2647/Charts/blob/main/Selection-Api) to that can be used to change the chart selection and subscribe to chart selection changes.
+Returns [SelectionApi](https://github.com/Abolfazl2647/Charts/blob/main/Selection-Api.md) to that can be used to change the chart selection and subscribe to chart selection changes.
 
 ```javascript
 widget.activeChart().selection().clear();
@@ -1123,8 +1123,8 @@ widget.activeChart().setScrollEnabled(false);
 
 ## See Also
 
-- [Widget Methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods)
-- [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor)
-- [Saving and Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts)
-- [Overriding Studies' Defaults](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides)
-- [Overriding Chart's Defaults](https://github.com/Abolfazl2647/Charts/blob/main/Overrides)
+- [Widget Methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md)
+- [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md)
+- [Saving and Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts.md)
+- [Overriding Studies' Defaults](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides.md)
+- [Overriding Chart's Defaults](https://github.com/Abolfazl2647/Charts/blob/main/Overrides.md)

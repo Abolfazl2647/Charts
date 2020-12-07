@@ -12,15 +12,15 @@ Enables or disables removing/changing/hiding a study by the user.
 
 ### getInputsInfo()
 
-Returns the information about all the inputs - an array of [StudyInputInfo](https://github.com/Abolfazl2647/Charts/blob/main/#studyinputinfo) objects.
+Returns the information about all the inputs - an array of [StudyInputInfo](https://github.com/Abolfazl2647/Charts/blob/main/Study-Api.md#studyinputinfo) objects.
 
 ### getInputValues()
 
-Returns values of study inputs - an array of [StudyInputValueItem](https://github.com/Abolfazl2647/Charts/blob/main/#studyinputvalueitem) objects.
+Returns values of study inputs - an array of [StudyInputValueItem](https://github.com/Abolfazl2647/Charts/blob/main/Study-Api.md#studyinputvalueitem) objects.
 
 ### setInputValues(inputs)
 
-1. `inputs` should be an array of [StudyInputValueItem](https://github.com/Abolfazl2647/Charts/blob/main/#studyinputvalueitem) objects.
+1. `inputs` should be an array of [StudyInputValueItem](https://github.com/Abolfazl2647/Charts/blob/main/Study-Api.md#studyinputvalueitem) objects.
 
 Sets input values for a study. It may contain only some of the inputs that you wish to change.
 
@@ -49,7 +49,7 @@ Unmerges the study down (if possible).
    - `"as-series"` - attach the study to the price scale where the main series is attached (it is only applicable if the study and the main series are located on the same pane)
    - `entityId` - attach the study to the same price axis as a study with a corresponding `entityId`
 
-Changes the price scale of the study. See [here](https://github.com/Abolfazl2647/Charts/blob/main/Panes-And-Scales-Behavior) more information about panes and scales behavior in relation to studies.
+Changes the price scale of the study. See [here](https://github.com/Abolfazl2647/Charts/blob/main/Panes-And-Scales-Behavior.md) more information about panes and scales behavior in relation to studies.
 
 ### isVisible()
 
@@ -71,7 +71,7 @@ Places the study behind all other chart objects.
 
 ### applyOverrides(overrides)
 
-1. `overrides` - new [overrides](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides) for the study
+1. `overrides` - new [overrides](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides.md) for the study
 
 Applies `overrides` to the study.
 

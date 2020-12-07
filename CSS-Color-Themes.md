@@ -6,7 +6,7 @@ Important: this functionality is currently being developed. Any variable and sel
 
 _Starting from version 1.16_.
 
-You can change the colors of light/dark theme for certain UI elements by connecting your [CSS files](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#custom_css_url). For your convenience, some elements have CSS Custom Properties that can be overridden.
+You can change the colors of light/dark theme for certain UI elements by connecting your [CSS files](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#custom_css_url). For your convenience, some elements have CSS Custom Properties that can be overridden.
 
 The following CSS will make the widget look pink when selecting the light/dark theme.
 

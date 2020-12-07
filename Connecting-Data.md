@@ -11,16 +11,16 @@ Market data connection API ([JS API](https://github.com/Abolfazl2647/Charts/blob
 
 All these methods are called by the library as needed.
 
-The Charting Library expects to get an implementation of the JS API in the [datafeed](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#datafeed) field of the constructor.
+The Charting Library expects to get an implementation of the JS API in the [datafeed](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#datafeed) field of the constructor.
 
 ## UDF
 
-If you don’t have sufficient JavaScript knowledge, or if you don’t yet have a Web-based server API that you can fetch data from, then you can use a ready-made [UDF adapter](https://github.com/Abolfazl2647/Charts/blob/main/UDF) that implements the [JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api) and makes simple HTTP(S) requests at the specified URL in a specific format. This adapter does not support data streaming out of the box (but it still can be added there).
+If you don’t have sufficient JavaScript knowledge, or if you don’t yet have a Web-based server API that you can fetch data from, then you can use a ready-made [UDF adapter](https://github.com/Abolfazl2647/Charts/blob/main/UDF.md) that implements the [JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md) and makes simple HTTP(S) requests at the specified URL in a specific format. This adapter does not support data streaming out of the box (but it still can be added there).
 
-Also, the UDF adapter can be used as an **example** implementation of the JS API. You can copy [its code](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/charting_library/tree/master/datafeeds/udf) and start editing it.
+Also, the UDF adapter can be used as an **example** implementation of the JS API. You can copy [its code](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/charting_library/tree/master/datafeeds/udf.md) and start editing it.
 
 ## Go ahead
 
-[Start implementing JS API if you have an existing Web API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api)
+[Start implementing JS API if you have an existing Web API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md)
 
-[Start with a predefined UDF adapter and implement a server-side API](https://github.com/Abolfazl2647/Charts/blob/main/UDF)
+[Start with a predefined UDF adapter and implement a server-side API](https://github.com/Abolfazl2647/Charts/blob/main/UDF.md)

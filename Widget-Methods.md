@@ -472,7 +472,7 @@ _Starting from version 1.13._
 
 This method changes the chart theme without reloading the chart.
 
-You can also use the [theme](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#theme) in the Widget Constructor to create the chart with a custom theme.
+You can also use the [theme](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#theme) in the Widget Constructor to create the chart with a custom theme.
 
 ### addCustomCSSFile(url)
 
@@ -480,14 +480,14 @@ You can also use the [theme](https://github.com/Abolfazl2647/Charts/blob/main/Wi
 
 This method was introduced in version `1.3`.
 
-Starting from version `1.4` use [custom_css_url](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#custom_css_url) instead.
+Starting from version `1.4` use [custom_css_url](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#custom_css_url) instead.
 
 ### applyOverrides(overrides)
 
 _Starting from version 1.5._
 
 1. `overrides` is an object.
-   It is the same as [overrides](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#overrides) in the Widget Constructor.
+   It is the same as [overrides](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#overrides) in the Widget Constructor.
 
 This method applies "overrides" to the properties without reloading the chart.
 
@@ -495,13 +495,13 @@ This method applies "overrides" to the properties without reloading the chart.
 
 _Starting from version 1.9._
 
-1. `overrides` is an object. It is the same as [studies_overrides](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#studies_overrides) in the Widget Constructor.
+1. `overrides` is an object. It is the same as [studies_overrides](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#studies_overrides) in the Widget Constructor.
 
 This method applies "overrides" to the styles or inputs of the indicators without reloading the chart.
 
 ## :chart: Trading Terminal only
 
-The following methods are available in [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
+The following methods are available in [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) only.
 
 ### :chart: watchList()
 
@@ -553,11 +553,11 @@ Returns an object to manage the watchlist. The object has the following methods:
 
 1. `index`: index of a chart starting from `0`. `index` is `0` by default.
 
-Returns a chart object that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
+Returns a chart object that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md)
 
 ### :chart: activeChart()
 
-Returns a chart object of the active chart that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
+Returns a chart object of the active chart that you can use to call [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md)
 
 ### :chart: chartsCount()
 
@@ -579,7 +579,7 @@ Returns the current layout name. If the current layout has not yet been saved th
 
 ### :chart: symbolSync()
 
-Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of symbol sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md) object that can be used to read/set/watch the state of symbol sync between charts.
 
 ```javascript
 if (widget.symbolSync().value()) {
@@ -589,7 +589,7 @@ if (widget.symbolSync().value()) {
 
 ### :chart: intervalSync()
 
-Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of interval sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md) object that can be used to read/set/watch the state of interval sync between charts.
 
 ```javascript
 widget.intervalSync().setValue(true);
@@ -597,7 +597,7 @@ widget.intervalSync().setValue(true);
 
 ### :chart: crosshairSync()
 
-Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of crosshair sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md) object that can be used to read/set/watch the state of crosshair sync between charts.
 
 ```javascript
 widget.crosshairSync().setValue(true);
@@ -605,7 +605,7 @@ widget.crosshairSync().setValue(true);
 
 ### :chart: timeSync()
 
-Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object that can be used to read/set/watch the state of time sync between charts.
+Returns a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md) object that can be used to read/set/watch the state of time sync between charts.
 
 ```javascript
 widget.timeSync().setValue(true);
@@ -613,8 +613,8 @@ widget.timeSync().setValue(true);
 
 ## See Also
 
-- [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods)
-- [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor)
-- [Saving and Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts)
-- [Overriding Default Properties of the Studies](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides)
-- [Overriding Default Properties of the Chart](https://github.com/Abolfazl2647/Charts/blob/main/Overrides)
+- [Chart-Methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md)
+- [Widget Constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md)
+- [Saving and Loading Charts](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts.md)
+- [Overriding Default Properties of the Studies](https://github.com/Abolfazl2647/Charts/blob/main/Studies-Overrides.md)
+- [Overriding Default Properties of the Chart](https://github.com/Abolfazl2647/Charts/blob/main/Overrides.md)

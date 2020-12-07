@@ -1,15 +1,15 @@
 The Charting Library supports saving/loading charts and study templates using UI and API:
 
-1. **API**: Content of charts and study templates can be directly accessed using widget's [save() / load() methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#savecallback) and [createStudyTemplate() / applyStudyTemplate() methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#createstudytemplateoptions).
+1. **API**: Content of charts and study templates can be directly accessed using widget's [save() / load() methods](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#savecallback.md) and [createStudyTemplate() / applyStudyTemplate() methods](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#createstudytemplateoptions).
    You are able to save the JSONs where you wish. For example, you may embed them to your saved pages or user's working area etc.
 
-1. **Save button**: Charting Library has save/load UI for charts and study templates. You can use [predefined server requests](https://github.com/Abolfazl2647/Charts/blob/main/#predefined-server-requests) or implement [save_load_adapter](https://github.com/Abolfazl2647/Charts/blob/main/#save_load_adapter) and process save/load by yourself.
+1. **Save button**: Charting Library has save/load UI for charts and study templates. You can use [predefined server requests](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts.md#predefined-server-requests) or implement [save_load_adapter](https://github.com/Abolfazl2647/Charts/blob/main/Saving-and-Loading-Charts.md#save_load_adapter) and process save/load by yourself.
 
 ## Predefined server requests
 
 ### Example
 
-We created a tiny storage sample with Python and PostgreSQL that can be found in [our GitHub](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/saveload_backend).
+We created a tiny storage sample with Python and PostgreSQL that can be found in [our GitHub](https://github.com/tradingview/saveload_backend).
 You can use it and run on your own server so that you'll be able to have control over all your users' saved data.
 
 Here are a few steps for those who want to have their own chart storage:
@@ -29,7 +29,7 @@ Here are a few steps for those who want to have their own chart storage:
 
 ### Developing your own backend
 
-- Charting Library sends HTTP/HTTPS commands to `charts_storage_url/charts_storage_api_version/charts?client=client_id&user=user_id`. `charts_storage_url`, `charts_storage_api_version`, `client_id` and `user_id` are the arguments of the [widget constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor).
+- Charting Library sends HTTP/HTTPS commands to `charts_storage_url/charts_storage_api_version/charts?client=client_id&user=user_id`. `charts_storage_url`, `charts_storage_api_version`, `client_id` and `user_id` are the arguments of the [widget constructor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md).
 - You should implement the processing of 4 requests: save chart / load chart / delete chart / list charts.
 
 #### LIST CHARTS
@@ -124,7 +124,7 @@ Here are a few examples:
 
 _Starting from version 1.12._
 
-One of the parameters in [Widget Construcor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#save_load_adapter), this is basically an object containing the save/load functions. It is used to customize the `Save` button behaviour. If it is available, it should have the following methods:
+One of the parameters in [Widget Construcor](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#save_load_adapter), this is basically an object containing the save/load functions. It is used to customize the `Save` button behaviour. If it is available, it should have the following methods:
 
 ### Chart layouts
 

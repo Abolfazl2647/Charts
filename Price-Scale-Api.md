@@ -2,11 +2,11 @@
 
 ### getMode()
 
-Returns current [mode](https://github.com/Abolfazl2647/Charts/blob/main/#pricescalemode) of the price scale.
+Returns current [mode](https://github.com/Abolfazl2647/Charts/blob/main/Price-Scale-Api.md#pricescalemode) of the price scale.
 
 ### setMode(newMode)
 
-1. `newMode` - new [mode](https://github.com/Abolfazl2647/Charts/blob/main/#pricescalemode) for the price scale
+1. `newMode` - new [mode](https://github.com/Abolfazl2647/Charts/blob/main/Price-Scale-Api.md#pricescalemode) for the price scale
 
 Changes current mode of the price scale.
 

@@ -1,13 +1,13 @@
-:chart: All content on this page applies to the [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
+:chart: All content on this page applies to the [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) only.
 
-Trading Host is an API for interaction between [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API) and the Chart Trading Subsystem. Its main purpose is to exchange information between our charts and your trading adapter. In terms of `JS`, it is an `object` with a set of functions. Here is the list of Hosts's **methods**.
+Trading Host is an API for interaction between [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md) and the Chart Trading Subsystem. Its main purpose is to exchange information between our charts and your trading adapter. In terms of `JS`, it is an `object` with a set of functions. Here is the list of Hosts's **methods**.
 
 ## Commands
 
 ### showOrderDialog(order, focus) : Promise
 
 1. `order` to be placed or modified
-1. `focus` - [Focus constant](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#orderticketfocuscontrol).
+1. `focus` - [Focus constant](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#orderticketfocuscontrol).
 
 Shows standard order dialog to create or modify an order and executes handler if Buy/Sell/Modify is pressed.
 
@@ -27,25 +27,25 @@ Shows a confirmation dialog and executes handler if YES/OK is pressed.
 
 Shows a confirmation dialog and executes handler if YES/OK is pressed.
 
-### showClosePositionDialog([positionId](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position), handler) : Promise
+### showClosePositionDialog([positionId](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#position), handler) : Promise
 
 1. `positionId` identifier of a position to be closed
 1. `handler` is a function to process position close. It should return Promise
 
 Shows a confirmation dialog and executes handler if YES/OK is pressed.
 
-### showReversePositionDialog([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position), handler) : Promise
+### showReversePositionDialog([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#position), handler) : Promise
 
 1. `position` to be reversed
 1. `handler` is a function to process position reverse. It should return a Promise
 
 Shows a confirmation dialog and executes handler if YES/OK is pressed.
 
-### showPositionBracketsDialog([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position), [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#brackets), focus) : Promise
+### showPositionBracketsDialog([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#position), [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#brackets), focus) : Promise
 
 1. `position` to be modified
-1. `brackets` (optional) new [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#brackets)
-1. `focus` - [Focus constant](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#orderticketfocuscontrol).
+1. `brackets` (optional) new [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#brackets)
+1. `focus` - [Focus constant](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#orderticketfocuscontrol).
 
 Shows a default edit brackets dialog and executes handler if MODIFY is pressed.
 
@@ -67,11 +67,11 @@ Triggers show active orders.
 
 ### numericFormatter(decimalPlaces)
 
-Returns a [Formatter](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#formatter) with the specified number of decimal places.
+Returns a [Formatter](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#formatter) with the specified number of decimal places.
 
 ### defaultFormatter(symbol: string, alignToMinMove?: boolean = true)
 
-Returns a default [Formatter](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#formatter) formatter for the specified instrument. This formatter is created based on [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure).
+Returns a default [Formatter](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#formatter) formatter for the specified instrument. This formatter is created based on [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure).
 
 By default, the formatter rounds a price to the minimum price movement, but sometimes you may want to disable this rounding. For example, the average price of a position should not be rounded to the minimum price movement. Let’s assume that we placed one trade at `100.25` and another trade at `100.50`. The average price of the position is going to be `100.375`. If you get a formatter using `defaultFormatter(symbol)`, then this formatter will round this price to `100.38`, but if you set the second argument to `false`, then the price will be rounded to `100.50`.
 
@@ -85,11 +85,11 @@ Creates a [Delegate](https://github.com/Abolfazl2647/Charts/blob/main/Delegate) 
 
 ### factory.createWatchedValue
 
-Creates a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue) object.
+Creates a [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md) object.
 
 ### factory.createPriceFormatter(priceScale, minMove, fractional, minMove2)
 
-Creates a price [Formatter](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#formatter). The arguments of this function are described in [another article](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#minmov-pricescale-minmove2-fractional).
+Creates a price [Formatter](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#formatter). The arguments of this function are described in [another article](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#minmov-pricescale-minmove2-fractional).
 
 ### symbolSnapshot(symbol) : Promise
 
@@ -97,23 +97,23 @@ Returns quotes of a symbol.
 
 ## Getters and Setters
 
-### floatingTradingPanelVisibility: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue)
+### floatingTradingPanelVisibility: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md)
 
 Returns whether the floating trading panel is visible or not.
 
-### domVisibility: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue)
+### domVisibility: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md)
 
 Returns whether DOM is visible or not.
 
-### orderPanelVisibility: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue)
+### orderPanelVisibility: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md)
 
 Returns whether the order panel is visible or not.
 
-### showPricesWithZeroVolume: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue)
+### showPricesWithZeroVolume: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md)
 
 Returns whether levels with empty volume (between min and max volume levels) are collapsed or not.
 
-### silentOrdersPlacement: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue)
+### silentOrdersPlacement: [WatchedValue](https://github.com/Abolfazl2647/Charts/blob/main/WatchedValue.md)
 
 Returns if orders can be sent to the broker without showing the order ticket.
 
@@ -123,7 +123,7 @@ Returned object properties:
 
 1. value - use it to get the current value. It returns Promise.
 1. setValue - use it to set new value
-1. changed : [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription)
+1. changed : [Subscription](https://github.com/Abolfazl2647/Charts/blob/main/Subscription.md)
 
 It is to synchronize quantity in the Floating Trading Panel and in the dialogs.
 
@@ -131,15 +131,15 @@ It is to synchronize quantity in the Floating Trading Panel and in the dialogs.
 
 Bottom Trading Panel has a button with a list of dropdown items. This method can be used to replace existing items.
 
-1. `actions` is an array of [ActionMetainfo](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#actionmetainfo), each of them representing one dropdown item.
+1. `actions` is an array of [ActionMetainfo](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#actionmetainfo), each of them representing one dropdown item.
 
 ### defaultContextMenuActions()
 
-Provides default buy/sell, show properties actions to be returned as a default by [chartContextMenuActions](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#chartcontextmenuactionse).
+Provides default buy/sell, show properties actions to be returned as a default by [chartContextMenuActions](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md#chartcontextmenuactionse).
 
 ### defaultDropdownMenuActions(options)
 
-Provides default dropdown list of actions. You can use default actions in [setButtonDropdownActions](https://github.com/Abolfazl2647/Charts/blob/main/#setButtonDropdownActionsactions).
+Provides default dropdown list of actions. You can use default actions in [setButtonDropdownActions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#setButtonDropdownActionsactions).
 You can add/remove default action from the result using `options`:
 
 1. `showFloatingToolbar`: boolean;
@@ -153,25 +153,25 @@ You can add/remove default action from the result using `options`:
 
 The usage of these methods is required to notify the chart that it needs to update information.
 
-### orderUpdate([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order))
+### orderUpdate([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order))
 
 Call this method when an order is added or changed.
 
-### orderPartialUpdate([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order))
+### orderPartialUpdate([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order))
 
 Call this method when an order is not changed, but the fields that you added to the order object to display in the Account Manager are changed.
-It should be used only if you want to display custom fields in the [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager).
+It should be used only if you want to display custom fields in the [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md).
 
-### positionUpdate ([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position))
+### positionUpdate ([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#position))
 
 Call this method when a position is added or changed.
 
-### positionPartialUpdate ([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position))
+### positionPartialUpdate ([position](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#position))
 
 Call this method when a position is not changed, but fields that you added to the position object to display in the Account Manager are changed.
-It should be used only if you want to display custom fields in the [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager).
+It should be used only if you want to display custom fields in the [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md).
 
-### executionUpdate([execution](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#execution))
+### executionUpdate([execution](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#execution))
 
 Call this method when an execution is added.
 
@@ -191,11 +191,11 @@ Call this method when a broker connection has received an equity update. This me
 
 Call this method when a broker connection has received a margin available update. This method is required by the standard order dialog to display the margin meter. This method should be used when `supportMargin` flag is set in `configFlags`. The Trading Terminal subscribes to margin available updates using [subscribeMarginAvailable](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#subscribemarginavailable).
 
-### tradeUpdate ([trade](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#trade))
+### tradeUpdate ([trade](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#trade))
 
 Call this method when a trade is added or changed.
 
-### tradePartialUpdate ([trade](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#trade))
+### tradePartialUpdate ([trade](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#trade))
 
 Call this method when a trade is not changed, but fields that you added to the trade object to display in the Account Manager are changed.
 
@@ -205,7 +205,7 @@ Call this method when a broker connection has received a trade PL update.
 
 ### pipValueUpdate(symbol, pipValues)
 
-Call this method when a broker connection has a `pipValue` update. The library subscribes to `pipValue` updates using [subscribePipValue](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API#subscribepipvalue).
+Call this method when a broker connection has a `pipValue` update. The library subscribes to `pipValue` updates using [subscribePipValue](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md#subscribepipvalue).
 
 `pipValues` is an object with the following fields:
 

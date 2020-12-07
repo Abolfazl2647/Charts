@@ -4,13 +4,13 @@ Trading Terminal is a ready-to-use product for those who want to have a great ch
 
 This product is based on a Charting Library and includes all of its functionality, but also contains a bunch of additional features.
 
-Trading Terminal repository is [here](https://github.com/Abolfazl2647/Charts/blob/main/https://github.com/tradingview/trading_platform).
+Trading Terminal repository is [here](https://github.com/tradingview/trading_platform).
 
 ## Trading Terminal Features
 
 ### Trading Capabilities
 
-You can trade right from the chart, and all you have to do to make this work is to implement your [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API) and plug it into the chart widget.
+You can trade right from the chart, and all you have to do to make this work is to implement your [Broker API](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md) and plug it into the chart widget.
 
 ![images/tt_trading.png](https://github.com/Abolfazl2647/Charts/blob/main/images/tt_trading.png)
 
@@ -27,7 +27,7 @@ You can display orders/positions and account information in an interactive table
 
 **Read more about this feature:**
 
-- [How to enable Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager)
+- [How to enable Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md)
 
 ### DOM Widget
 
@@ -43,8 +43,8 @@ In the Trading Terminal, you can have the functionality of the Watchlist and Det
 
 **Read more about this feature:**
 
-- [How to enable sidebar quotes](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#widgetbar)
-- How to provide the data for quotes: depends on the type of data integration that you use - [JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api#trading-terminal-specific) or [UDF](https://github.com/Abolfazl2647/Charts/blob/main/UDF#quotes)
+- [How to enable sidebar quotes](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#widgetbar)
+- How to provide the data for quotes: depends on the type of data integration that you use - [JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#trading-terminal-specific) or [UDF](https://github.com/Abolfazl2647/Charts/blob/main/UDF.md#quotes)
 
 ### Sidebar Market News Feed
 
@@ -54,8 +54,8 @@ You can have the news feed right in the sidebar of the chart. We are quite flexi
 
 **Read more about this feature:**
 
-- [Enabling sidebar news](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#widgetbar)
-- [Setting up different news feeds](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#rss_news_feed)
+- [Enabling sidebar news](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#widgetbar)
+- [Setting up different news feeds](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#rss_news_feed)
 
 ### Multiple charts layout
 
@@ -88,6 +88,6 @@ Note that the specific features that are available in the Trading Terminal only 
 
 ## See Also
 
-- [How to connect your trading back-end to the Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API)
-- [Widget methods specific for Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#chart-trading-terminal-only)
-- [Widget constructor parameters specific for Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#trading-terminal-only)
+- [How to connect your trading back-end to the Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Broker-API.md)
+- [Widget methods specific for Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#chart-trading-terminal-only)
+- [Widget constructor parameters specific for Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#trading-terminal-only)

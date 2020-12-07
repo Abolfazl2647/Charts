@@ -4,7 +4,7 @@ The Charting Library works out of the box, but you have to set up your HTTP serv
 
 ## 1. Clone this repository
 
-[Cloning a repository](https://github.com/Abolfazl2647/Charts/blob/main/https://help.github.com/articles/cloning-a-repository/)
+[Cloning a repository](https://help.github.com/articles/cloning-a-repository/)
 
 ## 2. Start an HTTP server
 
@@ -55,10 +55,10 @@ Start `http-server` using the following command in the Charting Library folder:
 
 Once you are done running the HTTP server, you will have your Charting Library ready.
 
-Open [http://127.0.0.1:9090](https://github.com/Abolfazl2647/Charts/blob/main/http://127.0.0.1:9090) in your browser.
+Open [http://127.0.0.1:9090](http://127.0.0.1:9090) in your browser.
 
 # Online Example
 
-You may see the working example of Charting Library [here](https://github.com/Abolfazl2647/Charts/blob/main/https://charting-library.tradingview.com). This example is based on our [sample data feed.](https://github.com/Abolfazl2647/Charts/blob/main/http://demo_feed.tradingview.com)
+You may see the working example of Charting Library [here](https://charting-library.tradingview.com). This example is based on our [sample data feed.](http://demo_feed.tradingview.com)
 
 **IMPORTANT**: This datafeed is just a sample. It contains a dozen of symbols (from Quandl) and provides DWM only. It does however support quotes. Please use it for testing purposes only.

@@ -1,4 +1,4 @@
-:chart: All content on this page is related to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) only.
+:chart: All content on this page is related to [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) only.
 
 Broker API is a key component that enables live trading. Its main purpose is to connect our charts with your trading logic. In terms of `JS`, it is an `object` which is expected to expose the specific interface. Here is a list of API's **methods** that Terminal is expected to have.
 
@@ -6,29 +6,29 @@ Broker API is a key component that enables live trading. Its main purpose is to 
 
 ### constructor(host)
 
-The constructor of the Broker API usually takes [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host).
+The constructor of the Broker API usually takes [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md).
 
 ### positions : Promise<Position[]>
 
-This method is called by the Trading Terminal to request [positions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#position).
+This method is called by the Trading Terminal to request [positions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#position).
 
 ### orders : Promise<Order[]>
 
-This method is called by the Trading Terminal to request [orders](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order).
+This method is called by the Trading Terminal to request [orders](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order).
 
 ### executions(symbol) : Promise<Execution[]>
 
-This method is called by the Trading Terminal to request [executions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#execution).
+This method is called by the Trading Terminal to request [executions](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#execution).
 
 ### trades : Promise<Trade[]>
 
-This method is called by the Trading Terminal to request [trades](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#trade) (individual positions).
+This method is called by the Trading Terminal to request [trades](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#trade) (individual positions).
 
 ### chartContextMenuActions(e)
 
 - `e` is a context object passed by a browser
 
-Chart can have a sub-menu `Trading` in the context menu. This method should return an array of [ActionMetainfo](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#actionmetainfo) elements, each of them representing one context menu item.
+Chart can have a sub-menu `Trading` in the context menu. This method should return an array of [ActionMetainfo](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#actionmetainfo) elements, each of them representing one context menu item.
 
 ### connectionStatus()
 
@@ -51,23 +51,23 @@ If you want to show a custom message with the reason why the symbol cannot be tr
 ### accountManagerInfo()
 
 This function should return the information that will be used to build an account manager.
-See [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager) for more information.
+See [Account Manager](https://github.com/Abolfazl2647/Charts/blob/main/Account-Manager.md) for more information.
 
-### placeOrder([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order), confirmId)
+### placeOrder([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order), confirmId)
 
 Method is called when a user wants to place an order. Order is pre-filled with partial or complete information.
 
 `confirmId` is passed if `supportOrderPreview` configuration flag is on.
 
-### previewOrder([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order))
+### previewOrder([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order))
 
 Returns estimated commission, fees, margin and other information for the order without it actually being placed. The method is called if `supportOrderPreview` configuration flag is on.
 The result will be an object with the following fields:
 
 - `confirmId` - a unique identifier that should be passed to `placeOrder` method
-- `info` - information about the order, which is a table that has the following structure: [OrderPreviewInfoItem](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#OrderPreviewInfoItem)[].
+- `info` - information about the order, which is a table that has the following structure: [OrderPreviewInfoItem](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#OrderPreviewInfoItem)[].
 
-### modifyOrder([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#order))
+### modifyOrder([order](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#order))
 
 1. `order` is an order object to modify
 
@@ -80,16 +80,16 @@ This method is called to cancel a single order with a given `id`.
 ### cancelOrders(symbol, side, ordersIds)
 
 1. `symbol` - symbol string
-1. `side`: [Side constant](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#side) or `undefined`
+1. `side`: [Side constant](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#side) or `undefined`
 1. `ordersIds` - ids already collected by `symbol` and `side`
 
 This method is called to cancel multiple orders for a `symbol` and `side`.
 
-### editPositionBrackets(positionId, [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#brackets), customFields)
+### editPositionBrackets(positionId, [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#brackets), customFields)
 
 1. `positionId` is an ID of an existing position to be modified
-1. `brackets` - new [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#brackets).
-1. `customFields` - [CustomInputFieldsValues](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#CustomInputFieldsValues) or `undefined`
+1. `brackets` - new [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#brackets).
+1. `customFields` - [CustomInputFieldsValues](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#CustomInputFieldsValues) or `undefined`
 
 This method is called if `supportPositionBrackets` configuration flag is on. It shows a dialog that enables `take profit` and `stop loss` editing.
 
@@ -101,10 +101,10 @@ This method is called if `supportClosePosition` configuration flag is on. It all
 
 This method is called if `supportNativeReversePosition` configuration flag is on. It allows to reverse the position by id.
 
-### editTradeBrackets(tradeId, [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#brackets))
+### editTradeBrackets(tradeId, [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#brackets))
 
 1. `tradeId` is ID of existing trade to be modified
-1. `brackets` - new [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants#brackets).
+1. `brackets` - new [brackets](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Objects-and-Constants.md#brackets).
 
 This method is called if `supportTradeBrackets` configuration flag is on. It displays a dialog that enables take profit and stop loss editing.
 
@@ -145,7 +145,7 @@ Once this method is called the broker should stop providing profit/loss.
 
 The method should be implemented if you use the standard order dialog and support stop loss. Equity is used to calculate Risk in Percent.
 
-Once this method is called the broker should provide equity (Balance + P/L) updates via [equityUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host#equityupdateequity) method.
+Once this method is called the broker should provide equity (Balance + P/L) updates via [equityUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#equityupdateequity) method.
 
 ### unsubscribeEquity()
 
@@ -157,7 +157,7 @@ Once this method is called the broker should stop providing equity updates.
 
 The method should be implemented if you use the standard order dialog and want to show the margin meter.
 
-Once this method is called the broker should provide margin available updates via [marginAvailableUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host#marginavailableupdatemarginavailable) method.
+Once this method is called the broker should provide margin available updates via [marginAvailableUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#marginavailableupdatemarginavailable) method.
 
 ### unsubscribeMarginAvailable()
 
@@ -169,7 +169,7 @@ Once this method is called the broker should stop providing margin available upd
 
 The method should be implemented if you use a standard order dialog. `pipValues` is displayed in the Order info and it is used to calculate the Trade Value and risks. If this method is not implemented then `pipValue` from the `symbolInfo` is used in the order panel/dialog.
 
-Once this method is called the broker should provide `pipValue` updates via [pipValueUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host#pipvalueupdatesymbol-pipValues) method.
+Once this method is called the broker should provide `pipValue` updates via [pipValueUpdate](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md#pipvalueupdatesymbol-pipValues) method.
 
 ### unsubscribePipValue()
 
@@ -179,5 +179,5 @@ Once this method is called the broker should stop providing `pipValue` updates.
 
 ## See Also
 
-- [How to connect](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#broker_factory) your trading controller to the chart
-- [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host)
+- [How to connect](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#broker_factory) your trading controller to the chart
+- [Trading Host](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Host.md)

@@ -6,30 +6,30 @@ JS API is a set of JS methods that needs to be implemented in order to connect y
 
 You should create a JS object that fetches data from your server when the Charting Library calls its methods.
 
-When you create an object that implements the described interface simply pass it to Library widget constructor through the [datafeed](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor#datafeed) argument.
+When you create an object that implements the described interface simply pass it to Library widget constructor through the [datafeed](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Constructor.md#datafeed) argument.
 
 The Charting Library caches historical data on its own. You don't need to implement a client-side cache by yourself.
 
 ## Methods
 
-1. [onReady](https://github.com/Abolfazl2647/Charts/blob/main/#onreadycallback)
-1. [searchSymbols](https://github.com/Abolfazl2647/Charts/blob/main/#searchsymbolsuserinput-exchange-symboltype-onresultreadycallback)
-1. [resolveSymbol](https://github.com/Abolfazl2647/Charts/blob/main/#resolvesymbolsymbolname-onsymbolresolvedcallback-onresolveerrorcallback)
-1. [getBars](https://github.com/Abolfazl2647/Charts/blob/main/#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest)
-1. [subscribeBars](https://github.com/Abolfazl2647/Charts/blob/main/#subscribebarssymbolinfo-resolution-onrealtimecallback-subscriberuid-onresetcacheneededcallback)
-1. [unsubscribeBars](https://github.com/Abolfazl2647/Charts/blob/main/#unsubscribebarssubscriberuid)
-1. [calculateHistoryDepth](https://github.com/Abolfazl2647/Charts/blob/main/#calculatehistorydepthresolution-resolutionback-intervalback)
-1. [getMarks](https://github.com/Abolfazl2647/Charts/blob/main/#getmarkssymbolinfo-from-to-ondatacallback-resolution)
-1. [getTimescaleMarks](https://github.com/Abolfazl2647/Charts/blob/main/#gettimescalemarkssymbolinfo-from-to-ondatacallback-resolution)
-1. [getServerTime](https://github.com/Abolfazl2647/Charts/blob/main/#getservertimecallback)
+1. [onReady](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#onreadycallback)
+1. [searchSymbols](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#searchsymbolsuserinput-exchange-symboltype-onresultreadycallback)
+1. [resolveSymbol](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#resolvesymbolsymbolname-onsymbolresolvedcallback-onresolveerrorcallback)
+1. [getBars](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#getbarssymbolinfo-resolution-from-to-onhistorycallback-onerrorcallback-firstdatarequest)
+1. [subscribeBars](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#subscribebarssymbolinfo-resolution-onrealtimecallback-subscriberuid-onresetcacheneededcallback)
+1. [unsubscribeBars](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#unsubscribebarssubscriberuid)
+1. [calculateHistoryDepth](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#calculatehistorydepthresolution-resolutionback-intervalback)
+1. [getMarks](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#getmarkssymbolinfo-from-to-ondatacallback-resolution)
+1. [getTimescaleMarks](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#gettimescalemarkssymbolinfo-from-to-ondatacallback-resolution)
+1. [getServerTime](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#getservertimecallback)
 
 :chart: [Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) specific:
 
-1. [getQuotes](https://github.com/Abolfazl2647/Charts/blob/main/#getquotessymbols-ondatacallback-onerrorcallback)
-1. [subscribeQuotes](https://github.com/Abolfazl2647/Charts/blob/main/#subscribequotessymbols-fastsymbols-onrealtimecallback-listenerguid)
-1. [unsubscribeQuotes](https://github.com/Abolfazl2647/Charts/blob/main/#unsubscribequoteslistenerguid)
-1. [subscribeDepth](https://github.com/Abolfazl2647/Charts/blob/main/#subscribedepthsymbolinfo-callback-string)
-1. [unsubscribeDepth](https://github.com/Abolfazl2647/Charts/blob/main/#unsubscribedepthsubscriberuid)
+1. [getQuotes](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#getquotessymbols-ondatacallback-onerrorcallback)
+1. [subscribeQuotes](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#subscribequotessymbols-fastsymbols-onrealtimecallback-listenerguid)
+1. [unsubscribeQuotes](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#unsubscribequoteslistenerguid)
+1. [subscribeDepth](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#subscribedepthsymbolinfo-callback-string)
+1. [unsubscribeDepth](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#unsubscribedepthsubscriberuid)
 
 ### onReady(callback)
 
@@ -42,19 +42,19 @@ Configuration data is an object; for now, the following properties are supported
 
 #### exchanges
 
-An array of exchange descriptors. Exchange descriptor is an object `{value, name, desc}`. `value` will be passed as `exchange` argument to [searchSymbols](https://github.com/Abolfazl2647/Charts/blob/main/#searchsymbolsuserinput-exchange-symboltype-onresultreadycallback).
+An array of exchange descriptors. Exchange descriptor is an object `{value, name, desc}`. `value` will be passed as `exchange` argument to [searchSymbols](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#searchsymbolsuserinput-exchange-symboltype-onresultreadycallback).
 
 `exchanges = []` leads to the absence of the exchanges filter in Symbol Search list. Use `value = ""` if you wish to include all exchanges.
 
 #### symbols_types
 
-An array of filter descriptors. Filter descriptor is an object `{name, value}`. `value` will be passed as `symbolType` argument to [searchSymbols](https://github.com/Abolfazl2647/Charts/blob/main/#searchsymbolsuserinput-exchange-symboltype-onresultreadycallback).
+An array of filter descriptors. Filter descriptor is an object `{name, value}`. `value` will be passed as `symbolType` argument to [searchSymbols](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#searchsymbolsuserinput-exchange-symboltype-onresultreadycallback).
 
 `symbols_types = []` leads to the absence of filter types in Symbol Search list. Use `value = ""` if you wish to include all filter types.
 
 #### supported_resolutions
 
-An array of supported resolutions. Resolution must be a string. Format is described in another [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution).
+An array of supported resolutions. Resolution must be a string. Format is described in another [article](https://github.com/Abolfazl2647/Charts/blob/main/Resolution.md).
 
 `supported_resolutions = undefined` or `supported_resolutions = []` leads to resolution widget including the default content.
 
@@ -105,19 +105,19 @@ This call is intended to provide the list of symbols that match the user's searc
 ];
 ```
 
-If no symbols are found, then callback should be called with an empty array. See more details about `ticker` value [here](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#ticker)
+If no symbols are found, then callback should be called with an empty array. See more details about `ticker` value [here](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#ticker)
 
 ### resolveSymbol(symbolName, onSymbolResolvedCallback, onResolveErrorCallback)
 
 1. `symbolName`: string. Symbol name or `ticker` if provided.
-1. `onSymbolResolvedCallback`: function([SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure))
+1. `onSymbolResolvedCallback`: function([SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure))
 1. `onResolveErrorCallback`: function(reason)
 
-Charting Library will call this function when it needs to get [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure) by symbol name.
+Charting Library will call this function when it needs to get [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure) by symbol name.
 
 ### getBars(symbolInfo, resolution, from, to, onHistoryCallback, onErrorCallback, firstDataRequest)
 
-1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure) object
+1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure) object
 1. `resolution`: string
 1. `from`: unix timestamp, leftmost required bar time
 1. `to`: unix timestamp, rightmost required bar time
@@ -132,7 +132,7 @@ This function is called when the chart needs a history fragment defined by dates
 
 `Bar` is an object with the following fields:
 
-1. `time`: number. Amount of **milliseconds** since Unix epoch start in **UTC** timezone. `time` for daily bars is expected to be a trading day (not session start day) at 00:00 UTC. Charting Library adjusts time according to [Session](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#session) from SymbolInfo. `time` for monthly bars is the first trading day of the month without the time part.
+1. `time`: number. Amount of **milliseconds** since Unix epoch start in **UTC** timezone. `time` for daily bars is expected to be a trading day (not session start day) at 00:00 UTC. Charting Library adjusts time according to [Session](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#session) from SymbolInfo. `time` for monthly bars is the first trading day of the month without the time part.
 1. `open`: number. Bar's open value
 1. `high`: number. Bar's high value
 1. `low`: number. Bar's low value
@@ -146,7 +146,7 @@ This function is called when the chart needs a history fragment defined by dates
 
 ### subscribeBars(symbolInfo, resolution, onRealtimeCallback, subscriberUID, onResetCacheNeededCallback)
 
-1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure) object
+1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure) object
 1. `resolution`: string
 1. `onRealtimeCallback`: function(bar)
    1. `bar`: object `{time, close, open, high, low, volume}`
@@ -219,19 +219,19 @@ In all other cases the history depth will have the default value.
 
 _Optional._
 
-1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure) object
+1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure) object
 1. `from`: unix timestamp (UTC). Leftmost visible bar's time.
 1. `to`: unix timestamp (UTC). Rightmost visible bar's time.
 1. `onDataCallback`: function(array of `mark`s)
 1. `resolution`: string
 
-The Library calls this function to get [marks](https://github.com/Abolfazl2647/Charts/blob/main/Marks#marks-on-bars) for visible bars range.
+The Library calls this function to get [marks](https://github.com/Abolfazl2647/Charts/blob/main/Marks.md#marks-on-bars) for visible bars range.
 
 The Library assumes that you will call `onDataCallback` only once per `getMarks` call.
 
 `mark` is an object that has the following properties:
 
-- `id`: unique mark ID. It will be passed to a [respective callback](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#subscribeevent-callback) when user clicks on a mark
+- `id`: unique mark ID. It will be passed to a [respective callback](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#subscribeevent-callback) when user clicks on a mark
 - `time`: unix time, UTC
 - `color`: `red` | `green` | `blue` | `yellow` | `{ border: '#ff0000', background: '#00ff00' }`
 - `text`: mark popup text. HTML supported
@@ -241,25 +241,25 @@ The Library assumes that you will call `onDataCallback` only once per `getMarks`
 
 A few marks per bar are allowed (for now, the maximum is `10`). Marks outside of the bars are not allowed.
 
-**Remark**: This function will be called only if you confirmed that your back-end is [supporting marks](https://github.com/Abolfazl2647/Charts/blob/main/#supports_marks).
+**Remark**: This function will be called only if you confirmed that your back-end is [supporting marks](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#supports_marks).
 
 ### getTimescaleMarks(symbolInfo, from, to, onDataCallback, resolution)
 
 _Optional._
 
-1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure) object
+1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure) object
 1. `from`: unix timestamp (UTC). Leftmost visible bar's time.
 1. `to`: unix timestamp (UTC). Rightmost visible bar's time.
 1. `onDataCallback`: function(array of `mark`s)
 1. `resolution`: string
 
-The Library calls this function to get [timescale marks](https://github.com/Abolfazl2647/Charts/blob/main/Marks#marks-on-the-timescale) for visible bars range.
+The Library calls this function to get [timescale marks](https://github.com/Abolfazl2647/Charts/blob/main/Marks.md#marks-on-the-timescale) for visible bars range.
 
 The Library assumes that you will call `onDataCallback` only once per `getTimescaleMarks` call.
 
 `mark` is an object that has the following properties:
 
-- `id`: unique mark ID. Will be passed to a [respective callback](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods#subscribeevent-callback) when user clicks on a mark
+- `id`: unique mark ID. Will be passed to a [respective callback](https://github.com/Abolfazl2647/Charts/blob/main/Widget-Methods.md#subscribeevent-callback) when user clicks on a mark
 - `time`: unix time, UTC
 - `color`: `red` | `green` | `blue` | `yellow` | ... | `#000000`
 - `label`: a letter to be printed on a mark. Single character
@@ -267,7 +267,7 @@ The Library assumes that you will call `onDataCallback` only once per `getTimesc
 
 Only one mark per bar is allowed. Marks outside of the bars are not allowed.
 
-**Remark**: This function will be called only if you confirmed that your back-end is [supporting marks](https://github.com/Abolfazl2647/Charts/blob/main/#supports_timescale_marks).
+**Remark**: This function will be called only if you confirmed that your back-end is [supporting marks](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md#supports_timescale_marks).
 
 ### getServerTime(callback)
 
@@ -287,23 +287,23 @@ Example: `1445324591`.
 
 ### getQuotes(symbols, onDataCallback, onErrorCallback)
 
-:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) specific._
+:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) specific._
 
 1. `symbols`: array of symbols names
 1. `onDataCallback`: function(array of `data`)
-   1. `data`: [symbol quote data](https://github.com/Abolfazl2647/Charts/blob/main/Quotes#symbol-quote-data)
+   1. `data`: [symbol quote data](https://github.com/Abolfazl2647/Charts/blob/main/Quotes.md#symbol-quote-data)
 1. `onErrorCallback`: function(reason)
 
 This function is called when the Charting Library needs quote data. The charting library assumes that `onDataCallback` is called once when all the requested data is received.
 
 ### subscribeQuotes(symbols, fastSymbols, onRealtimeCallback, listenerGUID)
 
-:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) specific._
+:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) specific._
 
 1. `symbols`: array of symbols that should be updated rarely (once per minute). These symbols are included in the watchlist but they are not visible at the moment.
 1. `fastSymbols`: array of symbols that should be updated frequently (once every 10 seconds or more often)
 1. `onRealtimeCallback`: function(array of `data`)
-   1. `data`: [symbol quote data](https://github.com/Abolfazl2647/Charts/blob/main/Quotes#symbol-quote-data)
+   1. `data`: [symbol quote data](https://github.com/Abolfazl2647/Charts/blob/main/Quotes.md#symbol-quote-data)
 1. `listenerGUID`: unique identifier of the listener
 
 Trading Terminal calls this function when it wants to receive real-time quotes for a symbol.
@@ -312,7 +312,7 @@ The Charting Library assumes that you will call `onRealtimeCallback` every time 
 
 ### unsubscribeQuotes(listenerGUID)
 
-:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) specific._
+:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) specific._
 
 1. `listenerGUID`: unique identifier of the listener
 
@@ -322,9 +322,9 @@ Trading Terminal calls this function when it doesn't want to receive updates for
 
 ### subscribeDepth(symbolInfo, callback): string
 
-:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) specific._
+:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) specific._
 
-1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology#symbolinfo-structure) object
+1. `symbolInfo`: [SymbolInfo](https://github.com/Abolfazl2647/Charts/blob/main/Symbology.md#symbolinfo-structure) object
 1. `callback`: function(depth)
    1. `depth`: object `{snapshot, asks, bids}`
       - `snapshot`: Boolean - if `true` `asks` and `bids` have full set of depth, otherwise they contain only updated levels.
@@ -337,7 +337,7 @@ This method should return a unique identifier (`subscriberUID`) that will be use
 
 ### unsubscribeDepth(subscriberUID)
 
-:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal) specific._
+:chart: _[Trading Terminal](https://github.com/Abolfazl2647/Charts/blob/main/Trading-Terminal.md) specific._
 
 1. `subscriberUID`: String
 

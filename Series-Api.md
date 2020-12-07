@@ -70,7 +70,7 @@ Places main series behind all other chart objects.
 
 1. `chartStyle` - number
 
-Returns properties for a specific [chart style](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#setChartTypetype). See [this article](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Style-Properties) for a returned object.
+Returns properties for a specific [chart style](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setChartTypetype). See [this article](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Style-Properties.md) for a returned object.
 
 ### setChartStyleProperties(chartStyle, newPrefs)
 
@@ -79,5 +79,5 @@ Sets properties for a specific chart style.
 1. `chartStyle` - number
 1. `newPrefs` - object
 
-`newPrefs` should be a subset of properties for a [chart style](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods#setChartTypetype).
-See [this article](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Style-Properties) for available values of properties for a specific chart style.
+`newPrefs` should be a subset of properties for a [chart style](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Methods.md#setChartTypetype).
+See [this article](https://github.com/Abolfazl2647/Charts/blob/main/Chart-Style-Properties.md) for available values of properties for a specific chart style.
