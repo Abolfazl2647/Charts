@@ -7,7 +7,7 @@ Thus, market data connection API is designed in such a way, that all interaction
 
 ## JS API
 
-Market data connection API ([JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api)) is a set of methods that must be implemented in JavaScript.
+Market data connection API ([JS API](https://github.com/Abolfazl2647/Charts/blob/main/JS-Api.md)) is a set of methods that must be implemented in JavaScript.
 
 All these methods are called by the library as needed.
 
